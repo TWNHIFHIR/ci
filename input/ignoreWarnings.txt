@@ -1,0 +1,24 @@
+== Suppressed Messages ==
+
+# 值集中的代碼量太多，Expansion僅列出前1,000筆。（後方的藍色字樣(4 uses) 是指INFORMATION在此Profile中有被使用到）
+The value set expansion is too large, and only a subset has been displayed
+The value set include has too many codes to validate (1,170), so each individual code has not been checked
+
+# 使用預設的 HL7 代碼系統，但 HL7 validator 無法辨識代碼系統，此屬於HL7 validator 程式本身問題，非IG 設計問題，此提示訊息不影響實作與實際代碼驗證。（後方的藍色字樣(15 uses) 是指INFORMATION在此Profile中有被使用到）
+%Reference to draft CodeSystem %
+
+# GA代碼（後方的藍色字樣(1 uses) 是指INFORMATION在此Profile中有被使用到）
+% The <script> containing the javascript 'window.dataLayer = w'... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) %
+
+# OID（後方的藍色字樣(1 uses) 是指INFORMATION在此Profile中有被使用到）
+The resource Questionnaire/apply-catastrophic-illness could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+
+# TW Core IG Slice設計問題（後方的藍色字樣(1uses) 是指INFORMATION在此Profile中有被使用到）
+INFORMATION: StructureDefinition/Patient-twci: StructureDefinition.snapshot.element[97].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/Patient-twci: StructureDefinition.snapshot.element[201].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/Condition-twci: StructureDefinition.snapshot.element[28].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+# deprecated extension，IG中未使用，不影響驗證。（後方的藍色字樣(1uses) 是指INFORMATION在此Profile中有被使用到）
+INFORMATION: StructureDefinition/ApplyModel: StructureDefinition.snapshot.element[68].type[0].extension[1]: The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
+INFORMATION: StructureDefinition/Bundle-twci: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
