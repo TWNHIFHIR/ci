@@ -22,10 +22,10 @@ Usage: #example
 /** address.postalCode.extension.valueCodeableConcept.coding.system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/postal-code3-tw"
 * address.postalCode.extension.valueCodeableConcept.coding.code = #106*/
 
-* telecom[sms].system = #sms
-* telecom[sms].value = "0912345678"
-* telecom[phone].system = #phone
-* telecom[phone].value = "0227065866"
+* telecom[mobile].system = #sms
+* telecom[mobile].value = "0912345678"
+* telecom[contactTel].system = #phone
+* telecom[contactTel].value = "0227065866"
 * telecom[email].system = #email
 * telecom[email].value = "a123456@nhi.gov.tw"
 

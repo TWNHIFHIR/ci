@@ -1,5 +1,5 @@
 CodeSystem: CancerStageAssessment
-Id: nhi-cancerstage-assessment
+Id: nhi-cancerstage-cancerTreatment
 Title: "NHI-後續治療評估"
 Description: "臺灣衛生福利部中央健康保險署「後續治療評估」代碼，代碼出版日期：2024-11-06；資料所屬單位：臺灣衛生福利部中央健康保險署。"
 * ^caseSensitive = true
@@ -16,7 +16,7 @@ Description: "臺灣衛生福利部中央健康保險署「後續治療評估」
 * #7 "其他"
 
 ValueSet: CancerStageAssessment
-Id: nhi-cancerstage-assessment
+Id: nhi-cancerstage-cancerTreatment
 Title: "NHI-後續治療評估值集"
 Description: "NHI-後續治療評估值集"
 * ^date = "2024-11-07"

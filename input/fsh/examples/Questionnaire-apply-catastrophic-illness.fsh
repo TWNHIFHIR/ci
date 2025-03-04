@@ -25,10 +25,10 @@ Usage: #example
 * item[hosp].item[applDate].type = #date
 * item[hosp].item[applDate].required = true
 
-* item[hosp].item[diagRepApplyDate].linkId = "1.3" 
-* item[hosp].item[diagRepApplyDate].text = "hosp.diagRepApplyDate|開立診斷書申請日期"
-* item[hosp].item[diagRepApplyDate].type = #date
-* item[hosp].item[diagRepApplyDate].required = true
+* item[hosp].item[medCertBookDate].linkId = "1.3" 
+* item[hosp].item[medCertBookDate].text = "hosp.medCertBookDate|開立診斷書申請日期"
+* item[hosp].item[medCertBookDate].type = #date
+* item[hosp].item[medCertBookDate].required = true
 
 * item[hosp].item[hospId].linkId = "1.4" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
@@ -54,27 +54,27 @@ Usage: #example
 * item[doctor].type = #group
 * item[doctor].required = true
 
-* item[doctor].item[drIdCard].linkId = "3.1"
-* item[doctor].item[drIdCard].text = "doctor.drIdCard|醫師身分證號"
-* item[doctor].item[drIdCard].definition = "醫師國民身分證統一編號"
-* item[doctor].item[drIdCard].type = #string
-* item[doctor].item[drIdCard].required = true
+* item[doctor].item[diagPrsnId].linkId = "3.1"
+* item[doctor].item[diagPrsnId].text = "doctor.diagPrsnId|醫師身分證號"
+* item[doctor].item[diagPrsnId].definition = "醫師國民身分證統一編號"
+* item[doctor].item[diagPrsnId].type = #string
+* item[doctor].item[diagPrsnId].required = true
 
-* item[doctor].item[drName].linkId = "3.2"
-* item[doctor].item[drName].text = "doctor.drName|診斷醫師姓名"
-* item[doctor].item[drName].type = #string
-* item[doctor].item[drName].required = true
+* item[doctor].item[diagPrsnName].linkId = "3.2"
+* item[doctor].item[diagPrsnName].text = "doctor.diagPrsnName|診斷醫師姓名"
+* item[doctor].item[diagPrsnName].type = #string
+* item[doctor].item[diagPrsnName].required = true
 
 * item[diagnosis].linkId = "4"
 * item[diagnosis].text = "diagnosis|疾病資訊"
 * item[diagnosis].type = #group
 * item[diagnosis].required = true
 
-* item[diagnosis].item[diagCode].linkId = "4.1"
-* item[diagnosis].item[diagCode].text = "diagnosis.diagCode|主診斷代碼"
-* item[diagnosis].item[diagCode].type = #choice
-* item[diagnosis].item[diagCode].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-diag-code-icd"
-* item[diagnosis].item[diagCode].required = true
+* item[diagnosis].item[icd10cmCode].linkId = "4.1"
+* item[diagnosis].item[icd10cmCode].text = "diagnosis.icd10cmCode|主診斷代碼"
+* item[diagnosis].item[icd10cmCode].type = #choice
+* item[diagnosis].item[icd10cmCode].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-diag-code-icd"
+* item[diagnosis].item[icd10cmCode].required = true
 
 /* item[diagnosis].item[diagName].linkId = "4.2"
 * item[diagnosis].item[diagName].text = "diagnosis.diagName|主診斷病名"
@@ -155,27 +155,27 @@ Usage: #example
 * item[illness].type = #group
 * item[illness].required = true
 
-* item[illness].item[primaryCancerIcd].linkId = "7.1"
-* item[illness].item[primaryCancerIcd].text = "illness.primaryCancerIcd|原發癌症診斷碼"
-* item[illness].item[primaryCancerIcd].type = #choice
-* item[illness].item[primaryCancerIcd].definition = "最長為7碼"
-* item[illness].item[primaryCancerIcd].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-primary-cancer-icd"
+* item[illness].item[oriCancerCode].linkId = "7.1"
+* item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼"
+* item[illness].item[oriCancerCode].type = #choice
+* item[illness].item[oriCancerCode].definition = "最長為7碼"
+* item[illness].item[oriCancerCode].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-primary-cancer-icd"
 
-* item[illness].item[cancerDate].linkId = "7.2"
-* item[illness].item[cancerDate].text = "illness.cancerDate|癌症最初診斷日期"
-* item[illness].item[cancerDate].definition = "西元年月日；不得大於系統日"
-* item[illness].item[cancerDate].type = #date
+* item[illness].item[oriCancerDxDate].linkId = "7.2"
+* item[illness].item[oriCancerDxDate].text = "illness.oriCancerDxDate|癌症最初診斷日期"
+* item[illness].item[oriCancerDxDate].definition = "西元年月日；不得大於系統日"
+* item[illness].item[oriCancerDxDate].type = #date
 
-* item[illness].item[ajccStage].linkId = "7.3"
-* item[illness].item[ajccStage].text = "illness.ajccStage|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)"
-* item[illness].item[ajccStage].definition = "依期別填入；若不是用此分類而用其他分類，則填寫9"
-* item[illness].item[ajccStage].type = #choice
-* item[illness].item[ajccStage].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstaging"
+* item[illness].item[oriCancerAjcc].linkId = "7.3"
+* item[illness].item[oriCancerAjcc].text = "illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)"
+* item[illness].item[oriCancerAjcc].definition = "依期別填入；若不是用此分類而用其他分類，則填寫9"
+* item[illness].item[oriCancerAjcc].type = #choice
+* item[illness].item[oriCancerAjcc].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstaging"
 
-* item[illness].item[ajccStageNotes].linkId = "7.4"
-* item[illness].item[ajccStageNotes].text = "illness.ajccStageNotes|癌症最初診斷AJCC分期_補充說明欄位"
-* item[illness].item[ajccStageNotes].definition = "若前述欄位為9，則請於此欄位描述其他系統之其他分期為何"
-* item[illness].item[ajccStageNotes].type = #string
+* item[illness].item[oriCancerAjcc1].linkId = "7.4"
+* item[illness].item[oriCancerAjcc1].text = "illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位"
+* item[illness].item[oriCancerAjcc1].definition = "若前述欄位為9，則請於此欄位描述其他系統之其他分期為何"
+* item[illness].item[oriCancerAjcc1].type = #string
 
 * item[illness].item[cancerStatus].linkId = "7.5"
 * item[illness].item[cancerStatus].text = "illness.cancerStatus|目前癌症狀態"
@@ -183,13 +183,13 @@ Usage: #example
 * item[illness].item[cancerStatus].required = true
 * item[illness].item[cancerStatus].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-status"
 
-* item[illness].item[assessment].linkId = "7.6"
-* item[illness].item[assessment].text = "illness.assessment|後續治療評估"
-* item[illness].item[assessment].definition = "可複選"
-* item[illness].item[assessment].type = #choice
-* item[illness].item[assessment].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-assessment"
-* item[illness].item[assessment].required = true
-* item[illness].item[assessment].repeats = true
+* item[illness].item[cancerTreatment].linkId = "7.6"
+* item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估"
+* item[illness].item[cancerTreatment].definition = "可複選"
+* item[illness].item[cancerTreatment].type = #choice
+* item[illness].item[cancerTreatment].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-cancerTreatment"
+* item[illness].item[cancerTreatment].required = true
+* item[illness].item[cancerTreatment].repeats = true
 
 
 

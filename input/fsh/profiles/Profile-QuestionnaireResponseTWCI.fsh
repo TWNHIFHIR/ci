@@ -32,7 +32,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[hosp].item contains
     applType 1..1 MS and
     applDate 1..1 MS and
-    diagRepApplyDate 1..1 MS and
+    medCertBookDate 1..1 MS and
     hospId 1..1 MS and
     acptNo 0..1 MS and
     acptNum 0..1 MS
@@ -50,12 +50,12 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 //* item[hosp].item[applDate].answer.valueDate only date
 //* item[hosp].item[applDate].answer.valueDate 1..1 MS
 
-* item[hosp].item[diagRepApplyDate].linkId = "1.3" 
-* item[hosp].item[diagRepApplyDate].text = "hosp.diagRepApplyDate|開立診斷書申請日期"
-* item[hosp].item[diagRepApplyDate].answer 1..1 MS
-* item[hosp].item[diagRepApplyDate].answer.value[x] 1..1
-/* item[hosp].item[diagRepApplyDate].answer.valueDate only date*/
-//* item[hosp].item[diagRepApplyDate].answer.valueDate 1..1 MS
+* item[hosp].item[medCertBookDate].linkId = "1.3" 
+* item[hosp].item[medCertBookDate].text = "hosp.medCertBookDate|開立診斷書申請日期"
+* item[hosp].item[medCertBookDate].answer 1..1 MS
+* item[hosp].item[medCertBookDate].answer.value[x] 1..1
+/* item[hosp].item[medCertBookDate].answer.valueDate only date*/
+//* item[hosp].item[medCertBookDate].answer.valueDate 1..1 MS
 
 * item[hosp].item[hospId].linkId = "1.4" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
@@ -86,19 +86,19 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[doctor].item ^slicing.discriminator.path = "linkId"
 * item[doctor].item ^slicing.rules = #closed
 * item[doctor].item contains
-    drIdCard 1..1 MS and
-    drName 1..1 MS
+    diagPrsnId 1..1 MS and
+    diagPrsnName 1..1 MS
 
-* item[doctor].item[drIdCard].linkId = "3.1"
-* item[doctor].item[drIdCard].text = "doctor.drIdCard|醫師身分證號"
-* item[doctor].item[drIdCard].definition = "醫師國民身分證統一編號"
-* item[doctor].item[drIdCard].answer 1..1 MS
-* item[doctor].item[drIdCard].answer.valueString 1..1 MS
+* item[doctor].item[diagPrsnId].linkId = "3.1"
+* item[doctor].item[diagPrsnId].text = "doctor.diagPrsnId|醫師身分證號"
+* item[doctor].item[diagPrsnId].definition = "醫師國民身分證統一編號"
+* item[doctor].item[diagPrsnId].answer 1..1 MS
+* item[doctor].item[diagPrsnId].answer.valueString 1..1 MS
 
-* item[doctor].item[drName].linkId = "3.2"
-* item[doctor].item[drName].text = "doctor.drName|診斷醫師姓名"
-* item[doctor].item[drName].answer 1..1 MS
-* item[doctor].item[drName].answer.valueString 1..1 MS
+* item[doctor].item[diagPrsnName].linkId = "3.2"
+* item[doctor].item[diagPrsnName].text = "doctor.diagPrsnName|診斷醫師姓名"
+* item[doctor].item[diagPrsnName].answer 1..1 MS
+* item[doctor].item[diagPrsnName].answer.valueString 1..1 MS
 
 * item[diagnosis].linkId = "4"
 * item[diagnosis].text = "diagnosis|疾病資訊"
@@ -107,15 +107,15 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item ^slicing.discriminator.path = "linkId"
 * item[diagnosis].item ^slicing.rules = #closed
 * item[diagnosis].item contains
-    diagCode 1..1 MS and
+    icd10cmCode 1..1 MS and
     //diagName 1..1 MS and
     examinationReport 0..* MS
 
-* item[diagnosis].item[diagCode].linkId = "4.1"
-* item[diagnosis].item[diagCode].text = "diagnosis.diagCode|主診斷代碼"
-* item[diagnosis].item[diagCode].answer 1..1 MS
-* item[diagnosis].item[diagCode].answer.valueCoding 1..1 MS
-* item[diagnosis].item[diagCode].answer.valueCoding from NHIDiagCodeICD
+* item[diagnosis].item[icd10cmCode].linkId = "4.1"
+* item[diagnosis].item[icd10cmCode].text = "diagnosis.icd10cmCode|主診斷代碼"
+* item[diagnosis].item[icd10cmCode].answer 1..1 MS
+* item[diagnosis].item[icd10cmCode].answer.valueCoding 1..1 MS
+* item[diagnosis].item[icd10cmCode].answer.valueCoding from NHIDiagCodeICD
 
 /* item[diagnosis].item[diagName].linkId = "4.2"
 * item[diagnosis].item[diagName].text = "diagnosis.diagName|主診斷病名"
@@ -221,34 +221,34 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[illness].item ^slicing.discriminator.path = "linkId"
 * item[illness].item ^slicing.rules = #closed
 * item[illness].item contains
-    primaryCancerIcd 1..1 MS and
-    cancerDate 0..1 MS and
-    ajccStage 0..1 MS and
-    ajccStageNotes 0..1 MS and
+    oriCancerCode 1..1 MS and
+    oriCancerDxDate 0..1 MS and
+    oriCancerAjcc 0..1 MS and
+    oriCancerAjcc1 0..1 MS and
     cancerStatus 0..1 MS and
-    assessment 0..1 MS
+    cancerTreatment 0..1 MS
 
-* item[illness].item[primaryCancerIcd].linkId = "7.1"
-* item[illness].item[primaryCancerIcd].text = "illness.primaryCancerIcd|原發癌症診斷碼"
-* item[illness].item[primaryCancerIcd].answer 1..1 MS
-* item[illness].item[primaryCancerIcd].answer.valueCoding 1..1 MS
-* item[illness].item[primaryCancerIcd].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-primary-cancer-icd
+* item[illness].item[oriCancerCode].linkId = "7.1"
+* item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼"
+* item[illness].item[oriCancerCode].answer 1..1 MS
+* item[illness].item[oriCancerCode].answer.valueCoding 1..1 MS
+* item[illness].item[oriCancerCode].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-primary-cancer-icd
 
-* item[illness].item[cancerDate].linkId = "7.2"
-* item[illness].item[cancerDate].text = "illness.cancerDate|癌症最初診斷日期"
-* item[illness].item[cancerDate].answer 1..1 MS
+* item[illness].item[oriCancerDxDate].linkId = "7.2"
+* item[illness].item[oriCancerDxDate].text = "illness.oriCancerDxDate|癌症最初診斷日期"
+* item[illness].item[oriCancerDxDate].answer 1..1 MS
 
-* item[illness].item[ajccStage].linkId = "7.3"
-* item[illness].item[ajccStage].text = "illness.ajccStage|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)"
-* item[illness].item[ajccStage].definition = "依期別填入；若不是用此分類而用其他分類，則填寫9"
-* item[illness].item[ajccStage].answer 1..1 MS
-* item[illness].item[ajccStage].answer.valueCoding 1..1 MS
-* item[illness].item[ajccStage].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstaging
+* item[illness].item[oriCancerAjcc].linkId = "7.3"
+* item[illness].item[oriCancerAjcc].text = "illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)"
+* item[illness].item[oriCancerAjcc].definition = "依期別填入；若不是用此分類而用其他分類，則填寫9"
+* item[illness].item[oriCancerAjcc].answer 1..1 MS
+* item[illness].item[oriCancerAjcc].answer.valueCoding 1..1 MS
+* item[illness].item[oriCancerAjcc].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstaging
 
-* item[illness].item[ajccStageNotes].linkId = "7.4"
-* item[illness].item[ajccStageNotes].text = "illness.ajccStageNotes|癌症最初診斷AJCC分期_補充說明欄位"
-* item[illness].item[ajccStageNotes].answer 1..1 MS
-* item[illness].item[ajccStageNotes].answer.valueString 1..1 MS
+* item[illness].item[oriCancerAjcc1].linkId = "7.4"
+* item[illness].item[oriCancerAjcc1].text = "illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位"
+* item[illness].item[oriCancerAjcc1].answer 1..1 MS
+* item[illness].item[oriCancerAjcc1].answer.valueString 1..1 MS
 
 * item[illness].item[cancerStatus].linkId = "7.5"
 * item[illness].item[cancerStatus].text = "illness.cancerStatus|目前癌症狀態"
@@ -256,17 +256,17 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[illness].item[cancerStatus].answer.valueCoding 1..1 MS
 * item[illness].item[cancerStatus].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-status
 
-* item[illness].item[assessment].linkId = "7.6"
-* item[illness].item[assessment].text = "illness.assessment|後續治療評估"
-* item[illness].item[assessment].definition = "可複選"
-* item[illness].item[assessment].answer 1.. MS
-* item[illness].item[assessment].answer.valueCoding 1..1 MS
-* item[illness].item[assessment].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-assessment
+* item[illness].item[cancerTreatment].linkId = "7.6"
+* item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估"
+* item[illness].item[cancerTreatment].definition = "可複選"
+* item[illness].item[cancerTreatment].answer 1.. MS
+* item[illness].item[cancerTreatment].answer.valueCoding 1..1 MS
+* item[illness].item[cancerTreatment].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-cancerTreatment
 
 
-* item[hosp].item[diagRepApplyDate] obeys diagRepApplyDate
-* item[doctor].item[drIdCard].answer.valueString obeys txt-10
-* item[doctor].item[drName].answer.valueString obeys txt-12
+* item[hosp].item[medCertBookDate] obeys medCertBookDate
+* item[doctor].item[diagPrsnId].answer.valueString obeys txt-10
+* item[doctor].item[diagPrsnName].answer.valueString obeys txt-12
 
 
 //癌症分期分數或結果
@@ -280,9 +280,9 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 //檢查報告名稱
 * item[diagnosis].item[examinationReport].item[reportResultPdfTitle].answer.valueString obeys txt-50
 //癌症最初診斷AJCC分期_補充說明欄位
-* item[illness].item[ajccStageNotes].answer.valueString obeys txt-20
+* item[illness].item[oriCancerAjcc1].answer.valueString obeys txt-20
 
-Invariant:   diagRepApplyDate
+Invariant:   medCertBookDate
 Description: "開立診斷書申請日期，不可大於系統日，不可小於2016-01-01，且為系統日之30日內。"
 Expression:  "answer.value.ofType(date) <= today() and answer.value.ofType(date) >= @2016-01-01 and answer.value.ofType(date) >= today() - 30 days"
 Severity:    #error

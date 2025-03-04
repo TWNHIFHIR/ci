@@ -30,11 +30,11 @@ Description:    "此病人資訊-Patient TWCI Profile說明TWCI IG如何進一�
 * telecom ^slicing.ordered = false
 * telecom ^slicing.rules = #closed
 * telecom contains
-    sms 1..1 MS and
-    phone 1..1 MS and
+    mobile 1..1 MS and
+    contactTel 1..1 MS and
     email 0..1 MS
-* telecom[sms].system = #sms
-* telecom[phone].system = #phone
+* telecom[mobile].system = #sms
+* telecom[contactTel].system = #phone
 * telecom[email].system = #email
 
 * identifier[idCardNumber].value obeys txt-10
@@ -44,15 +44,15 @@ Description:    "此病人資訊-Patient TWCI Profile說明TWCI IG如何進一�
 * birthDate ^short = "出生日期，YYYY-MM-DD，西元年月日。"
 * address.postalCode.extension[PostalCode].value[x].coding[PostalCode3].code ^short = "郵遞區號"
 * address.text ^short = "連絡住址"
-* telecom[sms] ^short = "手機號碼。應為數字10碼(寄送核發簡訊使用)"
-* telecom[phone] ^short = "連絡電話"
+* telecom[mobile] ^short = "手機號碼。應為數字10碼(寄送核發簡訊使用)"
+* telecom[contactTel] ^short = "連絡電話"
 * telecom[email] ^short = "電子郵件信箱"
-* telecom[sms] obeys telecom-sms
+* telecom[mobile] obeys telecom-mobile
 * address.text obeys txt-80
-* telecom[phone].value obeys txt-15
+* telecom[contactTel].value obeys txt-15
 * telecom[email].value obeys txt-40
 
-Invariant:   telecom-sms
+Invariant:   telecom-mobile
 Description: "手機號碼格式有誤，應為數字10碼"
 Expression:  "value.toString().length() = 10"
 Severity:    #error

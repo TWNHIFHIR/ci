@@ -18,9 +18,9 @@ Usage: #example
 * item[hosp].item[applDate].text = "hosp.applDate|申請日期"
 * item[hosp].item[applDate].answer.valueDate = "2024-01-01"
 
-* item[hosp].item[diagRepApplyDate].linkId = "1.3" 
-* item[hosp].item[diagRepApplyDate].text = "hosp.diagRepApplyDate|開立診斷書申請日期"
-* item[hosp].item[diagRepApplyDate].answer.valueDate = "2025-02-18"
+* item[hosp].item[medCertBookDate].linkId = "1.3" 
+* item[hosp].item[medCertBookDate].text = "hosp.medCertBookDate|開立診斷書申請日期"
+* item[hosp].item[medCertBookDate].answer.valueDate = "2025-02-18"
 
 * item[hosp].item[hospId].linkId = "1.4" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
@@ -82,22 +82,22 @@ Usage: #example
 * item[doctor].linkId = "3"
 * item[doctor].text = "doctor|醫師資訊"
 
-* item[doctor].item[drIdCard].linkId = "3.1"
-* item[doctor].item[drIdCard].text = "doctor.drIdCard|醫師身分證號"
-* item[doctor].item[drIdCard].definition = "醫師國民身分證統一編號"
-* item[doctor].item[drIdCard].answer.valueString = "A234649456"
+* item[doctor].item[diagPrsnId].linkId = "3.1"
+* item[doctor].item[diagPrsnId].text = "doctor.diagPrsnId|醫師身分證號"
+* item[doctor].item[diagPrsnId].definition = "醫師國民身分證統一編號"
+* item[doctor].item[diagPrsnId].answer.valueString = "A234649456"
 
-* item[doctor].item[drName].linkId = "3.2"
-* item[doctor].item[drName].text = "doctor.drName|診斷醫師姓名"
-* item[doctor].item[drName].answer.valueString = "王小明"
+* item[doctor].item[diagPrsnName].linkId = "3.2"
+* item[doctor].item[diagPrsnName].text = "doctor.diagPrsnName|診斷醫師姓名"
+* item[doctor].item[diagPrsnName].answer.valueString = "王小明"
 
 
 * item[diagnosis].linkId = "4"
 * item[diagnosis].text = "diagnosis|疾病資訊"
 
-* item[diagnosis].item[diagCode].linkId = "4.1"
-* item[diagnosis].item[diagCode].text = "diagnosis.diagCode|主診斷代碼"
-* item[diagnosis].item[diagCode].answer.valueCoding = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw#C49.6 "軀幹結締及軟組織之惡性腫瘤"
+* item[diagnosis].item[icd10cmCode].linkId = "4.1"
+* item[diagnosis].item[icd10cmCode].text = "diagnosis.icd10cmCode|主診斷代碼"
+* item[diagnosis].item[icd10cmCode].answer.valueCoding = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw#C49.6 "軀幹結締及軟組織之惡性腫瘤"
 
 /* item[diagnosis].item[diagName].linkId = "4.2"
 * item[diagnosis].item[diagName].text = "diagnosis.diagName|主診斷病名"
@@ -138,7 +138,7 @@ Usage: #example
 * item[ci].answer.valueReference = Reference(Condition/con-min)
 /*
 * item[illness].item[0].linkId = "5.1"
-* item[illness].item[=].text = "ci.illnessType|重大傷病類別"
+* item[illness].item[=].text = "ci.hvType|重大傷病類別"
 * item[illness].item[=].definition = "重大傷病申請僅限申請#1癌症"
 * item[illness].item[=].answer.valueCoding = NHICICategory#1 "癌症"
 */
@@ -171,35 +171,35 @@ Usage: #example
 * item[illness].linkId = "7"
 * item[illness].text = "illness|惡性腫瘤重大傷病換發評估表"
 
-* item[illness].item[primaryCancerIcd].linkId = "7.1"
-* item[illness].item[primaryCancerIcd].text = "illness.primaryCancerIcd|原發癌症診斷碼"
-* item[illness].item[primaryCancerIcd].definition = "最長為7碼"
-* item[illness].item[primaryCancerIcd].answer.valueCoding = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw#C49.4 "腹(部)結締及軟組織之惡性腫瘤"
+* item[illness].item[oriCancerCode].linkId = "7.1"
+* item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼"
+* item[illness].item[oriCancerCode].definition = "最長為7碼"
+* item[illness].item[oriCancerCode].answer.valueCoding = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw#C49.4 "腹(部)結締及軟組織之惡性腫瘤"
 
-* item[illness].item[cancerDate].linkId = "7.2"
-* item[illness].item[cancerDate].text = "illness.cancerDate|癌症最初診斷日期"
-* item[illness].item[cancerDate].definition = "西元年月日；不得大於系統日"
-* item[illness].item[cancerDate].answer.valueDate = "2017-03-16"
+* item[illness].item[oriCancerDxDate].linkId = "7.2"
+* item[illness].item[oriCancerDxDate].text = "illness.oriCancerDxDate|癌症最初診斷日期"
+* item[illness].item[oriCancerDxDate].definition = "西元年月日；不得大於系統日"
+* item[illness].item[oriCancerDxDate].answer.valueDate = "2017-03-16"
 
-* item[illness].item[ajccStage].linkId = "7.3"
-* item[illness].item[ajccStage].text = "illness.ajccStage|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)"
-* item[illness].item[ajccStage].definition = "依期別填入；若不是用此分類而用其他分類，則填寫9"
-* item[illness].item[ajccStage].answer.valueCoding = CancerStaging#9
+* item[illness].item[oriCancerAjcc].linkId = "7.3"
+* item[illness].item[oriCancerAjcc].text = "illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)"
+* item[illness].item[oriCancerAjcc].definition = "依期別填入；若不是用此分類而用其他分類，則填寫9"
+* item[illness].item[oriCancerAjcc].answer.valueCoding = CancerStaging#9
 
-* item[illness].item[ajccStageNotes].linkId = "7.4"
-* item[illness].item[ajccStageNotes].text = "illness.ajccStageNotes|癌症最初診斷AJCC分期_補充說明欄位"
-* item[illness].item[ajccStageNotes].definition = "若前述欄位為9，則請於此欄位描述其他系統之其他分期為何"
-* item[illness].item[ajccStageNotes].answer.valueString = "T1"
+* item[illness].item[oriCancerAjcc1].linkId = "7.4"
+* item[illness].item[oriCancerAjcc1].text = "illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位"
+* item[illness].item[oriCancerAjcc1].definition = "若前述欄位為9，則請於此欄位描述其他系統之其他分期為何"
+* item[illness].item[oriCancerAjcc1].answer.valueString = "T1"
 
 * item[illness].item[cancerStatus].linkId = "7.5"
 * item[illness].item[cancerStatus].text = "illness.cancerStatus|目前癌症狀態"
 * item[illness].item[cancerStatus].answer.valueCoding = CancerStageStatus#4 "癌症遠端轉移"
 
-* item[illness].item[assessment].linkId = "7.6"
-* item[illness].item[assessment].text = "illness.assessment|後續治療評估"
-* item[illness].item[assessment].definition = "可複選"
-* item[illness].item[assessment].answer[0].valueCoding = CancerStageAssessment#1 "手術治療"
-* item[illness].item[assessment].answer[+].valueCoding = CancerStageAssessment#4 "標靶治療"
+* item[illness].item[cancerTreatment].linkId = "7.6"
+* item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估"
+* item[illness].item[cancerTreatment].definition = "可複選"
+* item[illness].item[cancerTreatment].answer[0].valueCoding = CancerStageAssessment#1 "手術治療"
+* item[illness].item[cancerTreatment].answer[+].valueCoding = CancerStageAssessment#4 "標靶治療"
 
 
 * text.status = #generated
@@ -297,7 +297,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.3</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">hosp.diagRepApplyDate|開立診斷書申請日期</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">hosp.medCertBookDate|開立診斷書申請日期</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
@@ -387,7 +387,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 3.1</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">doctor.drIdCard|醫師身分證號</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">doctor.diagPrsnId|醫師身分證號</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
@@ -402,7 +402,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 3.2</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">doctor.drName|診斷醫師姓名</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">doctor.diagPrsnName|診斷醫師姓名</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
@@ -431,7 +431,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.1</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.diagCode|主診斷代碼</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.icd10cmCode|主診斷代碼</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
@@ -707,7 +707,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.1</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.primaryCancerIcd|原發癌症診斷碼</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerCode|原發癌症診斷碼</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
@@ -724,7 +724,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.2</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.cancerDate|癌症最初診斷日期</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerDxDate|癌症最初診斷日期</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
@@ -739,7 +739,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.3</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.ajccStage|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
@@ -756,7 +756,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.4</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.ajccStageNotes|癌症最初診斷AJCC分期_補充說明欄位</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
@@ -788,11 +788,11 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.6</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.assessment|後續治療評估</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.cancerTreatment|後續治療評估</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-nhi-cancerstage-assessment.html\">NHI-後續治療評估 1</a>: 手術治療<br /><a href=\"CodeSystem-nhi-cancerstage-assessment.html\">NHI-後續治療評估 4</a>: 標靶治療</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-nhi-cancerstage-cancerTreatment.html\">NHI-後續治療評估 1</a>: 手術治療<br /><a href=\"CodeSystem-nhi-cancerstage-cancerTreatment.html\">NHI-後續治療評估 4</a>: 標靶治療</span></span></td>
         </tr>
         <tr>
             <td colspan=\"4\" class=\"hierarchy\"><br /><a href=\"http://hl7.org/fhir/R4/formats.html#table\"

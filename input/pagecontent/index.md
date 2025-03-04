@@ -31,7 +31,8 @@
 4. 若資料不符合格式，健保署回覆上傳失敗訊息，由醫院查詢上傳結果
 5. 資料上傳成功後，健保署申請證明通過，由醫院查詢申請結果
 6. 資料上傳成功後，健保署申請證明未通過，由醫院查詢申請結果
-<div style="justify-content: center;display: flex;">{% include index.svg %}</div>
+<!--For CI-Build> <div style="justify-content: center;display: flex;">{% include index.svg %}</div> <-->
+<img class="figure-img img-responsive img-rounded center-block" src="sequence.png" alt="IG use case" style="display: block;margin-left: auto;margin-right: auto;width: 45%;"/>
 
 ### 如何閱讀這個實作指引(IG)
 <div  style="padding-left: 10px;"> 
