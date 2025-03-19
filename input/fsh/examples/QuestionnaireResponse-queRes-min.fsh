@@ -133,6 +133,77 @@ Usage: #example
 * item[diagnosis].item[examinationReport].item[reportDate].definition = "YYYY-MM-DD"
 * item[diagnosis].item[examinationReport].item[reportDate].answer.valueDate = "2024-01-01"
 
+* item[diagnosis].item[medrec].linkId = "4.3"
+* item[diagnosis].item[medrec].text = "diagnosis.medrec|病歷資料"
+
+* item[diagnosis].item[medrec].item[medrec].linkId = "4.3.1"
+* item[diagnosis].item[medrec].item[medrec].text = "diagnosis.medrec.medrec|病歷資料"
+* item[diagnosis].item[medrec].item[medrec].answer.valueString = "file://Medicalrecord01.pdf"
+
+* item[diagnosis].item[medrec].item[medrecTitle].linkId = "4.3.2"
+* item[diagnosis].item[medrec].item[medrecTitle].text = "diagnosis.medrec.medrecTitle|病歷資料名稱"
+* item[diagnosis].item[medrec].item[medrecTitle].answer.valueString = "Medicalrecord01"
+
+* item[diagnosis].item[imageStudy].linkId = "4.4"
+* item[diagnosis].item[imageStudy].text = "diagnosis.imageStudy|影像報告"
+
+* item[diagnosis].item[imageStudy].item[imgItem].linkId = "4.4.1"
+* item[diagnosis].item[imageStudy].item[imgItem].text = "diagnosis.imageStudy.imgItem|影像報告"
+* item[diagnosis].item[imageStudy].item[imgItem].answer.valueCoding = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw#B34JZZ3
+
+* item[diagnosis].item[imageStudy].item[imgResult].linkId = "4.4.2"
+* item[diagnosis].item[imageStudy].item[imgResult].text = "diagnosis.imageStudy.imgResult|影像報告結果"
+* item[diagnosis].item[imageStudy].item[imgResult].answer.valueString = "CT of Chest with contrast enhancement shows: COMPARISON: 2023-12-13. FINDINGS: - placement of a right port-A catheter. - a small(＜=6mm) perifissural nodule in right minor lung fissure(SE2 IM66) larger. - small pleural nodules at RUL and LUL up to 1.1cm in apical RUL larger. - no pleural effusion. - no definite mediastinal lymphadenopathy. - some mixed increased and decreased densities at the vertebral bodies of thoracolumbar spines; partial collapse of L5 vertebral body stable. 1. A small perifissural nodule in right minor lung fissure larger. 2. Small pleural nodules at RUL and LUL up to 1.1cm in apical RUL larger. 2. Bone metastases."
+
+* item[diagnosis].item[imageStudy].item[imgDate].linkId = "4.4.3"
+* item[diagnosis].item[imageStudy].item[imgDate].text = "diagnosis.imageStudy.imgDate|影像報告日期"
+* item[diagnosis].item[imageStudy].item[imgDate].answer.valueDate = "2024-01-01"
+
+* item[diagnosis].item[imageStudy].item[imgBodySite].linkId = "4.4.4"
+* item[diagnosis].item[imageStudy].item[imgBodySite].text = "diagnosis.imageStudy.imgBodySite|影像檢查的身體部位"
+* item[diagnosis].item[imageStudy].item[imgBodySite].answer.valueCoding = http://snomed.info/sct#774007 "Head and neck structure"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].linkId = "4.4.5"
+* item[diagnosis].item[imageStudy].item[imgDicom].text = "diagnosis.imageStudy.imgDicom|DICOM影像"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[studyUid].linkId = "4.4.5.1"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[studyUid].text = "diagnosis.imageStudy.imgDicom.studyUid|整項影像檢查的識別碼"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[studyUid].answer.valueString = "urn:oid:2.16.886.2102.54.4546465747.465465465"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].linkId = "4.4.5.2"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].text = "diagnosis.imageStudy.imgDicom.series|每項影像檢查有一個或多個系列(series)的實例"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].linkId = "4.4.5.2.1"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|每項影像檢查有一個或多個系列(series)的實例"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].answer.valueString = "2.16.886.2102.54.4546465747.465465466"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].linkId = "4.4.5.2.2"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].text = "diagnosis.imageStudy.imgDicom.series.modality|此系列實例所使用的成像儀器"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].answer.valueCoding = http://dicom.nema.org/resources/ontology/DCM#CT
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].linkId = "4.4.5.2.3"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].text = "diagnosis.imageStudy.imgDicom.series.instance|系列中的一個SOP實例"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].linkId = "4.4.5.2.3.1"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM影像"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].answer.valueString = "2.25.88017001449189502323411118737039844241"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].linkId = "4.4.5.2.3.2"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM class 類型"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answer.valueCoding = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.2
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].linkId = "4.4.6"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].text = "diagnosis.imageStudy.imgNonDicom|非DICOM影像"
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].linkId = "4.4.6.1"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicom|非DICOM影像"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].answer.valueString = "file://US01.jpg"
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].linkId = "4.4.6.2"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicomMimeType|非DICOM影像MimeType"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding = #image/jpeg
+
+
 * item[ci].linkId = "5"
 * item[ci].text = "ci|重大傷病"
 * item[ci].answer.valueReference = Reference(Condition/con-min)
@@ -201,7 +272,7 @@ Usage: #example
 * item[illness].item[cancerTreatment].answer[0].valueCoding = CancerStageAssessment#1 "手術治療"
 * item[illness].item[cancerTreatment].answer[+].valueCoding = CancerStageAssessment#4 "標靶治療"
 
-
+/*
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
     <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">
@@ -801,4 +872,4 @@ Usage: #example
                         alt=\"doco\" style=\"background-color: inherit\" /> Documentation for this format</a></td>
         </tr>
     </table>
-</div>"
+</div>"*/

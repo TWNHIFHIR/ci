@@ -109,7 +109,9 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item contains
     icd10cmCode 1..1 MS and
     //diagName 1..1 MS and
-    examinationReport 0..* MS
+    examinationReport 0..* MS and
+    medrec 0..* MS and
+    imageStudy 0..* MS
 
 * item[diagnosis].item[icd10cmCode].linkId = "4.1"
 * item[diagnosis].item[icd10cmCode].text = "diagnosis.icd10cmCode|主診斷代碼"
@@ -130,7 +132,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[examinationReport].item ^slicing.rules = #closed
 * item[diagnosis].item[examinationReport].item contains
     reportType 1..1 MS and
-    speType 1..1 MS and
+    speType 0..1 MS and
     reportResultString 0..1 MS and
     reportResultPdf 0..1 MS and
     reportResultPdfTitle 0..1 MS and
@@ -169,6 +171,124 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[examinationReport].item[reportDate].answer 1..1 MS
 //* item[diagnosis].item[examinationReport].item[reportDate].answer.valueDate only date
 //* item[diagnosis].item[examinationReport].item[reportDate].answer.valueDate 1..1 MS
+
+* item[diagnosis].item[medrec].linkId = "4.3"
+* item[diagnosis].item[medrec].text = "diagnosis.medrec|病歷資料"
+
+* item[diagnosis].item[medrec].item ^slicing.discriminator.type = #value
+* item[diagnosis].item[medrec].item ^slicing.discriminator.path = "linkId"
+* item[diagnosis].item[medrec].item ^slicing.rules = #closed
+* item[diagnosis].item[medrec].item contains
+    medrec 1..1 MS and
+    medrecTitle 0..1 MS
+
+* item[diagnosis].item[medrec].item[medrec].linkId = "4.3.1"
+* item[diagnosis].item[medrec].item[medrec].text = "diagnosis.medrec.medrec|病歷資料"
+* item[diagnosis].item[medrec].item[medrec].answer 1..1 MS
+* item[diagnosis].item[medrec].item[medrec].answer.valueString 1..1 MS
+
+* item[diagnosis].item[medrec].item[medrecTitle].linkId = "4.3.2"
+* item[diagnosis].item[medrec].item[medrecTitle].text = "diagnosis.medrec.medrecTitle|病歷資料名稱"
+* item[diagnosis].item[medrec].item[medrecTitle].answer.valueString 1..1 MS
+
+* item[diagnosis].item[imageStudy].linkId = "4.4"
+* item[diagnosis].item[imageStudy].text = "diagnosis.imageStudy|影像報告"
+
+* item[diagnosis].item[imageStudy].item ^slicing.discriminator.type = #value
+* item[diagnosis].item[imageStudy].item ^slicing.discriminator.path = "linkId"
+* item[diagnosis].item[imageStudy].item ^slicing.rules = #closed
+* item[diagnosis].item[imageStudy].item contains
+    imgItem 1..1 MS and
+    imgResult 1..1 MS and
+    imgDate 1..1 MS and
+    imgBodySite 1..1 MS and
+    imgDicom 0..* MS and
+    imgNonDicom 0..* MS
+
+* item[diagnosis].item[imageStudy].item[imgItem].linkId = "4.4.1"
+* item[diagnosis].item[imageStudy].item[imgItem].text = "diagnosis.imageStudy.imgItem|影像報告"
+* item[diagnosis].item[imageStudy].item[imgItem].answer.valueCoding  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgResult].linkId = "4.4.2"
+* item[diagnosis].item[imageStudy].item[imgResult].text = "diagnosis.imageStudy.imgResult|影像報告結果"
+* item[diagnosis].item[imageStudy].item[imgResult].answer.valueString  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgDate].linkId = "4.4.3"
+* item[diagnosis].item[imageStudy].item[imgDate].text = "diagnosis.imageStudy.imgDate|影像報告日期"
+* item[diagnosis].item[imageStudy].item[imgDate].answer  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgBodySite].linkId = "4.4.4"
+* item[diagnosis].item[imageStudy].item[imgBodySite].text = "diagnosis.imageStudy.imgBodySite|影像檢查的身體部位"
+* item[diagnosis].item[imageStudy].item[imgBodySite].answer.valueCoding  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgDicom].linkId = "4.4.5"
+* item[diagnosis].item[imageStudy].item[imgDicom].text = "diagnosis.imageStudy.imgDicom|DICOM影像"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item ^slicing.discriminator.type = #value
+* item[diagnosis].item[imageStudy].item[imgDicom].item ^slicing.discriminator.path = "linkId"
+* item[diagnosis].item[imageStudy].item[imgDicom].item ^slicing.rules = #closed
+* item[diagnosis].item[imageStudy].item[imgDicom].item contains
+    studyUid 1..1 MS and
+    series 1..* MS
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[studyUid].linkId = "4.4.5.1"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[studyUid].text = "diagnosis.imageStudy.imgDicom.studyUid|整項影像檢查的識別碼"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[studyUid].answer.valueString  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].linkId = "4.4.5.2"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].text = "diagnosis.imageStudy.imgDicom.series|每項影像檢查有一個或多個系列(series)的實例"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item ^slicing.discriminator.type = #value
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item ^slicing.discriminator.path = "linkId"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item ^slicing.rules = #closed
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item contains
+    uid 1..1 MS and
+    modality 1..1 MS and
+    instance 1..* MS
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].linkId = "4.4.5.2.1"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|每項影像檢查有一個或多個系列(series)的實例"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].answer.valueString  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].linkId = "4.4.5.2.2"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].text = "diagnosis.imageStudy.imgDicom.series.modality|此系列實例所使用的成像儀器"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].answer.valueCoding  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].linkId = "4.4.5.2.3"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].text = "diagnosis.imageStudy.imgDicom.series.instance|系列中的一個SOP實例"
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item ^slicing.discriminator.type = #value
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item ^slicing.discriminator.path = "linkId"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item ^slicing.rules = #closed
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item contains
+    uid 1..1 MS and
+    sopClass 1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].linkId = "4.4.5.2.3.1"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM影像"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].answer.valueString  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].linkId = "4.4.5.2.3.2"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM class 類型"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answer.valueCoding  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].linkId = "4.4.6"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].text = "diagnosis.imageStudy.imgNonDicom|非DICOM影像"
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item ^slicing.discriminator.type = #value
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item ^slicing.discriminator.path = "linkId"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item ^slicing.rules = #closed
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item contains
+    imgNonDicom 1..1 MS and
+    imgNonDicomMimeType	 1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].linkId = "4.4.6.1"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicom|非DICOM影像"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].answer.valueString  1..1 MS
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].linkId = "4.4.6.2"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicomMimeType|非DICOM影像MimeType"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding  1..1 MS
 
 * item[ci].linkId = "5"
 * item[ci].text = "ci|重大傷病"

@@ -71,4 +71,4 @@ Description: "NHI-重大傷病類別值集"
 * ^version = "0.1.0"
 * ^experimental = false
 * include codes from system NHICICategory
-* include codes from system http://terminology.hl7.org/CodeSystem/condition-category
+* include codes from system http://terminology.hl7.org/CodeSystem/condition-category|1.0.1

@@ -116,6 +116,97 @@ Usage: #example
 * item[diagnosis].item[examinationReport].item[reportDate].type = #date
 * item[diagnosis].item[examinationReport].item[reportDate].repeats = true
 
+* item[diagnosis].item[medrec].linkId = "4.3"
+* item[diagnosis].item[medrec].text = "diagnosis.medrec|病歷資料"
+* item[diagnosis].item[medrec].type = #group
+* item[diagnosis].item[medrec].repeats = true
+
+* item[diagnosis].item[medrec].item[medrec].linkId = "4.3.1"
+* item[diagnosis].item[medrec].item[medrec].text = "diagnosis.medrec.medrec|病歷資料"
+* item[diagnosis].item[medrec].item[medrec].definition = "請填寫完整檔案路徑"
+* item[diagnosis].item[medrec].item[medrec].type = #string
+
+* item[diagnosis].item[medrec].item[medrecTitle].linkId = "4.3.2"
+* item[diagnosis].item[medrec].item[medrecTitle].text = "diagnosis.medrec.medrecTitle|病歷資料名稱"
+* item[diagnosis].item[medrec].item[medrecTitle].type = #string
+
+* item[diagnosis].item[imageStudy].linkId = "4.4"
+* item[diagnosis].item[imageStudy].text = "diagnosis.imageStudy|影像報告"
+* item[diagnosis].item[imageStudy].type = #group
+* item[diagnosis].item[imageStudy].repeats = true
+
+* item[diagnosis].item[imageStudy].item[imgItem].linkId = "4.4.1"
+* item[diagnosis].item[imageStudy].item[imgItem].text = "diagnosis.imageStudy.imgItem|影像報告"
+* item[diagnosis].item[imageStudy].item[imgItem].type = #choice
+//* item[diagnosis].item[imageStudy].item[imgItem].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type" 待補
+
+* item[diagnosis].item[imageStudy].item[imgResult].linkId = "4.4.2"
+* item[diagnosis].item[imageStudy].item[imgResult].text = "diagnosis.imageStudy.imgResult|影像報告結果"
+* item[diagnosis].item[imageStudy].item[imgResult].type = #string
+
+* item[diagnosis].item[imageStudy].item[imgDate].linkId = "4.4.3"
+* item[diagnosis].item[imageStudy].item[imgDate].text = "diagnosis.imageStudy.imgDate|影像報告日期"
+* item[diagnosis].item[imageStudy].item[imgDate].definition = "YYYY-MM-DD"
+* item[diagnosis].item[imageStudy].item[imgDate].type = #date
+
+* item[diagnosis].item[imageStudy].item[imgBodySite].linkId = "4.4.4"
+* item[diagnosis].item[imageStudy].item[imgBodySite].text = "diagnosis.imageStudy.imgBodySite|影像檢查的身體部位"
+* item[diagnosis].item[imageStudy].item[imgBodySite].type = #choice
+//* item[diagnosis].item[imageStudy].item[imgItem].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type" 待補
+
+* item[diagnosis].item[imageStudy].item[imgDicom].linkId = "4.4.5"
+* item[diagnosis].item[imageStudy].item[imgDicom].text = "diagnosis.imageStudy.imgDicom|DICOM影像"
+* item[diagnosis].item[imageStudy].item[imgDicom].type = #group
+* item[diagnosis].item[imageStudy].item[imgDicom].repeats = true
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[studyUid].linkId = "4.4.5.1"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[studyUid].text = "diagnosis.imageStudy.imgDicom.studyUid|整項影像檢查的識別碼"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[studyUid].type = #string
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].linkId = "4.4.5.2"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].text = "diagnosis.imageStudy.imgDicom.series|每項影像檢查有一個或多個系列(series)的實例"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].type = #group
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].repeats = true
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].linkId = "4.4.5.2.1"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|每項影像檢查有一個或多個系列(series)的實例"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].type = #string
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].linkId = "4.4.5.2.2"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].text = "diagnosis.imageStudy.imgDicom.series.modality|此系列實例所使用的成像儀器"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].type = #choice
+//* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type" 待補
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].linkId = "4.4.5.2.3"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].text = "diagnosis.imageStudy.imgDicom.series.instance|系列中的一個SOP實例"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].type = #group
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].repeats = true
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].linkId = "4.4.5.2.3.1"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM影像"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].type = #string
+
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].linkId = "4.4.5.2.3.2"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM class 類型"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].type = #choice
+//* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type" 待補
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].linkId = "4.4.6"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].text = "diagnosis.imageStudy.imgNonDicom|非DICOM影像"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].type = #group
+* item[diagnosis].item[imageStudy].item[imgNonDicom].repeats = true
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].linkId = "4.4.6.1"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicom|非DICOM影像"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].type = #string
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].definition = "請填寫完整檔案路徑"
+
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].linkId = "4.4.6.2"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicomMimeType|非DICOM影像MimeType"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].type = #choice
+//* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type" 待補
+
+
 * item[ci].linkId = "5"
 * item[ci].text = "ci|重大傷病"
 * item[ci].type = #reference
