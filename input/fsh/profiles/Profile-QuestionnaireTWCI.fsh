@@ -254,7 +254,7 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
     instance 1..* MS
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].linkId = "4.4.5.2.1"
-* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|每項影像檢查有一個或多個系列(series)的實例"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|此系列的DICOM系列實例UID"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].type = #string
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].linkId = "4.4.5.2.2"
@@ -279,7 +279,7 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].type = #string
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].linkId = "4.4.5.2.3.2"
-* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM class 類型"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.sopClass|DICOM class 類型"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].type = #choice
 //* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type" 待補
 
@@ -406,5 +406,3 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 
 * item.linkId ^short = "問卷題目編號"
 * item.type ^short = "答題類型。group:組合題 ｜ date:日期 ｜ string:字串 ｜ integer:整數｜ choice:選擇｜ attachment:文件｜ text:文字"
-
-

@@ -174,7 +174,7 @@ Usage: #example
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].text = "diagnosis.imageStudy.imgDicom.series|每項影像檢查有一個或多個系列(series)的實例"
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].linkId = "4.4.5.2.1"
-* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|每項影像檢查有一個或多個系列(series)的實例"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|此系列的DICOM系列實例UID"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].answer.valueString = "2.16.886.2102.54.4546465747.465465466"
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].linkId = "4.4.5.2.2"
@@ -189,7 +189,7 @@ Usage: #example
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].answer.valueString = "2.25.88017001449189502323411118737039844241"
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].linkId = "4.4.5.2.3.2"
-* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM class 類型"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.sopClass|DICOM class 類型"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answer.valueCoding = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.2
 
 * item[diagnosis].item[imageStudy].item[imgNonDicom].linkId = "4.4.6"

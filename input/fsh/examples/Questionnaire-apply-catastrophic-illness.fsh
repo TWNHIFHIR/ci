@@ -169,7 +169,7 @@ Usage: #example
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].repeats = true
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].linkId = "4.4.5.2.1"
-* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|每項影像檢查有一個或多個系列(series)的實例"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|此系列的DICOM系列實例UID"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].type = #string
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].linkId = "4.4.5.2.2"
@@ -187,7 +187,7 @@ Usage: #example
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].type = #string
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].linkId = "4.4.5.2.3.2"
-* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM class 類型"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.sopClass|DICOM class 類型"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].type = #choice
 //* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type" 待補
 
