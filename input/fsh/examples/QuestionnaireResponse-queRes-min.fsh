@@ -10,8 +10,7 @@ Usage: #example
 * item[hosp].text = "hosp|院所資訊"
 
 * item[hosp].item[applType].linkId = "1.1"
-* item[hosp].item[applType].text = "hosp.applType|申報方式"
-* item[hosp].item[applType].definition = "醫院報備固定為2"
+* item[hosp].item[applType].text = "hosp.applType|申報方式，醫院報備固定為2。"
 * item[hosp].item[applType].answer.valueCoding = NHICIReportingMethod#2 "院所代辦"
 
 * item[hosp].item[applDate].linkId = "1.2" 
@@ -20,7 +19,7 @@ Usage: #example
 
 * item[hosp].item[medCertBookDate].linkId = "1.3" 
 * item[hosp].item[medCertBookDate].text = "hosp.medCertBookDate|開立診斷書申請日期"
-* item[hosp].item[medCertBookDate].answer.valueDate = "2025-02-18"
+* item[hosp].item[medCertBookDate].answer.valueDate = "2025-04-08"
 
 * item[hosp].item[hospId].linkId = "1.4" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
@@ -84,7 +83,7 @@ Usage: #example
 
 * item[doctor].item[diagPrsnId].linkId = "3.1"
 * item[doctor].item[diagPrsnId].text = "doctor.diagPrsnId|醫師身分證號"
-* item[doctor].item[diagPrsnId].definition = "醫師國民身分證統一編號"
+//* item[doctor].item[diagPrsnId].definition = "醫師國民身分證統一編號"
 * item[doctor].item[diagPrsnId].answer.valueString = "A234649456"
 
 * item[doctor].item[diagPrsnName].linkId = "3.2"
@@ -120,8 +119,7 @@ Usage: #example
 * item[diagnosis].item[examinationReport].item[reportResultString].answer.valueString = "Prostate labeled as lesion 1 magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate labeled as lesion 2 magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate right lateral magnetic resonance-ultrasound fusion biopsy prostatic intraepithelial neoplasia high-gradeProstate right medial magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate left medial magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate left lateral magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+4=7MACROSCOPYSites of biopsy: A. Lesion 1 (left anterior midgland TZ): 3 cores (length: up to 2.1 cm) B. Lesion 2 (right anterior apex TZ): 3 cores (length: up to 2.0 cm) C. Right lateral: 3 cores (length: up to 1.8 cm) D. Right medial: 3 cores (length: up to 1.5 cm) E. Left medial: 3 cores (length: up to 1.4 cm) F. Left lateral: 3 cores (length: up to 1.2 cm)All for section and labeled as: A1 to F1. Jar 0MICROSCOPY1. Histologic diagnosis: A. Lesion 1: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 90% 70% 60% * Maximum cancer core length: 9.8 mm B. Lesion 2: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 40% 25% 5% C. Right lateral: high-grade prostatic intraepithelial neoplasia (PIN unifocal) D. Right medial: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 20% 0% 0% E. Left medial: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 40% 40% 0% F. Left lateral: adenocarcinoma * Gleason score: 3+4=7 (Grade group: 2) * Percentage of pattern 4 component: less than 5% * Area percentages of tumor part: 100% 5% 5%2. Perineural invasion: not identified3. Extraprostatic extension: not identified4. Seminal vesicle invasion: seminal vesicle not includedStomach middle to upper body lesser curvature anterior wall endoscopic biopsy     (1) extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue            (MALT lymphoma)      (2) chronic active gastritis with Helicobacter infection      (3) intestinal metaplasiaStomach antrum lesser curvature and greater curvature endoscopic biopsy     (1) chronic gastritis without Helicobacter infection      (2) intestinal metaplasiaStomach mid-body lesser curvature and greater curvature endoscopic biopsy      (1) chronic gastritis with Helicobacter infection      (2) intestinal metaplasia     The specimen is submitted in 3 separated bottles labeled as A B and C respectively fixed in formalin.     The specimen A consists of two tissue fragments measuring up to 0.4 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft.        The specimen B consists of two tissue fragments measuring up to 0.3 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft.      The specimen C consists of 3 tissue fragments measuring up to 0.3 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft.           All for section and labeled as."
 
 * item[diagnosis].item[examinationReport].item[reportResultPdf].linkId = "4.2.4"
-* item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告"
-* item[diagnosis].item[examinationReport].definition = "請填寫完整檔案路徑|填寫格式：file://檔名.副檔名"
+* item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
 * item[diagnosis].item[examinationReport].item[reportResultPdf].answer.valueString = "file://PathologyReport01.pdf"
 
 * item[diagnosis].item[examinationReport].item[reportResultPdfTitle].linkId = "4.2.5"
@@ -129,8 +127,7 @@ Usage: #example
 * item[diagnosis].item[examinationReport].item[reportResultPdfTitle].answer.valueString = "PathologyReport01"
 
 * item[diagnosis].item[examinationReport].item[reportDate].linkId = "4.2.6"
-* item[diagnosis].item[examinationReport].item[reportDate].text = "diagnosis.examinationReport.reportDate|報告日期"
-* item[diagnosis].item[examinationReport].item[reportDate].definition = "YYYY-MM-DD"
+* item[diagnosis].item[examinationReport].item[reportDate].text = "diagnosis.examinationReport.reportDate|報告日期，YYYY-MM-DD。"
 * item[diagnosis].item[examinationReport].item[reportDate].answer.valueDate = "2024-01-01"
 
 * item[diagnosis].item[medrec].linkId = "4.3"
@@ -201,7 +198,7 @@ Usage: #example
 
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].linkId = "4.4.6.2"
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicomMimeType|非DICOM影像MimeType"
-* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding = #image/jpeg
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding = urn:ietf:bcp:13#image/jpeg
 
 
 * item[ci].linkId = "5"
@@ -217,8 +214,7 @@ Usage: #example
 * item[cancerStage].text = "cancerStage|癌症期別"
 
 * item[cancerStage].item[cancerStage].linkId = "6.1"
-* item[cancerStage].item[cancerStage].text = "cancerStage.cancerStage|癌症期別"
-* item[cancerStage].item[cancerStage].definition = "醫院自行填入癌症期別(1~4)，若為不適用者填9(不適用)"
+* item[cancerStage].item[cancerStage].text = "cancerStage.cancerStage|癌症期別，醫院自行填入癌症期別(1~4)，若為不適用者填9(不適用)。"
 * item[cancerStage].item[cancerStage].answer.valueCoding = CancerStage#1 "第一期"
 
 * item[cancerStage].item[assessScore].linkId = "6.2"
@@ -234,8 +230,7 @@ Usage: #example
 * item[cancerStage].item[actualStage].answer.valueString = "T1"
 
 * item[cancerStage].item[assessDate].linkId = "6.5"
-* item[cancerStage].item[assessDate].text = "cancerStage.assessDate|癌症分期量表評估日期"
-* item[cancerStage].item[assessDate].definition = "YYYY-MM-DD，西元年月日，民國前為負數"
+* item[cancerStage].item[assessDate].text = "cancerStage.assessDate|癌症分期量表評估日期，YYYY-MM-DD，西元年月日，民國前為負數。"
 * item[cancerStage].item[assessDate].answer.valueDate = "2024-01-01"
 
 
@@ -243,23 +238,19 @@ Usage: #example
 * item[illness].text = "illness|惡性腫瘤重大傷病換發評估表"
 
 * item[illness].item[oriCancerCode].linkId = "7.1"
-* item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼"
-* item[illness].item[oriCancerCode].definition = "最長為7碼"
+* item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼，最長為7碼。"
 * item[illness].item[oriCancerCode].answer.valueCoding = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw#C49.4 "腹(部)結締及軟組織之惡性腫瘤"
 
 * item[illness].item[oriCancerDxDate].linkId = "7.2"
-* item[illness].item[oriCancerDxDate].text = "illness.oriCancerDxDate|癌症最初診斷日期"
-* item[illness].item[oriCancerDxDate].definition = "西元年月日；不得大於系統日"
+* item[illness].item[oriCancerDxDate].text = "illness.oriCancerDxDate|癌症最初診斷日期，西元年月日；不得大於系統日。"
 * item[illness].item[oriCancerDxDate].answer.valueDate = "2017-03-16"
 
 * item[illness].item[oriCancerAjcc].linkId = "7.3"
-* item[illness].item[oriCancerAjcc].text = "illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)"
-* item[illness].item[oriCancerAjcc].definition = "依期別填入；若不是用此分類而用其他分類，則填寫9"
+* item[illness].item[oriCancerAjcc].text = "illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)，依期別填入；若不是用此分類而用其他分類，則填寫9。"
 * item[illness].item[oriCancerAjcc].answer.valueCoding = CancerStaging#9
 
 * item[illness].item[oriCancerAjcc1].linkId = "7.4"
-* item[illness].item[oriCancerAjcc1].text = "illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位"
-* item[illness].item[oriCancerAjcc1].definition = "若前述欄位為9，則請於此欄位描述其他系統之其他分期為何"
+* item[illness].item[oriCancerAjcc1].text = "illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位，若前述欄位為9，則請於此欄位描述其他系統之其他分期為何。"
 * item[illness].item[oriCancerAjcc1].answer.valueString = "T1"
 
 * item[illness].item[cancerStatus].linkId = "7.5"
@@ -267,8 +258,7 @@ Usage: #example
 * item[illness].item[cancerStatus].answer.valueCoding = CancerStageStatus#4 "癌症遠端轉移"
 
 * item[illness].item[cancerTreatment].linkId = "7.6"
-* item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估"
-* item[illness].item[cancerTreatment].definition = "可複選"
+* item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估，可複選。"
 * item[illness].item[cancerTreatment].answer[0].valueCoding = CancerStageAssessment#1 "手術治療"
 * item[illness].item[cancerTreatment].answer[+].valueCoding = CancerStageAssessment#4 "標靶治療"
 

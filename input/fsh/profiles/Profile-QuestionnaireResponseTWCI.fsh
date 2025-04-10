@@ -38,8 +38,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
     acptNum 0..1 MS
 
 * item[hosp].item[applType].linkId = "1.1"
-* item[hosp].item[applType].text = "hosp.applType|申報方式"
-* item[hosp].item[applType].definition = "醫院報備固定為2"
+* item[hosp].item[applType].text = "hosp.applType|申報方式，醫院報備固定為2。"
 * item[hosp].item[applType].answer 1..1 MS
 * item[hosp].item[applType].answer.valueCoding 1..1
 * item[hosp].item[applType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-reporting-method
@@ -91,7 +90,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 * item[doctor].item[diagPrsnId].linkId = "3.1"
 * item[doctor].item[diagPrsnId].text = "doctor.diagPrsnId|醫師身分證號"
-* item[doctor].item[diagPrsnId].definition = "醫師國民身分證統一編號"
+//* item[doctor].item[diagPrsnId].definition = "醫師國民身分證統一編號"
 * item[doctor].item[diagPrsnId].answer 1..1 MS
 * item[doctor].item[diagPrsnId].answer.valueString 1..1 MS
 
@@ -155,19 +154,17 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[examinationReport].item[reportResultString].answer.valueString 1..1 MS
 
 * item[diagnosis].item[examinationReport].item[reportResultPdf].linkId = "4.2.4"
-* item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告"
+* item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
 * item[diagnosis].item[examinationReport].item[reportResultPdf].answer 1..1 MS
 * item[diagnosis].item[examinationReport].item[reportResultPdf].answer.valueString 1..1 MS
 
 * item[diagnosis].item[examinationReport].item[reportResultPdfTitle].linkId = "4.2.5"
 * item[diagnosis].item[examinationReport].item[reportResultPdfTitle].text = "diagnosis.examinationReport.reportResultPdfTitle|檢查報告名稱"
-* item[diagnosis].item[examinationReport].item[reportResultPdfTitle].definition = "檢查報告名稱"
 * item[diagnosis].item[examinationReport].item[reportResultPdfTitle].answer 1..1 MS
 * item[diagnosis].item[examinationReport].item[reportResultPdfTitle].answer.valueString 1..1 MS
 
 * item[diagnosis].item[examinationReport].item[reportDate].linkId = "4.2.6"
-* item[diagnosis].item[examinationReport].item[reportDate].text = "diagnosis.examinationReport.reportDate|報告日期"
-* item[diagnosis].item[examinationReport].item[reportDate].definition = "YYYY-MM-DD"
+* item[diagnosis].item[examinationReport].item[reportDate].text = "diagnosis.examinationReport.reportDate|報告日期，YYYY-MM-DD。"
 * item[diagnosis].item[examinationReport].item[reportDate].answer 1..1 MS
 //* item[diagnosis].item[examinationReport].item[reportDate].answer.valueDate only date
 //* item[diagnosis].item[examinationReport].item[reportDate].answer.valueDate 1..1 MS
@@ -271,6 +268,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].linkId = "4.4.5.2.3.2"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.sopClass|DICOM class 類型"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answer.valueCoding  1..1 MS
+//* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answer.valueCoding from http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1
 
 * item[diagnosis].item[imageStudy].item[imgNonDicom].linkId = "4.4.6"
 * item[diagnosis].item[imageStudy].item[imgNonDicom].text = "diagnosis.imageStudy.imgNonDicom|非DICOM影像"
@@ -289,6 +287,8 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].linkId = "4.4.6.2"
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicomMimeType|非DICOM影像MimeType"
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding  1..1 MS
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/media-mimetypes
+
 
 * item[ci].linkId = "5"
 * item[ci].text = "ci|重大傷病"
@@ -309,8 +309,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
     assessDate 0..1 MS
 
 * item[cancerStage].item[cancerStage].linkId = "6.1"
-* item[cancerStage].item[cancerStage].text = "cancerStage.cancerStage|癌症期別"
-* item[cancerStage].item[cancerStage].definition = "醫院自行填入癌症期別(1~4)，若為不適用者填9(不適用)"
+* item[cancerStage].item[cancerStage].text = "cancerStage.cancerStage|癌症期別，醫院自行填入癌症期別(1~4)，若為不適用者填9(不適用)。"
 * item[cancerStage].item[cancerStage].answer 1..1 MS
 * item[cancerStage].item[cancerStage].answer.valueCoding 1..1 MS
 * item[cancerStage].item[cancerStage].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/cancer-stage
@@ -329,7 +328,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[cancerStage].item[actualStage].answer 1..1 MS
 
 * item[cancerStage].item[assessDate].linkId = "6.5"
-* item[cancerStage].item[assessDate].text = "cancerStage.assessDate|癌症分期量表評估日期"
+* item[cancerStage].item[assessDate].text = "cancerStage.assessDate|癌症分期量表評估日期，YYYY-MM-DD，西元年月日，民國前為負數。"
 * item[cancerStage].item[assessDate].answer 1..1 MS
 /** item[cancerStage].item[assessDate].answer.valueDate only date
 * item[cancerStage].item[assessDate].answer.valueDate 1..1 MS*/
@@ -349,24 +348,23 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
     cancerTreatment 0..1 MS
 
 * item[illness].item[oriCancerCode].linkId = "7.1"
-* item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼"
+* item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼，最長為7碼。"
 * item[illness].item[oriCancerCode].answer 1..1 MS
 * item[illness].item[oriCancerCode].answer.valueCoding 1..1 MS
 * item[illness].item[oriCancerCode].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-primary-cancer-icd
 
 * item[illness].item[oriCancerDxDate].linkId = "7.2"
-* item[illness].item[oriCancerDxDate].text = "illness.oriCancerDxDate|癌症最初診斷日期"
+* item[illness].item[oriCancerDxDate].text = "illness.oriCancerDxDate|癌症最初診斷日期，西元年月日；不得大於系統日。"
 * item[illness].item[oriCancerDxDate].answer 1..1 MS
 
 * item[illness].item[oriCancerAjcc].linkId = "7.3"
-* item[illness].item[oriCancerAjcc].text = "illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)"
-* item[illness].item[oriCancerAjcc].definition = "依期別填入；若不是用此分類而用其他分類，則填寫9"
+* item[illness].item[oriCancerAjcc].text = "illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)，依期別填入；若不是用此分類而用其他分類，則填寫9。"
 * item[illness].item[oriCancerAjcc].answer 1..1 MS
 * item[illness].item[oriCancerAjcc].answer.valueCoding 1..1 MS
 * item[illness].item[oriCancerAjcc].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstaging
 
 * item[illness].item[oriCancerAjcc1].linkId = "7.4"
-* item[illness].item[oriCancerAjcc1].text = "illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位"
+* item[illness].item[oriCancerAjcc1].text = "illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位，若前述欄位為9，則請於此欄位描述其他系統之其他分期為何。"
 * item[illness].item[oriCancerAjcc1].answer 1..1 MS
 * item[illness].item[oriCancerAjcc1].answer.valueString 1..1 MS
 
@@ -377,8 +375,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[illness].item[cancerStatus].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-status
 
 * item[illness].item[cancerTreatment].linkId = "7.6"
-* item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估"
-* item[illness].item[cancerTreatment].definition = "可複選"
+* item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估，可複選。"
 * item[illness].item[cancerTreatment].answer 1.. MS
 * item[illness].item[cancerTreatment].answer.valueCoding 1..1 MS
 * item[illness].item[cancerTreatment].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-cancerTreatment

@@ -72,32 +72,44 @@
 </div>
 
 ### 作者與貢獻者
-<table class="grid" style="width:100%">
-<thead>
-<tr class="header">
-<th style="width:10%">角色</th>
-<th style="width:20%">姓名</th>
-<th style="width:40%">機構</th>
-<th style="width:20%">聯絡方式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>作者-IG</td>
-<td>李麗惠（Li-Hui Lee）</td>
-<td rowspan="3" style="vertical-align: middle;">國立臺北護理健康大學-健康事業管理系</td>
-<td><a href="mailto:cclhlee@gmail.com">cclhlee@gmail.com</a><br>
-    <a href="mailto:cclhlee@ntunhs.edu.tw">cclhlee@ntunhs.edu.tw</a></td>
-</tr>
-<tr>
-<td>作者-IG</td>
-<td>曾鈺珈（Yu-Jia Tseng）</td>
-<td><a href="mailto:yujia151645@gmail.com">yujia151645@gmail.com</a></td>
-</tr>
-<tr>
-<td>作者-IG</td>
-<td>黃甄翔（Chen-Hsiang Huang）</td>
-<td><a href="mailto:014120huang@gmail.com">014120huang@gmail.com</a></td>
-</tr>
-</tbody>
+<table class="grid">
+    <thead>
+        <tr class="header">
+            <th style="width:10%">角色</th>
+            <th style="width:30%">姓名</th>
+            <th style="width:50%">機構</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align: middle;">作者-IG</td>
+            <td style="vertical-align: middle;">李麗惠</td>
+            <td rowspan="3" style="vertical-align: middle;">國立臺北護理健康大學-健康事業管理系</td>
+        </tr>
+        <tr>
+            <td>作者-IG</td>
+            <td>曾鈺珈</td>
+        </tr>
+        <tr>
+            <td>作者-IG</td>
+            <td>黃甄翔</td>
+        </tr>
+        <tr>
+            <td>貢獻者-IG</td>
+            <td>王智廣</td>
+            <td rowspan="2" style="vertical-align: middle;">衛生福利部中央健康保險署-醫務管理組支付標準科</td>
+        </tr>
+        <tr>
+            <td>貢獻者-IG</td>
+            <td>宋怡慧</td>
+        </tr>
+        <tr>
+            <td>貢獻者-IG</td>
+            <td colspan="2">衛生福利部中央健康保險署-資訊組</td>
+        </tr>
+        <tr>
+            <td>貢獻者-IG</td>
+            <td colspan="2">衛生福利部資訊處</td>
+        </tr>
+    </tbody>
 </table>

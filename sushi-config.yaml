@@ -8,7 +8,7 @@ canonical: https://twcore.mohw.gov.tw/ig/ci
 name: TWCI
 title: 臺灣重大傷病實作指引
 description: 臺灣重大傷病實作指引(Catastrophic Illness Implementation Guide，TWCI IG)
-status: draft # draft | active | retired | unknown
+status: active # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+

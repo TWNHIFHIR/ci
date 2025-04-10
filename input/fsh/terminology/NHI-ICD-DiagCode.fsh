@@ -2,7 +2,7 @@ ValueSet: NHIDiagCodeICD
 Id: nhi-diag-code-icd
 Title: "NHI-ICD-CM-主診斷代碼值集"
 Description: "NHI-ICD-CM-主診斷代碼值集"
-* ^date = "2024-11-06"
+* ^date = "2025-04-10"
 * ^version = "0.1.0"
 * ^experimental = false
 * https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw#C00.0
