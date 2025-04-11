@@ -1,5 +1,5 @@
 <div class="bg-success" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
-<p><b>相關資訊可參考衛生福利部中央健康保險署的<a href="https://www.nhi.gov.tw/ch/lp-2957-1.html" target="_blank">重大傷病專區</a>。</b></p>
+<p><b>相關資訊可參考衛生福利部中央健康保險署的<a href="https://www.nhi.gov.tw/ch/np-3788-1.html" target="_blank">癌症重大傷病申請導入FHIR</a>。</b></p>
 </div>
 
 ### 專案介紹
@@ -97,7 +97,7 @@
         <tr>
             <td>貢獻者-IG</td>
             <td>王智廣</td>
-            <td rowspan="2" style="vertical-align: middle;">衛生福利部中央健康保險署-醫務管理組支付標準科</td>
+            <td rowspan="2" style="vertical-align: middle;">衛生福利部中央健康保險署-醫務管理組</td>
         </tr>
         <tr>
             <td>貢獻者-IG</td>
@@ -113,3 +113,8 @@
         </tr>
     </tbody>
 </table>
+
+<div class="bg-info"><p>如醫院有參與意願申請加入癌症重大傷病導入FHIR試辦院所，或對資料內容、代碼檔、IG有任何疑問，</p>
+    <p>請先洽(02)2706-5866#2610 宋小姐</p>
+<p><span style="color:#FF0000;">*若民眾對事前審查案申請案件有疑義，請洽各分區業務組。</span></p>
+</div>
