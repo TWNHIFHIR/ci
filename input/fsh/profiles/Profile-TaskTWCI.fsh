@@ -24,12 +24,12 @@ Description:    "此重大傷病申請-Task TWCI Profile說明TWCI IG如何進�
 
 CodeSystem: NHICIApproveResult	
 Id: nhi-approve-result
-Title: "NHI-核定結果"
-Description: "臺灣衛生福利部中央健康保險署「核定結果」代碼，代碼出版日期：2024-12-31；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+Title: "NHI-健保重大傷病-核定結果"
+Description: "臺灣衛生福利部中央健康保險署「核定結果」代碼，代碼出版日期：2025-04-30；資料所屬單位：臺灣衛生福利部中央健康保險署。"
 * ^caseSensitive = true
 * ^content = #complete
-* ^date = "2024-12-31"
-* ^version = "0.1.0"
+* ^date = "2025-04-30"
+* ^version = "1.0.0"
 * ^experimental = false
 * #0 "退件（不符申請條件）"
 * #1 "退件（不發卡）"
@@ -48,9 +48,9 @@ Description: "臺灣衛生福利部中央健康保險署「核定結果」代碼
 
 ValueSet: NHICIApproveResult
 Id: nhi-approve-result
-Title: "NHI-核定結果值集"
-Description: "NHI-核定結果值集"
-* ^date = "2024-12-31"
-* ^version = "0.1.0"
+Title: "NHI-健保重大傷病-核定結果值集"
+Description: "NHI-健保重大傷病-核定結果值集"
+* ^date = "2025-04-30"
+* ^version = "1.0.0"
 * ^experimental = false
 * include codes from system NHICIApproveResult

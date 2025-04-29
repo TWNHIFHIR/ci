@@ -9,6 +9,11 @@ Usage: #example
 * identifier[idCardNumber].type.coding.code = #NNxxx
 * identifier[idCardNumber].system = "http://www.moi.gov.tw"
 * identifier[idCardNumber].value = "A123456789"
+* identifier[medicalRecord].use = #official
+* identifier[medicalRecord].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[medicalRecord].type.coding.code = #MR
+* identifier[medicalRecord].system = "https://tpech.gov.taipei"
+* identifier[medicalRecord].value = "123456"
 
 * name[usual].use = #usual
 * name[usual].text = "王大明"
@@ -40,6 +45,13 @@ Usage: #example
 			<b>識別碼型別</b>：National Person Identifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> （ <a href=\"http://terminology.hl7.org/CodeSystem/v2-0203\">Identifier Type Codes</a>#NNxxx） </span>
 			<br />
 			<b>身分證字號（official）</b>：A123456789 （http://www.moi.gov.tw）
+		</p>
+	</blockquote>
+	<blockquote>
+		<p>
+			<b>識別碼型別</b>：Medical record number <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> （ <a href=\"http://terminology.hl7.org/CodeSystem/v2-0203\">Identifier Type Codes</a>#MR） </span>
+			<br />
+			<b>病歷號（official）</b>：123456 （https://tpech.gov.taipei）
 		</p>
 	</blockquote>
 	<p>

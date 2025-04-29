@@ -1,33 +1,33 @@
 /*CodeSystem: CICategory 
 Id: ci-category
-Title: "NHI-重大傷病補充說明"
+Title: "NHI-健保重大傷病-重大傷病補充說明"
 Description: "臺灣衛生福利部中央健康保險署「重大傷病類別」代碼，代碼出版日期：2024-09-20；資料所屬單位：臺灣衛生福利部中央健康保險署。"
 * ^caseSensitive = true
 * ^content = #complete
 * ^date = "2024-09-20"
-* ^version = "0.1.0"
+* ^version = "1.0.0"
 * ^experimental = false
 * #citype "重大傷病"
 
 ValueSet: CICategory 
 Id: ci-category
-Title: "NHI-重大傷病補充說明值集"
-Description: "NHI-重大傷病類別值集"
+Title: "NHI-健保重大傷病-重大傷病補充說明值集"
+Description: "NHI-健保重大傷病-重大傷病類別值集"
 * ^date = "2024-09-20"
-* ^version = "0.1.0"
+* ^version = "1.0.0"
 * ^experimental = false
 * include codes from system CICategory 
 */
 
 
-CodeSystem: NHICICategory
+CodeSystem: NHICICategoryCodes
 Id: nhi-category
-Title: "NHI-重大傷病類別"
+Title: "NHI-健保重大傷病-重大傷病類別"
 Description: "臺灣衛生福利部中央健康保險署「重大傷病類別」代碼，代碼出版日期：2024-09-20；資料所屬單位：臺灣衛生福利部中央健康保險署。"
 * ^caseSensitive = true
 * ^content = #complete
 * ^date = "2024-09-20"
-* ^version = "0.1.0"
+* ^version = "1.0.0"
 * ^experimental = false
 * #1 "癌症"
 * #2 "先天性凝血因子異常"
@@ -65,10 +65,10 @@ Description: "臺灣衛生福利部中央健康保險署「重大傷病類別」
 
 ValueSet: NHICICategory
 Id: nhi-category
-Title: "NHI-重大傷病類別值集"
-Description: "NHI-重大傷病類別值集"
+Title: "NHI-健保重大傷病-重大傷病類別值集"
+Description: "NHI-健保重大傷病-重大傷病類別值集"
 * ^date = "2024-09-20"
-* ^version = "0.1.0"
+* ^version = "1.0.0"
 * ^experimental = false
-* include codes from system NHICICategory
+* include codes from system NHICICategoryCodes
 * include codes from system http://terminology.hl7.org/CodeSystem/condition-category|1.0.1
