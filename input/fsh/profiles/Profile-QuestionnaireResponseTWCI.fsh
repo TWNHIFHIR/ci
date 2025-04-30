@@ -38,7 +38,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
     acptNum 0..1 MS
 
 * item[hosp].item[applType].linkId = "1.1"
-* item[hosp].item[applType].text = "hosp.applType|申報類別。"
+* item[hosp].item[applType].text = "hosp.applType|申報類別"
 * item[hosp].item[applType].answer 1..1 MS
 * item[hosp].item[applType].answer.valueCoding 1..1
 * item[hosp].item[applType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-reporting-method

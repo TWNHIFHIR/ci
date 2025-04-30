@@ -10,7 +10,7 @@ Usage: #example
 * item[hosp].text = "hosp|院所資訊"
 
 * item[hosp].item[applType].linkId = "1.1"
-* item[hosp].item[applType].text = "hosp.applType|申報類別。"
+* item[hosp].item[applType].text = "hosp.applType|申報類別"
 * item[hosp].item[applType].answer.valueCoding = NHICIReportingMethodCodes#1 "送核"
 
 * item[hosp].item[applDate].linkId = "1.2" 
@@ -266,7 +266,7 @@ Usage: #example
 * item[illness].item[cancerTreatmentText].text = "illness.cancerTreatmentText|補充說明。"
 * item[illness].item[cancerTreatmentText].answer.valueString = "補充說明"
 
-/*
+
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
     <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">
@@ -289,16 +289,14 @@ Usage: #example
                 padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a
                     href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"The type of the item\">Answer</a><span
                     style=\"float: right\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this
-                        format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\"
-                            alt=\"doco\" style=\"background-color: inherit\" /></a></span></th>
+                        format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\" /></a></span></th>
         </tr>
         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\">
                 <img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\" /><img
                     src=\"icon_q_root.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\"
-                    title=\"QuestionnaireResponseRoot\" class=\"hierarchy\" /> queRes-min
-            </td>
+                    title=\"QuestionnaireResponseRoot\" class=\"hierarchy\" /> queRes-min</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\"></td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
@@ -307,7 +305,7 @@ Usage: #example
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">Questionnaire:<a
                     href=\"Questionnaire-apply-catastrophic-illness.html\">Catastrophic-Illness-Form</a></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -321,7 +319,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -334,11 +332,9 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a
-                            href=\"CodeSystem-nhi-reporting-method.html#nhi-reporting-method-2\">NHI-健保重大傷病-申報類別類別 2</a>:
-                        院所代辦</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-nhi-reporting-method.html#nhi-reporting-method-1\">NHI-健保重大傷病-申報類別類別 1</a>: 送核</span></span></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -353,7 +349,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">2024-01-01</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -366,9 +362,9 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">2025-02-18</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">2025-04-08</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -381,11 +377,9 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a
-                            href=\"CodeSystem-organization-identifier-tw.html#organization-identifier-tw-0131060029\">NHI-健保重大傷病-特約醫事機構
-                            0131060029</a>: 衛生福利部臺北醫院</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-organization-identifier-tw.html#organization-identifier-tw-0131060029\">NHI-健保重大傷病-特約醫事機構 0131060029</a>: 衛生福利部臺北醫院</span></span></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -400,7 +394,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">11218899999</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -415,7 +409,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">1</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -427,9 +421,10 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"Patient-pat-min.html\">Patient/pat-min</a></span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"Patient-pat-min.html\">Patient/pat-min</a></span></span>
+            </td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -443,7 +438,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -458,7 +453,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">A234649456</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -473,7 +468,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">王小明</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -487,7 +482,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -500,70 +495,69 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/CodeSystem-icd-10-cm-2023-tw.html#icd-10-cm-2023-tw-A01.4603\">臺灣健保署2023年中文版ICD-10-CM C49.6</a>: 軀幹結締及軟組織之惡性腫瘤</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-icd-10-cm-2023-tw.html#icd-10-cm-2023-tw-C49.466\">臺灣健保署2023年中文版ICD-10-CM C49.6</a>: 軀幹結締及軟組織之惡性腫瘤</span></span></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck101.png)\"
-                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7;
-                    background-color: inherit\" title=\"Group\" class=\"hierarchy\" /> 4.2</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport|檢查報告</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
-        </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010.png)\"
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck111.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    class=\"hierarchy\" /><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Group\" class=\"hierarchy\" /> 4.2</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport|檢查報告</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.1</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" ><span><span><a href=\"ValueSet-loinc-report-type.html\">LOINC 66117-3</a>: Prostate Pathology biopsy report；<a href=\"ValueSet-loinc-report-type.html\">LOINC 66114-0</a>: Stomach Pathology biopsy report</span></span></td>
-        </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010.png)\"
-                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.2</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.speType|檢體種類</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">Prostate ; Stomach</td>
-        </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010.png)\"
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.3</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.2</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportResultString|報告結果-文數字
-            </td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.speType|檢體種類</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">Prostate ; Stomach</td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.3</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportResultString|報告結果-文數字
+            </td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">Prostate labeled as lesion 1 magnetic resonance-ultrasound
                 fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate labeled as lesion 2 magnetic
                 resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate right lateral magnetic
@@ -595,8 +589,115 @@ Usage: #example
                 fragments measuring up to 0.3 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft. The specimen
                 C consists of 3 tissue fragments measuring up to 0.3 x 0.2 x 0.2 cm in size. Grossly they are gray-white
                 and soft. All for section and labeled as.</td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.4</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                diagnosis.examinationReport.reportResultPdf|檢查報告檔案，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">file://PathologyReport01.pdf</td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.5</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportResultPdfTitle|檢查報告名稱
+            </td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">PathologyReport01</td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1100.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.6</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportDate|報告日期，YYYY-MM-DD。
+            </td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">2024-01-01</td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck111.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Group\" class=\"hierarchy\" /> 4.3</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.medrec|病歷資料</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.3.1</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.medrec.medrec|病歷資料</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">file://Medicalrecord01.pdf</td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1100.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.3.2</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.medrec.medrecTitle|病歷資料名稱</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">Medicalrecord01</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck101.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Group\" class=\"hierarchy\" /> 4.4</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy|影像報告</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+        </tr> 
+ <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -604,15 +705,15 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.4</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.1</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportResultPdf|檢查報告檔案</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgItem|影像報告</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">file://PathologyReport01.pdf</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-icd-10-pcs-2023-tw.html#icd-10-pcs-2023-tw-B34JZZ3\">臺灣健保署2023年中文版ICD-10-PCS B34JZZ3</a>: 左上肢動脈血管內超音波</span></span></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -620,32 +721,256 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.5</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.2</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportResultPdfTitle|檢查報告名稱
-            </td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgResult|影像報告結果</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">PathologyReport01</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">CT of Chest with contrast enhancement shows: COMPARISON:
+                2023-12-13. FINDINGS: - placement of a right port-A catheter. - a small(＜=6mm) perifissural nodule in
+                right minor lung fissure(SE2 IM66) larger. - small pleural nodules at RUL and LUL up to 1.1cm in apical
+                RUL larger. - no pleural effusion. - no definite mediastinal lymphadenopathy. - some mixed increased and
+                decreased densities at the vertebral bodies of thoracolumbar spines; partial collapse of L5 vertebral
+                body stable. 1. A small perifissural nodule in right minor lung fissure larger. 2. Small pleural nodules
+                at RUL and LUL up to 1.1cm in apical RUL larger. 2. Bone metastases.</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1000.png)\"
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.6</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.3</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportDate|報告日期</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgDate|影像報告日期</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">2024-01-01</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.4</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgBodySite|影像檢查的身體部位</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"http://snomed.info/id/774007\">SNOMED CT 774007</a>: Head and neck
+                        structure</span></span></td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1011.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Group\" class=\"hierarchy\" /> 4.4.5</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgDicom|DICOM影像</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.5.1</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgDicom.studyUid|整項影像檢查的識別碼</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">urn:oid:2.16.886.2102.54.4546465747.465465465</td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10101.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Group\" class=\"hierarchy\" /> 4.4.5.2</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                diagnosis.imageStudy.imgDicom.series|每項影像檢查有一個或多個系列(series)的實例</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck101010.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.5.2.1</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgDicom.series.uid|此系列的DICOM系列實例UID
+            </td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">2.16.886.2102.54.4546465747.465465466</td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck101010.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.5.2.2</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                diagnosis.imageStudy.imgDicom.series.modality|此系列實例所使用的成像儀器</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span>DICOM CT: Computed Tomography</span></span>
+            </td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck101001.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Group\" class=\"hierarchy\" /> 4.4.5.2.3</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgDicom.series.instance|系列中的一個SOP實例
+            </td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010010.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.5.2.3.1</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM影像
+            </td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">2.25.88017001449189502323411118737039844241</td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010000.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.5.2.3.2</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                diagnosis.imageStudy.imgDicom.series.instance.sopClass|DICOM class 類型</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span>unknown urn:oid:1.2.840.10008.5.1.4.1.1.2:
+                        urn:oid:1.2.840.10008.5.1.4.1.1.2</span></span></td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1001.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Group\" class=\"hierarchy\" /> 4.4.6</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgNonDicom|非DICOM影像</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10010.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.6.1</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.imageStudy.imgNonDicom.imgNonDicom|非DICOM影像</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">file://US01.jpg</td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10000.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.4.6.2</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                diagnosis.imageStudy.imgNonDicom.imgNonDicomMimeType|非DICOM影像MimeType</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span>urn:ietf:bcp:13#image/jpeg</span></span>
+            </td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -659,7 +984,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"Condition-con-min.html\">Condition/con-min</a></span></span></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -673,7 +998,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -682,14 +1007,15 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 6.1</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">cancerStage.cancerStage|癌症期別</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                cancerStage.cancerStage|癌症期別，醫院自行填入癌症期別(1~4)，若為不適用者填9(不適用)。</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a
-                            href=\"CodeSystem-cancer-stage.html#cancer-stage-1\">NHI-健保重大傷病-癌症期別 1</a>: 第一期</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-cancer-stage.html#cancer-stage-1\">NHI-健保重大傷病-癌症期別 1</a>:
+                        第一期</span></span></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -704,52 +1030,23 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">T1</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
-            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
-                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 6.3</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">cancerStage.earlyStage|初期癌症期別</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
-            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">T1</td>
-        </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
-                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
-                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 6.4</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">cancerStage.actualStage|實際癌症期別</td>
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
-            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">T1</td>
-        </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 6.5</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 6.3</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">cancerStage.assessDate|癌症分期量表評估日期</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">cancerStage.assessDate|癌症分期量表評估日期，YYYY-MM-DD，西元年月日，民國前為負數。
+            </td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">2024-01-01</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -763,7 +1060,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -772,15 +1069,13 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.1</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerCode|原發癌症診斷碼</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerCode|原發癌症診斷碼，最長為7碼。</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a
-                            href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/CodeSystem-icd-10-cm-2023-tw.html#icd-10-cm-2023-tw-C49.464\">臺灣健保署2023年中文版ICD-10-CM
-                            C49.4</a>: 腹(部)結締及軟組織之惡性腫瘤</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"https://twcore.mohw.gov.tw/ig/twcore/0.3.2/ValueSet-icd-10-cm-2023-tw.html#icd-10-cm-2023-tw-C49.464\">臺灣健保署2023年中文版ICD-10-CM C49.4</a>: 腹(部)結締及軟組織之惡性腫瘤</span></span></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -789,13 +1084,13 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.2</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerDxDate|癌症最初診斷日期</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerDxDate|癌症最初診斷日期，西元年月日；不得大於系統日。</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">2017-03-16</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -804,15 +1099,14 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.3</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)，依期別填入；若不是用此分類而用其他分類，則填寫9。</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a
-                            href=\"CodeSystem-nhi-cancerstaging.html#nhi-cancerstaging-9\">NHI-健保重大傷病-後續治療評估 9</a>:
-                        其他系統</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-nhi-cancerstaging.html#nhi-cancerstaging-9\">NHI-健保重大傷病-癌症最初診斷AJCC分期 9</a>: 其他系統</span></span></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -821,13 +1115,14 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.4</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位，若前述欄位為9，則請於此欄位描述其他系統之其他分期為何。</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">T1</td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -840,30 +1135,62 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a
-                            href=\"CodeSystem-nhi-cancerstage-status.html#nhi-cancerstage-status-4\">NHI-健保重大傷病-癌症狀態 4</a>:
-                        癌症遠端轉移</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-nhi-cancerstage-status.html#nhi-cancerstage-status-4\">NHI-健保重大傷病-癌症狀態 4</a>: 癌症遠端轉移</span></span></td>
         </tr>
-        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.6</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.cancerTreatment|後續治療評估，可複選。</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span>
+                    <a href=\"CodeSystem-nhi-cancer-treatment.html\">NHI-健保重大傷病-後續治療評估 1</a>: 需定期返診追蹤檢查<br />
+                    <a href=\"CodeSystem-nhi-cancer-treatment.html\">NHI-健保重大傷病-後續治療評估 5</a>: 癌症後遺症及併發症治療</span></span></td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.7</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.cancerTreatmentPlan|後續治療計劃，可複選。</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+                <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span>
+                    <a href=\"CodeSystem-nhi-cancer-treatment-plan.html\">NHI-健保重大傷病-後續治療計劃 1</a>: 手術治療<br />
+                    <a href=\"CodeSystem-nhi-cancer-treatment-plan.html\">NHI-健保重大傷病-後續治療計劃 2</a>: 放射線治療</span></span></td>
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.6</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 7.8</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.cancerTreatment|後續治療評估</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">illness.cancerTreatmentText|補充說明。</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-nhi-cancerstage-cancerTreatment.html\">NHI-健保重大傷病-後續治療評估 1</a>: 手術治療<br /><a href=\"CodeSystem-nhi-cancerstage-cancerTreatment.html\">NHI-健保重大傷病-後續治療評估 4</a>: 標靶治療</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">補充說明</td>
         </tr>
-        <tr>
+         <tr>
             <td colspan=\"4\" class=\"hierarchy\"><br /><a href=\"http://hl7.org/fhir/R4/formats.html#table\"
                     title=\"Legend for this format\"><img
                         src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\"
                         alt=\"doco\" style=\"background-color: inherit\" /> Documentation for this format</a></td>
         </tr>
     </table>
-</div>"*/
+</div>"
