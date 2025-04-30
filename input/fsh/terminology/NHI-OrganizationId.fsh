@@ -1,6 +1,6 @@
 CodeSystem: NHIOrganization
 Id: organization-identifier-tw
-Title: "NHI-特約醫事機構"
+Title: "NHI-健保重大傷病-特約醫事機構"
 Description: "臺灣衛生福利部中央健康保險署「特約醫事機構」代碼，參照至[衛福部健保署特約醫事機構代碼網路查詢服務](https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html)中的[健保特約醫療院所名冊](https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120)
 
 代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。
@@ -35843,8 +35843,8 @@ Description: "臺灣衛生福利部中央健康保險署「特約醫事機構」
 
 ValueSet: NHIOrganization
 Id: nhi-organization
-Title: "NHI-特約醫事機構值集"
-Description: "NHI-特約醫事機構值集，參照至[衛福部健保署特約醫事機構代碼網路查詢服務](https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html)中的[健保特約醫療院所名冊](https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120)
+Title: "NHI-健保重大傷病-特約醫事機構值集"
+Description: "NHI-健保重大傷病-特約醫事機構值集，參照至[衛福部健保署特約醫事機構代碼網路查詢服務](https://www.nhi.gov.tw/ch/cp-5548-135e8-2931-1.html)中的[健保特約醫療院所名冊](https://info.nhi.gov.tw/IODE0000/IODE0000S09?id=1120)
 
 代碼出版日期：2024-04-22；資料所屬單位：衛生福利部中央健康保險署。
 

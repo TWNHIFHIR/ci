@@ -1,0 +1,10 @@
+{
+  "package-id": "tw.gov.mohw.nhi.ci",
+  "version": "1.0.0",
+  "path": "https://twcore.mohw.gov.tw/ig/ci/1.0.0",
+  "mode": "milestone",
+  "status": "release",
+  "sequence": "STU1",
+  "desc": "第一個發佈版本",
+  "descmd": "第一個發佈版本"
+}

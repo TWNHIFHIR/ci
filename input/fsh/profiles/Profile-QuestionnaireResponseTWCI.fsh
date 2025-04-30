@@ -38,7 +38,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
     acptNum 0..1 MS
 
 * item[hosp].item[applType].linkId = "1.1"
-* item[hosp].item[applType].text = "hosp.applType|申報方式，醫院報備固定為2。"
+* item[hosp].item[applType].text = "hosp.applType|申報類別。"
 * item[hosp].item[applType].answer 1..1 MS
 * item[hosp].item[applType].answer.valueCoding 1..1
 * item[hosp].item[applType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-reporting-method
@@ -85,12 +85,12 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[doctor].item ^slicing.discriminator.path = "linkId"
 * item[doctor].item ^slicing.rules = #closed
 * item[doctor].item contains
-    diagPrsnId 1..1 MS and
+    diagPrsnId 0..1 MS and
     diagPrsnName 1..1 MS
 
 * item[doctor].item[diagPrsnId].linkId = "3.1"
 * item[doctor].item[diagPrsnId].text = "doctor.diagPrsnId|醫師身分證號"
-//* item[doctor].item[diagPrsnId].definition = "醫師國民身分證統一編號"
+
 * item[doctor].item[diagPrsnId].answer 1..1 MS
 * item[doctor].item[diagPrsnId].answer.valueString 1..1 MS
 
@@ -130,15 +130,16 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[examinationReport].item ^slicing.discriminator.path = "linkId"
 * item[diagnosis].item[examinationReport].item ^slicing.rules = #closed
 * item[diagnosis].item[examinationReport].item contains
-    reportType 1..1 MS and
+    reportType 0..1 MS and
     speType 0..1 MS and
     reportResultString 0..1 MS and
     reportResultPdf 0..1 MS and
     reportResultPdfTitle 0..1 MS and
     reportDate 0..1 MS
 
+* item[diagnosis].item[examinationReport] obeys speType
 * item[diagnosis].item[examinationReport].item[reportType].linkId = "4.2.1"
-* item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型"
+* item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"
 * item[diagnosis].item[examinationReport].item[reportType].answer 1..* MS
 * item[diagnosis].item[examinationReport].item[reportType].answer.valueCoding 1..1 MS
 * item[diagnosis].item[examinationReport].item[reportType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type
@@ -154,7 +155,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[examinationReport].item[reportResultString].answer.valueString 1..1 MS
 
 * item[diagnosis].item[examinationReport].item[reportResultPdf].linkId = "4.2.4"
-* item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
+* item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告檔案，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
 * item[diagnosis].item[examinationReport].item[reportResultPdf].answer 1..1 MS
 * item[diagnosis].item[examinationReport].item[reportResultPdf].answer.valueString 1..1 MS
 
@@ -176,7 +177,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[medrec].item ^slicing.discriminator.path = "linkId"
 * item[diagnosis].item[medrec].item ^slicing.rules = #closed
 * item[diagnosis].item[medrec].item contains
-    medrec 1..1 MS and
+    medrec 0..1 MS and
     medrecTitle 0..1 MS
 
 * item[diagnosis].item[medrec].item[medrec].linkId = "4.3.1"
@@ -195,10 +196,10 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[imageStudy].item ^slicing.discriminator.path = "linkId"
 * item[diagnosis].item[imageStudy].item ^slicing.rules = #closed
 * item[diagnosis].item[imageStudy].item contains
-    imgItem 1..1 MS and
-    imgResult 1..1 MS and
-    imgDate 1..1 MS and
-    imgBodySite 1..1 MS and
+    imgItem 0..1 MS and
+    imgResult 0..1 MS and
+    imgDate 0..1 MS and
+    imgBodySite 0..1 MS and
     imgDicom 0..* MS and
     imgNonDicom 0..* MS
 
@@ -304,8 +305,8 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[cancerStage].item contains
     cancerStage 1..1 MS and
     assessScore 0..1 MS and
-    earlyStage 0..1 MS and
-    actualStage 0..1 MS and
+    //earlyStage 0..1 MS and
+    //actualStage 0..1 MS and
     assessDate 0..1 MS
 
 * item[cancerStage].item[cancerStage].linkId = "6.1"
@@ -319,15 +320,15 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[cancerStage].item[assessScore].answer 1..1 MS
 * item[cancerStage].item[assessScore].answer.valueString 1..1 MS
 
-* item[cancerStage].item[earlyStage].linkId = "6.3"
+/* item[cancerStage].item[earlyStage].linkId = "6.3"
 * item[cancerStage].item[earlyStage].text = "cancerStage.earlyStage|初期癌症期別"
 * item[cancerStage].item[earlyStage].answer 1..1 MS
 
 * item[cancerStage].item[actualStage].linkId = "6.4"
 * item[cancerStage].item[actualStage].text = "cancerStage.actualStage|實際癌症期別"
-* item[cancerStage].item[actualStage].answer 1..1 MS
+* item[cancerStage].item[actualStage].answer 1..1 MS*/
 
-* item[cancerStage].item[assessDate].linkId = "6.5"
+* item[cancerStage].item[assessDate].linkId = "6.3"
 * item[cancerStage].item[assessDate].text = "cancerStage.assessDate|癌症分期量表評估日期，YYYY-MM-DD，西元年月日，民國前為負數。"
 * item[cancerStage].item[assessDate].answer 1..1 MS
 /** item[cancerStage].item[assessDate].answer.valueDate only date
@@ -340,12 +341,14 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[illness].item ^slicing.discriminator.path = "linkId"
 * item[illness].item ^slicing.rules = #closed
 * item[illness].item contains
-    oriCancerCode 1..1 MS and
+    oriCancerCode 0..1 MS and
     oriCancerDxDate 0..1 MS and
     oriCancerAjcc 0..1 MS and
     oriCancerAjcc1 0..1 MS and
     cancerStatus 0..1 MS and
-    cancerTreatment 0..1 MS
+    cancerTreatment 0..1 MS and
+    cancerTreatmentPlan 0..1 MS and
+    cancerTreatmentText 0..1 MS
 
 * item[illness].item[oriCancerCode].linkId = "7.1"
 * item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼，最長為7碼。"
@@ -378,7 +381,18 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估，可複選。"
 * item[illness].item[cancerTreatment].answer 1.. MS
 * item[illness].item[cancerTreatment].answer.valueCoding 1..1 MS
-* item[illness].item[cancerTreatment].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-cancerTreatment
+* item[illness].item[cancerTreatment].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancer-treatment
+
+* item[illness].item[cancerTreatmentPlan].linkId = "7.7"
+* item[illness].item[cancerTreatmentPlan].text = "illness.cancerTreatmentPlan|後續治療計劃，可複選。"
+* item[illness].item[cancerTreatmentPlan].answer 1.. MS
+* item[illness].item[cancerTreatmentPlan].answer.valueCoding 1..1 MS
+* item[illness].item[cancerTreatmentPlan].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancer-treatment-plan
+
+* item[illness].item[cancerTreatmentText].linkId = "7.8"
+* item[illness].item[cancerTreatmentText].text = "illness.cancerTreatmentText|補充說明。"
+* item[illness].item[cancerTreatmentText].answer 1.. MS
+* item[illness].item[cancerTreatmentText].answer.valueString 1..1 MS
 
 
 * item[hosp].item[medCertBookDate] obeys medCertBookDate
@@ -398,6 +412,8 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[examinationReport].item[reportResultPdfTitle].answer.valueString obeys txt-50
 //癌症最初診斷AJCC分期_補充說明欄位
 * item[illness].item[oriCancerAjcc1].answer.valueString obeys txt-20
+//惡性腫瘤重大傷病換發評估表_補充說明
+* item[illness].item[cancerTreatmentText].answer.valueString obeys txt-400
 
 Invariant:   medCertBookDate
 Description: "開立診斷書申請日期，不可大於系統日，不可小於2016-01-01，且為系統日之30日內。"
@@ -439,7 +455,17 @@ Description: "長度不得超過80字"
 Expression:  "length() <= 80"
 Severity:    #error
 
+Invariant:   txt-400
+Description: "長度不得超過400字"
+Expression:  "length() <= 400"
+Severity:    #error
+
 Invariant:   txt-4000
 Description: "長度不得超過4000字"
 Expression:  "length() <= 4000"
+Severity:    #error
+
+Invariant:   speType
+Description: "當報告類型(code.coding.code)為`47526-9`時，檢體種類(code.text)必填"
+Expression:  "(item.where(linkId = '4.2.1').item.answer.value.ofType(Coding).exists(code='47526-9')) implies (item.where(linkId = '4.2.2').item.answer.value.ofType(string).exists())"
 Severity:    #error

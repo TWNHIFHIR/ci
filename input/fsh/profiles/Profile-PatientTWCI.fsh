@@ -3,12 +3,12 @@ Parent:         TWCorePatient
 Id:             Patient-twci
 Title:          "病人資訊-Patient TWCI"
 Description:    "此病人資訊-Patient TWCI Profile說明TWCI IG如何進一步定義臺灣核心-病人(TW Core Patient) Profile以呈現重大傷病之病人基本資料"
-* identifier 1..1
+* identifier 1..2
 
 * identifier[idCardNumber] 1..1
 * identifier[residentNumber] 0..0
 * identifier[passportNumber] 0..0
-* identifier[medicalRecord] 0..0
+* identifier[medicalRecord] 0..1
 * name 1..1
 * name[official] 0..0
 * name[temp] 0..0
@@ -24,14 +24,14 @@ Description:    "此病人資訊-Patient TWCI Profile說明TWCI IG如何進一�
 * address.postalCode.extension[PostalCode].value[x].coding[PostalCode5] 0..0
 * address.postalCode.extension[PostalCode].value[x].coding[PostalCode6] 0..0
 * address.text 1..1
-* telecom 2..3
+* telecom 1..3
 * telecom ^slicing.discriminator.type = #value
 * telecom ^slicing.discriminator.path = "system"
 * telecom ^slicing.ordered = false
 * telecom ^slicing.rules = #closed
 * telecom contains
-    mobile 1..1 MS and
-    contactTel 1..1 MS and
+    mobile 0..1 MS and
+    contactTel 0..1 MS and
     email 0..1 MS
 * telecom[mobile].system = #sms
 * telecom[contactTel].system = #phone
@@ -39,22 +39,35 @@ Description:    "此病人資訊-Patient TWCI Profile說明TWCI IG如何進一�
 
 * identifier[idCardNumber].value obeys txt-10
 * identifier[idCardNumber] ^short = "身分證字號"
+* identifier[medicalRecord] ^short = "病歷號(參與醫院必須註冊命名系統)。由醫院自行填寫。"
 * name[usual] ^short = "姓名"
 * gender ^short = "病人性別。male:男性 ｜ female:女性 ｜ other:其他 ｜ unknown:未知"
 * birthDate ^short = "出生日期，YYYY-MM-DD，西元年月日。"
 * address.postalCode.extension[PostalCode].value[x].coding[PostalCode3].code ^short = "郵遞區號"
 * address.text ^short = "連絡住址"
-* telecom[mobile] ^short = "手機號碼。應為數字10碼(寄送核發簡訊使用)"
-* telecom[contactTel] ^short = "連絡電話"
+* telecom[mobile] ^short = "手機號碼。應為數字10碼(寄送核發簡訊使用)。手機號碼與聯絡電話應至少填寫一欄。"
+* telecom[contactTel] ^short = "連絡電話。長度不得超過15字。手機號碼與聯絡電話應至少填寫一欄。"
 * telecom[email] ^short = "電子郵件信箱"
+* . obeys telecom
 * telecom[mobile] obeys telecom-mobile
+* telecom[contactTel] obeys telecom-contactTel
 * address.text obeys txt-80
 * telecom[contactTel].value obeys txt-15
 * telecom[email].value obeys txt-40
 
 Invariant:   telecom-mobile
-Description: "手機號碼格式有誤，應為數字10碼"
+Description: "手機號碼格式有誤，應為數字10碼。"
 Expression:  "value.toString().length() = 10"
+Severity:    #error
+
+Invariant:   telecom-contactTel
+Description: "連絡電話格式有誤，長度不得超過15字。"
+Expression:  "value.toString().length() <= 15"
+Severity:    #error
+
+Invariant:   telecom
+Description: "手機號碼與聯絡電話應至少填寫一欄。"
+Expression:  "telecom.where(system = 'sms').exists() or telecom.where(system = 'phone').exists()"
 Severity:    #error
 
 Invariant:   pat-name

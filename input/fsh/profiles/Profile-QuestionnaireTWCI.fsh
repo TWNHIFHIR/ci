@@ -35,7 +35,7 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
     acptNum 0..1 MS
 
 * item[hosp].item[applType].linkId = "1.1"
-* item[hosp].item[applType].text = "hosp.applType|申報方式，醫院報備固定為2。"
+* item[hosp].item[applType].text = "hosp.applType|申報類別。"
 * item[hosp].item[applType].type = #choice
 * item[hosp].item[applType].required = true
 * item[hosp].item[applType].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-reporting-method"
@@ -80,14 +80,13 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[doctor].item ^slicing.discriminator.path = "linkId"
 * item[doctor].item ^slicing.rules = #closed
 * item[doctor].item contains
-    diagPrsnId 1..1 MS and
+    diagPrsnId 0..1 MS and
     diagPrsnName 1..1 MS
 
 * item[doctor].item[diagPrsnId].linkId = "3.1"
 * item[doctor].item[diagPrsnId].text = "doctor.diagPrsnId|醫師身分證號"
-//* item[doctor].item[diagPrsnId].definition = "醫師國民身分證統一編號"
 * item[doctor].item[diagPrsnId].type = #string
-* item[doctor].item[diagPrsnId].required = true
+
 
 * item[doctor].item[diagPrsnName].linkId = "3.2"
 * item[doctor].item[diagPrsnName].text = "doctor.diagPrsnName|診斷醫師姓名"
@@ -97,7 +96,7 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[diagnosis].linkId = "4"
 * item[diagnosis].text = "diagnosis|疾病資訊"
 * item[diagnosis].type = #group
-* item[diagnosis].required = true
+
 
 * item[diagnosis].item ^slicing.discriminator.type = #value
 * item[diagnosis].item ^slicing.discriminator.path = "linkId"
@@ -128,7 +127,7 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[diagnosis].item[examinationReport].item ^slicing.discriminator.path = "linkId"
 * item[diagnosis].item[examinationReport].item ^slicing.rules = #closed
 * item[diagnosis].item[examinationReport].item contains
-    reportType 1..1 MS and
+    reportType 0..1 MS and
     speType 0..1 MS and
     reportResultString 0..1 MS and
     reportResultPdf 0..1 MS and
@@ -136,11 +135,9 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
     reportDate 0..1 MS
 
 * item[diagnosis].item[examinationReport].item[reportType].linkId = "4.2.1"
-* item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型"
-* item[diagnosis].item[examinationReport].item[reportType].definition = "如果報告類型無法表述，使用暫代碼(99999[待確認])，並填寫code.text"
+* item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"
 * item[diagnosis].item[examinationReport].item[reportType].type = #choice
 * item[diagnosis].item[examinationReport].item[reportType].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type"
-* item[diagnosis].item[examinationReport].item[reportType].repeats = true
 
 * item[diagnosis].item[examinationReport].item[speType].linkId = "4.2.2"
 * item[diagnosis].item[examinationReport].item[speType].text = "diagnosis.examinationReport.speType|檢體種類"
@@ -152,7 +149,7 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[diagnosis].item[examinationReport].item[reportResultString].repeats = true
 
 * item[diagnosis].item[examinationReport].item[reportResultPdf].linkId = "4.2.4"
-* item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
+* item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告檔案，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
 * item[diagnosis].item[examinationReport].item[reportResultPdf].type = #string
 
 * item[diagnosis].item[examinationReport].item[reportResultPdfTitle].linkId = "4.2.5"
@@ -173,7 +170,7 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[diagnosis].item[medrec].item ^slicing.discriminator.path = "linkId"
 * item[diagnosis].item[medrec].item ^slicing.rules = #closed
 * item[diagnosis].item[medrec].item contains
-    medrec 1..1 MS and
+    medrec 0..1 MS and
     medrecTitle 0..1 MS
 
 * item[diagnosis].item[medrec].item[medrec].linkId = "4.3.1"
@@ -193,10 +190,10 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[diagnosis].item[imageStudy].item ^slicing.discriminator.path = "linkId"
 * item[diagnosis].item[imageStudy].item ^slicing.rules = #closed
 * item[diagnosis].item[imageStudy].item contains
-    imgItem 1..1 MS and
-    imgResult 1..1 MS and
-    imgDate 1..1 MS and
-    imgBodySite 1..1 MS and
+    imgItem 0..1 MS and
+    imgResult 0..1 MS and
+    imgDate 0..1 MS and
+    imgBodySite 0..1 MS and
     imgDicom 0..* MS and
     imgNonDicom 0..* MS
 
@@ -317,8 +314,8 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[cancerStage].item contains
     cancerStage 1..1 MS and
     assessScore 0..1 MS and
-    earlyStage 0..1 MS and
-    actualStage 0..1 MS and
+    //earlyStage 0..1 MS and
+    //actualStage 0..1 MS and
     assessDate 0..1 MS
 
 * item[cancerStage].item[cancerStage].linkId = "6.1"
@@ -331,33 +328,35 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[cancerStage].item[assessScore].text = "cancerStage.assessScore|癌症分期分數或結果"
 * item[cancerStage].item[assessScore].type = #string
 
-* item[cancerStage].item[earlyStage].linkId = "6.3"
+/* item[cancerStage].item[earlyStage].linkId = "6.3"
 * item[cancerStage].item[earlyStage].text = "cancerStage.earlyStage|初期癌症期別"
 * item[cancerStage].item[earlyStage].type = #string
 
 * item[cancerStage].item[actualStage].linkId = "6.4"
 * item[cancerStage].item[actualStage].text = "cancerStage.actualStage|實際癌症期別"
-* item[cancerStage].item[actualStage].type = #string
+* item[cancerStage].item[actualStage].type = #string*/
 
-* item[cancerStage].item[assessDate].linkId = "6.5"
+* item[cancerStage].item[assessDate].linkId = "6.3"
 * item[cancerStage].item[assessDate].text = "cancerStage.assessDate|癌症分期量表評估日期，YYYY-MM-DD，西元年月日，民國前為負數。"
 * item[cancerStage].item[assessDate].type = #date
 
 * item[illness].linkId = "7"
 * item[illness].text = "illness|惡性腫瘤重大傷病換發評估表"
 * item[illness].type = #group
-* item[illness].required = true
 
 * item[illness].item ^slicing.discriminator.type = #value
 * item[illness].item ^slicing.discriminator.path = "linkId"
 * item[illness].item ^slicing.rules = #closed
 * item[illness].item contains
-    oriCancerCode 1..1 MS and
+    oriCancerCode 0..1 MS and
     oriCancerDxDate 0..1 MS and
     oriCancerAjcc 0..1 MS and
     oriCancerAjcc1 0..1 MS and
     cancerStatus 0..1 MS and
-    cancerTreatment 0..1 MS
+    cancerTreatment 0..1 MS and
+    cancerTreatmentPlan 0..1 MS and
+    cancerTreatmentText 0..1 MS
+
 
 * item[illness].item[oriCancerCode].linkId = "7.1"
 * item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼，最長為7碼。"
@@ -380,15 +379,25 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[illness].item[cancerStatus].linkId = "7.5"
 * item[illness].item[cancerStatus].text = "illness.cancerStatus|目前癌症狀態"
 * item[illness].item[cancerStatus].type = #choice
-* item[illness].item[cancerStatus].required = true
+//* item[illness].item[cancerStatus].required = true
 * item[illness].item[cancerStatus].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-status"
 
 * item[illness].item[cancerTreatment].linkId = "7.6"
 * item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估，可複選。"
 * item[illness].item[cancerTreatment].type = #choice
-* item[illness].item[cancerTreatment].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-cancerTreatment"
-* item[illness].item[cancerTreatment].required = true
+* item[illness].item[cancerTreatment].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancer-treatment"
 * item[illness].item[cancerTreatment].repeats = true
+
+* item[illness].item[cancerTreatmentPlan].linkId = "7.7"
+* item[illness].item[cancerTreatmentPlan].text = "illness.cancerTreatmentPlan|後續治療計劃，可複選。"
+* item[illness].item[cancerTreatmentPlan].type = #choice
+* item[illness].item[cancerTreatmentPlan].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancer-treatment-plan"
+* item[illness].item[cancerTreatmentPlan].repeats = true
+
+* item[illness].item[cancerTreatmentText].linkId = "7.8"
+* item[illness].item[cancerTreatmentText].text = "illness.cancerTreatmentText|補充說明。"
+* item[illness].item[cancerTreatmentText].type = #string
+
 
 * item.linkId ^short = "問卷題目編號"
 * item.type ^short = "答題類型。group:組合題 ｜ date:日期 ｜ string:字串 ｜ integer:整數｜ choice:選擇｜ attachment:文件｜ text:文字"

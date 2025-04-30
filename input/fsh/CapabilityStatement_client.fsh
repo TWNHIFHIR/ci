@@ -2,13 +2,13 @@ Instance: CapabilityStatementTWCIClient
 InstanceOf: CapabilityStatement
 Usage: #definition
 * url = "https://twcore.mohw.gov.tw/ig/ci/CapabilityStatement/CapabilityStatementTWCIClient"
-* version = "0.1.0"
+* version = "1.0.0"
 * name = "CapabilityStatementTWCIClient"
 * title = "臺灣重大傷病-用戶端(TWCI Client)"
 * status = #active
 * experimental = false
 * publisher = "衛生福利部中央健康保險署"
-* date = "2024-12-31"
+* date = "2025-04-30"
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #json
@@ -18,6 +18,7 @@ Usage: #definition
 * description = "臺灣健保重大傷病實作指引(TWCI IG)用戶端(Client)之能力聲明"
 * rest.mode = #client
 * rest.documentation = "臺灣重大傷病-用戶端(TWCI Client)必須（SHALL）使用臺灣重大傷病伺服端（TWCI Server）能力聲明中的查詢參數，支援讀取和查詢一個或多個臺灣重大傷病Profile(s)。"
+* rest.security.description = "有關要求和建議，請參閱[安全性](security.html)。"
 
 * rest.resource[+].type = #Bundle
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/Bundle-twci"
@@ -164,10 +165,10 @@ Usage: #definition
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
     <h2 id=\"title\">臺灣重大傷病-用戶端(TWCI Client)</h2>
     <ul>
-        <li>實作指引版本：0.1.0</li>
+        <li>實作指引版本：1.0.0</li>
         <li>FHIR版本：4.0.1</li>
         <li>支援格式：<code>json</code>, <code>xml</code></li>
-        <li>發佈日：2024-12-31</li>
+        <li>發佈日：2025-04-30</li>
         <li>發佈者：衛生福利部中央健康保險署</li>
     </ul>
     <h3 id=\"shallIGs\">建議應該（SHOULD）支援以下實作指引</h3>

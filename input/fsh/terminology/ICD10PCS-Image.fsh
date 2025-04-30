@@ -1,10 +1,10 @@
 Alias: $icd-10-pcs-2023 = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-pcs-2023-tw
 ValueSet: ICD10PCS2023Image
 Id: icd-10-pcs-2023-image
-Title: "健保重大傷病-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集"
-Description: "健保重大傷病-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集"
-* ^date = "2025-04-10"
-* ^version = "0.1.0"
+Title: "NHI-健保重大傷病-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集"
+Description: "NHI-健保重大傷病-臺灣健保署2023年中文版ICD 10 PCS-影像報告值集"
+* ^date = "2025-04-30"
+* ^version = "1.0.0"
 * ^experimental = false
 * $icd-10-pcs-2023#B00BZZZ "脊髓一般放射線攝影"
 * $icd-10-pcs-2023#B01BZZZ "脊髓透視攝影"
