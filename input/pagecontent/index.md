@@ -2,9 +2,22 @@
 <p><b>相關資訊可參考衛生福利部中央健康保險署的<a href="https://www.nhi.gov.tw/ch/np-3788-1.html" target="_blank">癌症重大傷病申請導入FHIR</a>。</b></p>
 </div>
 
+<div class="bg-warning" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
+因考量實作需求，於2025/5/13異動以下內容：
+    <ol>  
+        <li>修改<a href="CodeSystem-nhi-category.html">CodeSystem: NHI-健保重大傷病-重大傷病類別</a>：
+            <ol>
+               <li>原為單位數的代碼（<code>1</code>～<code>9</code>）調整為兩位數格式（<code>01</code>～<code>09</code>）。</li>
+            </ol>
+        </li>
+	</ol>
+    請留意這些異動，以避免影響您的實作。
+</div>
+<br/>
+
 ### 專案介紹
 <div  style="padding-left: 10px;"> 
-<p>臺灣健保重大傷病實作指引(Taiwan NHI Catastrophic Illness Implementation Guide，TWCI IG)採用HL7® FHIR® standard（Fast Healthcare Interoperability Resources）IG建置方法，在<a href="http://hl7.org/fhir/R4/">FHIR R4.0.1</a>之標準基礎上，繼承TW Core IG V0.3.1 (2024-10-21)，進一步定義適用於「重大傷病」資料需求的Resources（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..*、1..1或1..*）及資料類型（文字、日期時間、代碼等）等。</p>
+<p>臺灣健保重大傷病實作指引(Taiwan NHI Catastrophic Illness Implementation Guide，TWCI IG)採用HL7® FHIR® standard（Fast Healthcare Interoperability Resources）IG建置方法，在<a href="http://hl7.org/fhir/R4/">FHIR R4.0.1</a>之標準基礎上，繼承TW Core IG V0.3.2 (2024-12-12)，進一步定義適用於「重大傷病」資料需求的Resources（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..*、1..1或1..*）及資料類型（文字、日期時間、代碼等）等。</p>
 </div>
 
 ### 專案背景

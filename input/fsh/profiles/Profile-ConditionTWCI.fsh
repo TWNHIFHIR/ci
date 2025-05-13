@@ -7,7 +7,7 @@ Description:    "此重大傷病-Condition TWCI Profile說明TWCI IG如何進一
 * category from NHICICategory
 * category.coding 1..1
 * category.coding.code 1..1
-* category.coding.code = #1
+* category.coding.code = #01
 * category.coding.system = "https://twcore.mohw.gov.tw/ig/ci/CodeSystem/nhi-category"
-* category.coding.code ^short = "固定填1(癌症)。"
+* category.coding.code ^short = "固定填「01」(癌症)。"
 * category ^short = "重大傷病類別"
