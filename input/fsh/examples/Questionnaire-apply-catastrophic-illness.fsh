@@ -14,7 +14,7 @@ Usage: #example
 * item[hosp].required = true
 
 * item[hosp].item[applType].linkId = "1.1"
-* item[hosp].item[applType].text = "hosp.applType|申報類別。"
+* item[hosp].item[applType].text = "hosp.applType|申報類別"
 * item[hosp].item[applType].type = #choice
 * item[hosp].item[applType].required = true
 * item[hosp].item[applType].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-reporting-method"
