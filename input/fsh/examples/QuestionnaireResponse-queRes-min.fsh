@@ -19,7 +19,7 @@ Usage: #example
 
 * item[hosp].item[medCertBookDate].linkId = "1.3" 
 * item[hosp].item[medCertBookDate].text = "hosp.medCertBookDate|開立診斷書申請日期"
-* item[hosp].item[medCertBookDate].answer.valueDate = "2025-04-30"
+* item[hosp].item[medCertBookDate].answer.valueDate = "2025-05-05"
 
 * item[hosp].item[hospId].linkId = "1.4" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
