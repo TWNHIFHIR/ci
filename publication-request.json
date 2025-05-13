@@ -5,6 +5,6 @@
   "mode": "milestone",
   "status": "release",
   "sequence": "STU1",
-  "desc": "第一個發佈版本",
-  "descmd": "第一個發佈版本"
+  "desc": "修改CodeSystem",
+  "descmd": "修改CodeSystem: NHI-健保重大傷病-重大傷病類別"
 }
