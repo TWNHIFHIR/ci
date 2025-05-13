@@ -5,7 +5,7 @@ Description: "臺灣衛生福利部中央健康保險署「癌症最初診斷AJC
 * ^caseSensitive = true
 * ^content = #complete
 * ^date = "2025-04-30"
-* ^version = "1.0.0"
+* ^version = "1.0.1"
 * ^experimental = false
 * #1 "第一期"
 * #2 "第二期"
@@ -18,6 +18,6 @@ Id: nhi-cancerstaging
 Title: "NHI-健保重大傷病-癌症最初診斷AJCC分期值集"
 Description: "NHI-健保重大傷病-癌症最初診斷AJCC分期值集"
 * ^date = "2025-04-30"
-* ^version = "1.0.0"
+* ^version = "1.0.1"
 * ^experimental = false
 * include codes from system CancerStagingCodes

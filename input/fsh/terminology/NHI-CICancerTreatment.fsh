@@ -6,7 +6,7 @@ Description: "臺灣衛生福利部中央健康保險署「後續治療評估」
 * ^caseSensitive = true
 * ^content = #complete
 * ^date = "2025-04-30"
-* ^version = "1.0.0"
+* ^version = "1.0.1"
 * ^experimental = false
 * #1 "需定期返診追蹤檢查"
 * #2 "癌症從未disease-free須持續治療"
@@ -19,6 +19,6 @@ Id: nhi-cancer-treatment
 Title: "NHI-健保重大傷病-後續治療評估值集"
 Description: "NHI-健保重大傷病-後續治療評估值集"
 * ^date = "2025-04-30"
-* ^version = "1.0.0"
+* ^version = "1.0.1"
 * ^experimental = false
 * include codes from system CancerTreatmentCodes
