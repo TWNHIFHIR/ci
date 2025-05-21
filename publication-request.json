@@ -6,5 +6,9 @@
   "status": "release",
   "sequence": "STU1",
   "desc": "修改CodeSystem",
-  "descmd": "修改CodeSystem: NHI-健保重大傷病-重大傷病類別"
+  "descmd": "- 修改CodeSystem: NHI-健保重大傷病-重大傷病類別
+  - 修改CodeSystem: NHI-健保重大傷病-申報類別
+  - 修改Profile: 重大傷病申請書-Questionnaire TWCI
+  - 修改Profile: 重大傷病申請書回覆-QuestionnaireResponse TWCI
+  - 修改Profile: 重大傷病申請-Task TWCI"
 }
