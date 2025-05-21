@@ -28,8 +28,9 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[hosp].item ^slicing.discriminator.type = #value
 * item[hosp].item ^slicing.discriminator.path = "linkId"
 * item[hosp].item ^slicing.rules = #closed
-* item[hosp].item 4..6
+* item[hosp].item 5..7
 * item[hosp].item contains
+    applMode 1..1 MS and
     applType 1..1 MS and
     applDate 1..1 MS and
     medCertBookDate 1..1 MS and
@@ -37,37 +38,45 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
     acptNo 0..1 MS and
     acptNum 0..1 MS
 
-* item[hosp].item[applType].linkId = "1.1"
+* item[hosp].item[applMode].linkId = "1.1"
+* item[hosp].item[applMode].text = "hosp.applMode|申報方式"
+* item[hosp].item[applMode].answer 1..1 MS
+* item[hosp].item[applMode].answer.valueCoding 1..1 MS
+* item[hosp].item[applMode].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-apply-mode
+* item[hosp].item[applMode].answer.valueCoding = https://twcore.mohw.gov.tw/ig/ci/CodeSystem/nhi-apply-mode#2
+
+* item[hosp].item[applType].linkId = "1.2"
 * item[hosp].item[applType].text = "hosp.applType|申報類別"
 * item[hosp].item[applType].answer 1..1 MS
-* item[hosp].item[applType].answer.valueCoding 1..1
-* item[hosp].item[applType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-reporting-method
+* item[hosp].item[applType].answer.valueCoding 1..1 MS
+* item[hosp].item[applType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-apply-type
+* item[hosp].item[applType].answer.valueCoding = https://twcore.mohw.gov.tw/ig/ci/CodeSystem/nhi-apply-type#1
 
-* item[hosp].item[applDate].linkId = "1.2" 
+* item[hosp].item[applDate].linkId = "1.3" 
 * item[hosp].item[applDate].text = "hosp.applDate|申請日期"
 * item[hosp].item[applDate].answer 1..1 MS
 //* item[hosp].item[applDate].answer.valueDate only date
 //* item[hosp].item[applDate].answer.valueDate 1..1 MS
 
-* item[hosp].item[medCertBookDate].linkId = "1.3" 
+* item[hosp].item[medCertBookDate].linkId = "1.4" 
 * item[hosp].item[medCertBookDate].text = "hosp.medCertBookDate|開立診斷書申請日期"
 * item[hosp].item[medCertBookDate].answer 1..1 MS
 * item[hosp].item[medCertBookDate].answer.value[x] 1..1
 /* item[hosp].item[medCertBookDate].answer.valueDate only date*/
 //* item[hosp].item[medCertBookDate].answer.valueDate 1..1 MS
 
-* item[hosp].item[hospId].linkId = "1.4" 
+* item[hosp].item[hospId].linkId = "1.5" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
 * item[hosp].item[hospId].answer 1..1 MS
 * item[hosp].item[hospId].answer.valueCoding 1..1
 * item[hosp].item[hospId].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-organization
 
-* item[hosp].item[acptNo].linkId = "1.5" 
+* item[hosp].item[acptNo].linkId = "1.6" 
 * item[hosp].item[acptNo].text = "hosp.acptNo|受理編號"
 * item[hosp].item[acptNo].answer 1..1 MS
 * item[hosp].item[acptNo].answer.valueString 1..1
 
-* item[hosp].item[acptNum].linkId = "1.6"
+* item[hosp].item[acptNum].linkId = "1.7"
 * item[hosp].item[acptNum].text = "hosp.acptNum|受理次數"
 * item[hosp].item[acptNum].answer 1..1 MS
 //* item[hosp].item[acptNum].answer.valueInteger 1..1 MS
@@ -140,7 +149,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[examinationReport] obeys speType
 * item[diagnosis].item[examinationReport].item[reportType].linkId = "4.2.1"
 * item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"
-* item[diagnosis].item[examinationReport].item[reportType].answer 1..* MS
+* item[diagnosis].item[examinationReport].item[reportType].answer 1..1 MS
 * item[diagnosis].item[examinationReport].item[reportType].answer.valueCoding 1..1 MS
 * item[diagnosis].item[examinationReport].item[reportType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type
 
@@ -151,7 +160,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 * item[diagnosis].item[examinationReport].item[reportResultString].linkId = "4.2.3"
 * item[diagnosis].item[examinationReport].item[reportResultString].text = "diagnosis.examinationReport.reportResultString|報告結果-文數字"
-* item[diagnosis].item[examinationReport].item[reportResultString].answer 1..* MS
+* item[diagnosis].item[examinationReport].item[reportResultString].answer 1..1 MS
 * item[diagnosis].item[examinationReport].item[reportResultString].answer.valueString 1..1 MS
 
 * item[diagnosis].item[examinationReport].item[reportResultPdf].linkId = "4.2.4"
@@ -187,6 +196,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 * item[diagnosis].item[medrec].item[medrecTitle].linkId = "4.3.2"
 * item[diagnosis].item[medrec].item[medrecTitle].text = "diagnosis.medrec.medrecTitle|病歷資料名稱"
+* item[diagnosis].item[medrec].item[medrecTitle].answer 1..1 MS
 * item[diagnosis].item[medrec].item[medrecTitle].answer.valueString 1..1 MS
 
 * item[diagnosis].item[imageStudy].linkId = "4.4"
@@ -209,6 +219,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 * item[diagnosis].item[imageStudy].item[imgResult].linkId = "4.4.2"
 * item[diagnosis].item[imageStudy].item[imgResult].text = "diagnosis.imageStudy.imgResult|影像報告結果"
+* item[diagnosis].item[imageStudy].item[imgResult].answer 1..1 MS
 * item[diagnosis].item[imageStudy].item[imgResult].answer.valueString  1..1 MS
 
 * item[diagnosis].item[imageStudy].item[imgDate].linkId = "4.4.3"
@@ -246,7 +257,8 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].linkId = "4.4.5.2.1"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].text = "diagnosis.imageStudy.imgDicom.series.uid|此系列的DICOM系列實例UID"
-* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].answer.valueString  1..1 MS
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].answer 1..1 MS
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].answer.valueString 1..1 MS
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].linkId = "4.4.5.2.2"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[modality].text = "diagnosis.imageStudy.imgDicom.series.modality|此系列實例所使用的成像儀器"
@@ -264,10 +276,12 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].linkId = "4.4.5.2.3.1"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].text = "diagnosis.imageStudy.imgDicom.series.instance.uid|DICOM影像"
-* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].answer.valueString  1..1 MS
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].answer 1..1 MS
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].answer.valueString 1..1 MS
 
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].linkId = "4.4.5.2.3.2"
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].text = "diagnosis.imageStudy.imgDicom.series.instance.sopClass|DICOM class 類型"
+* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answer 1..1 MS
 * item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answer.valueCoding  1..1 MS
 //* item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answer.valueCoding from http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1
 
@@ -283,11 +297,13 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].linkId = "4.4.6.1"
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicom|非DICOM影像"
-* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].answer.valueString  1..1 MS
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].answer 1..1 MS
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].answer.valueString 1..1 MS
 
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].linkId = "4.4.6.2"
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicomMimeType|非DICOM影像MimeType"
-* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding  1..1 MS
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer 1..1 MS
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding 1..1 MS
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/media-mimetypes
 
 
@@ -391,7 +407,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 * item[illness].item[cancerTreatmentText].linkId = "7.8"
 * item[illness].item[cancerTreatmentText].text = "illness.cancerTreatmentText|補充說明。"
-* item[illness].item[cancerTreatmentText].answer 1.. MS
+* item[illness].item[cancerTreatmentText].answer 1..1 MS
 * item[illness].item[cancerTreatmentText].answer.valueString 1..1 MS
 
 

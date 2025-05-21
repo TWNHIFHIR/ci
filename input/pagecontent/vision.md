@@ -16,7 +16,7 @@
 ### 圖例說明圖
 
 <div  style="padding-left: 10px;"> 
-<img class="figure-img img-responsive img-rounded center-block" src="圖例說明.png" alt="圖例說明" style="display: block;margin-left: auto;margin-right: auto;width: 90%;"/>
+<img class="figure-img img-responsive img-rounded center-block" src="legend.png" alt="圖例說明" style="display: block;margin-left: auto;margin-right: auto;width: 90%;"/>
 </div>
 
 <br>

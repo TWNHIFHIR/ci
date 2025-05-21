@@ -27,6 +27,7 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[hosp].item ^slicing.discriminator.path = "linkId"
 * item[hosp].item ^slicing.rules = #closed
 * item[hosp].item contains
+    applMode 1..1 MS and
     applType 1..1 MS and
     applDate 1..1 MS and
     medCertBookDate 1..1 MS and
@@ -34,33 +35,39 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
     acptNo 0..1 MS and
     acptNum 0..1 MS
 
-* item[hosp].item[applType].linkId = "1.1"
+* item[hosp].item[applMode].linkId = "1.1"
+* item[hosp].item[applMode].text = "hosp.applMode|申報方式"
+* item[hosp].item[applMode].type = #choice
+* item[hosp].item[applMode].required = true
+* item[hosp].item[applMode].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-apply-mode"
+
+* item[hosp].item[applType].linkId = "1.2"
 * item[hosp].item[applType].text = "hosp.applType|申報類別"
 * item[hosp].item[applType].type = #choice
 * item[hosp].item[applType].required = true
-* item[hosp].item[applType].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-reporting-method"
+* item[hosp].item[applType].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-apply-type"
 
-* item[hosp].item[applDate].linkId = "1.2" 
+* item[hosp].item[applDate].linkId = "1.3" 
 * item[hosp].item[applDate].text = "hosp.applDate|申請日期"
 * item[hosp].item[applDate].type = #date
 * item[hosp].item[applDate].required = true
 
-* item[hosp].item[medCertBookDate].linkId = "1.3" 
+* item[hosp].item[medCertBookDate].linkId = "1.4" 
 * item[hosp].item[medCertBookDate].text = "hosp.medCertBookDate|開立診斷書申請日期"
 * item[hosp].item[medCertBookDate].type = #date
 * item[hosp].item[medCertBookDate].required = true
 
-* item[hosp].item[hospId].linkId = "1.4" 
+* item[hosp].item[hospId].linkId = "1.5" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
 * item[hosp].item[hospId].type = #choice
 * item[hosp].item[hospId].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-organization"
 * item[hosp].item[hospId].required = true
 
-* item[hosp].item[acptNo].linkId = "1.5" 
+* item[hosp].item[acptNo].linkId = "1.6" 
 * item[hosp].item[acptNo].text = "hosp.acptNo|受理編號"
 * item[hosp].item[acptNo].type = #string
 
-* item[hosp].item[acptNum].linkId = "1.6"
+* item[hosp].item[acptNum].linkId = "1.7"
 * item[hosp].item[acptNum].text = "hosp.acptNum|受理次數"
 * item[hosp].item[acptNum].type = #integer
 
@@ -146,7 +153,6 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
 * item[diagnosis].item[examinationReport].item[reportResultString].linkId = "4.2.3"
 * item[diagnosis].item[examinationReport].item[reportResultString].text = "diagnosis.examinationReport.reportResultString|報告結果-文數字"
 * item[diagnosis].item[examinationReport].item[reportResultString].type = #string
-* item[diagnosis].item[examinationReport].item[reportResultString].repeats = true
 
 * item[diagnosis].item[examinationReport].item[reportResultPdf].linkId = "4.2.4"
 * item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告檔案，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
