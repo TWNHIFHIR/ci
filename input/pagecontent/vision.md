@@ -3,7 +3,10 @@
 重大傷病申請證明透過Bundle打包以下資料(相關對應表可以參照申請(Apply)癌藥事前審查之資料模型中的<a href="StructureDefinition-ApplyModel-mappings.html">Mappings</a>)：
 <ul>
     <li>重大傷病申請證明-Bundle TWCI</li>
+    <li>重大傷病申請-Task TWCII</li>
     <li>重大傷病申請書回覆-QuestionnaireResponse TWCI</li>
+    <li>病人資訊-Patient TWCI</li>
+    <li>重大傷病-Condition TWCI</li>
 </ul>
 </div>
 
