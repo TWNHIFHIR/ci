@@ -18,8 +18,10 @@ Description:    "此重大傷病申請-Task TWCI Profile說明TWCI IG如何進�
 * identifier  ^short = "受理編號（上傳時不須填寫，由健保署端收件後填寫。）"
 * executionPeriod  ^short = "受理日期（上傳時不須填寫，由健保署端收件後填寫。）"
 * businessStatus ^short = "核定結果（上傳時不須填寫，由健保署端收件後填寫。）"
-* status ^short = "查詢進度。送審:requested | 審結:completed | 核定同意:accepted | 核定不同意:rejected | 退件:failed | 補件:on-hold（上傳時不須填寫，由健保署端收件後填寫。）"
+* status ^short = "查詢進度。上傳時請固定填requested。送審:requested | 審結:completed | 核定同意:accepted | 核定不同意:rejected | 退件:failed | 補件:on-hold"
+* intent ^short = "【因FHIR設計而需必填】上傳時請固定填order。unknown | proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
 * intent = http://hl7.org/fhir/request-intent#order
+* status = http://hl7.org/fhir/task-status#requested
 
 
 CodeSystem: NHICIApproveResult	

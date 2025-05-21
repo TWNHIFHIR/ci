@@ -9,27 +9,31 @@ Usage: #example
 * item[hosp].linkId = "1"
 * item[hosp].text = "hosp|院所資訊"
 
-* item[hosp].item[applType].linkId = "1.1"
-* item[hosp].item[applType].text = "hosp.applType|申報類別"
-* item[hosp].item[applType].answer.valueCoding = NHICIReportingMethodCodes#1 "送核"
+* item[hosp].item[applMode].linkId = "1.1"
+* item[hosp].item[applMode].text = "hosp.applMode|申報方式"
+* item[hosp].item[applMode].answer.valueCoding = NHICIApplyModeCodes#2 "院所代辦"
 
-* item[hosp].item[applDate].linkId = "1.2" 
+* item[hosp].item[applType].linkId = "1.2"
+* item[hosp].item[applType].text = "hosp.applType|申報類別"
+* item[hosp].item[applType].answer.valueCoding = NHICIApplyTypeCodes#1 "送核"
+
+* item[hosp].item[applDate].linkId = "1.3" 
 * item[hosp].item[applDate].text = "hosp.applDate|申請日期"
 * item[hosp].item[applDate].answer.valueDate = "2024-01-01"
 
-* item[hosp].item[medCertBookDate].linkId = "1.3" 
+* item[hosp].item[medCertBookDate].linkId = "1.4" 
 * item[hosp].item[medCertBookDate].text = "hosp.medCertBookDate|開立診斷書申請日期"
 * item[hosp].item[medCertBookDate].answer.valueDate = "2025-05-05"
 
-* item[hosp].item[hospId].linkId = "1.4" 
+* item[hosp].item[hospId].linkId = "1.5" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
 * item[hosp].item[hospId].answer.valueCoding = https://twcore.mohw.gov.tw/ig/ci/CodeSystem/organization-identifier-tw#0131060029 "衛生福利部臺北醫院"
 
-* item[hosp].item[acptNo].linkId = "1.5" 
+* item[hosp].item[acptNo].linkId = "1.6" 
 * item[hosp].item[acptNo].text = "hosp.acptNo|受理編號"
 * item[hosp].item[acptNo].answer.valueString = "11218899999"
 
-* item[hosp].item[acptNum].linkId = "1.6"
+* item[hosp].item[acptNum].linkId = "1.7"
 * item[hosp].item[acptNum].text = "hosp.acptNum|受理次數"
 * item[hosp].item[acptNum].answer.valueInteger = 1
 
@@ -108,7 +112,7 @@ Usage: #example
 * item[diagnosis].item[examinationReport].item[reportType].linkId = "4.2.1"
 * item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"
 * item[diagnosis].item[examinationReport].item[reportType].answer[0].valueCoding = http://loinc.org#66117-3
-* item[diagnosis].item[examinationReport].item[reportType].answer[+].valueCoding = http://loinc.org#66114-0
+//* item[diagnosis].item[examinationReport].item[reportType].answer[+].valueCoding = http://loinc.org#66114-0
 
 * item[diagnosis].item[examinationReport].item[speType].linkId = "4.2.2"
 * item[diagnosis].item[examinationReport].item[speType].text = "diagnosis.examinationReport.speType|檢體種類"
@@ -319,7 +323,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
         </tr>
-         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
@@ -328,11 +332,26 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
                     background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.1</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">hosp.applMode|申報方式</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-nhi-apply-type.html#nhi-apply-type-1\">NHI-健保重大傷病-申報方式 2</a>: 院所代辦</span></span></td>
+        </tr>
+        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.2</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">hosp.applType|申報類別</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-nhi-reporting-method.html#nhi-reporting-method-1\">NHI-健保重大傷病-申報類別類別 1</a>: 送核</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"CodeSystem-nhi-apply-type.html#nhi-apply-type-1\">NHI-健保重大傷病-申報類別 1</a>: 送核</span></span></td>
         </tr>
          <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
@@ -341,7 +360,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.2</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.3</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">hosp.applDate|申請日期</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
@@ -356,7 +375,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.3</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.4</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">hosp.medCertBookDate|開立診斷書申請日期</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
@@ -371,7 +390,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.4</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.5</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">hosp.hospId|醫事機構代碼</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
@@ -386,7 +405,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.5</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.6</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">hosp.acptNo|受理編號</td>
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
@@ -401,7 +420,7 @@ Usage: #example
                     class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
                     class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
-                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.6</td>
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 1.7</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">hosp.acptNum|受理次數</td>
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
@@ -527,7 +546,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\" ><span><span><a href=\"ValueSet-loinc-report-type.html\">LOINC 66117-3</a>: Prostate Pathology biopsy report；<a href=\"ValueSet-loinc-report-type.html\">LOINC 66114-0</a>: Stomach Pathology biopsy report</span></span></td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" ><span><a href=\"ValueSet-loinc-report-type.html\">LOINC 66117-3</a>: Prostate Pathology biopsy report</span></td>
         </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"

@@ -66,6 +66,8 @@ pages:
     title: TWCI ImplementationGuide Resource
   vision.md:
     title: 視覺化邏輯模型
+  validate.md:
+    title: 驗證教學
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
