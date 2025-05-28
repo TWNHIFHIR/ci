@@ -1,8 +1,8 @@
 Instance: CapabilityStatementTWCIServer
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "https://twcore.mohw.gov.tw/ig/ci/CapabilityStatement/CapabilityStatementTWCIServer"
-* version = "1.0.1"
+* url = "https://nhicore.nhi.gov.tw/ci/CapabilityStatement/CapabilityStatementTWCIServer"
+* version = "1.0.0"
 * name = "CapabilityStatementTWCIServer"
 * title = "臺灣重大傷病-伺服端(TWCI Server)"
 * status = #active
@@ -14,7 +14,7 @@ Usage: #definition
 * format[0] = #json
 * format[+] = #xml
 * patchFormat = #application/json-patch+json
-* implementationGuide = "https://twcore.mohw.gov.tw/ig/ci/ImplementationGuide/tw.gov.mohw.nhi.ci"
+* implementationGuide = "https://nhicore.nhi.gov.tw/ci/ImplementationGuide/tw.gov.mohw.nhi.ci"
 * description = "臺灣健保重大傷病實作指引(TWCI IG)伺服端(Server)之能力聲明"
 * rest.mode = #server
 * rest.documentation = "臺灣重大傷病-伺服端(TWCI Server)必須（SHALL）使用臺灣重大傷病伺服端（TWCI Server）能力聲明中的查詢參數，支援讀取和查詢一個或多個臺灣重大傷病Profile(s)。"
@@ -22,7 +22,7 @@ Usage: #definition
 * rest.security.description = "Server必須(SHALL)透過回傳 HTTP 401「未授權」， HTTP 403「禁止」，或 HTTP 404 「未找到」，來拒絕任何未經授權的請求。"
 
 * rest.resource[+].type = #Bundle
-* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/Bundle-twci"
+* rest.resource[=].profile = "https://nhicore.nhi.gov.tw/ci/StructureDefinition/Bundle-twci"
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #create
@@ -37,13 +37,13 @@ Usage: #definition
 * rest.resource[=].interaction[=].code = #update
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchParam[0].name = "_id"
-* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/ci/SearchParameter/Bundle-id"
+* rest.resource[=].searchParam[=].definition = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Bundle-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
 
 * rest.resource[+].type = #Questionnaire
-* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/Questionnaire-twci"
+* rest.resource[=].profile = "https://nhicore.nhi.gov.tw/ci/StructureDefinition/Questionnaire-twci"
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #create
@@ -59,7 +59,7 @@ Usage: #definition
 * rest.resource[=].referencePolicy = #resolves
 
 * rest.resource[+].type = #QuestionnaireResponse
-* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/QuestionnaireResponse-twci"
+* rest.resource[=].profile = "https://nhicore.nhi.gov.tw/ci/StructureDefinition/QuestionnaireResponse-twci"
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #create
@@ -75,7 +75,7 @@ Usage: #definition
 * rest.resource[=].referencePolicy = #resolves
 
 * rest.resource[+].type = #Task
-* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/Task-twci"
+* rest.resource[=].profile = "https://nhicore.nhi.gov.tw/ci/StructureDefinition/Task-twci"
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #create
@@ -90,38 +90,38 @@ Usage: #definition
 * rest.resource[=].interaction[=].code = #update
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchParam[0].name = "period"
-* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/ci/SearchParameter/Task-period"
+* rest.resource[=].searchParam[=].definition = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-period"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
 * rest.resource[=].searchParam[+].name = "patient"
-* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/ci/SearchParameter/Task-patient"
+* rest.resource[=].searchParam[=].definition = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
 * rest.resource[=].searchParam[+].name = "authored-on"
-* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/ci/SearchParameter/Task-authored-on"
+* rest.resource[=].searchParam[=].definition = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-authored-on"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
 * rest.resource[=].searchParam[+].name = "modified"
-* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/ci/SearchParameter/Task-modified"
+* rest.resource[=].searchParam[=].definition = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-modified"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
 * rest.resource[=].searchParam[+].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/ci/SearchParameter/Task-identifier"
+* rest.resource[=].searchParam[=].definition = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
 * rest.resource[=].searchParam[+].name = "status"
-* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/ci/SearchParameter/Task-status"
+* rest.resource[=].searchParam[=].definition = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
 
 * rest.resource[+].type = #Patient
-* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/Patient-twci"
+* rest.resource[=].profile = "https://nhicore.nhi.gov.tw/ci/StructureDefinition/Patient-twci"
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #create
@@ -136,18 +136,18 @@ Usage: #definition
 * rest.resource[=].interaction[=].code = #update
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchParam[0].name = "name"
-* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/ci/SearchParameter/Patient-name"
+* rest.resource[=].searchParam[=].definition = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Patient-name"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
 * rest.resource[=].searchParam[+].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/ci/SearchParameter/Patient-identifier"
+* rest.resource[=].searchParam[=].definition = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Patient-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
 
 * rest.resource[+].type = #Condition
-* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/Condition-twci"
+* rest.resource[=].profile = "https://nhicore.nhi.gov.tw/ci/StructureDefinition/Condition-twci"
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #create
@@ -167,7 +167,7 @@ Usage: #definition
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
     <h2 id=\"title\">臺灣重大傷病-伺服端(TWCI Server)</h2>
     <ul>
-        <li>實作指引版本：1.0.1</li>
+        <li>實作指引版本：1.0.0</li>
         <li>FHIR版本：4.0.1</li>
         <li>支援格式：<code>json</code>, <code>xml</code></li>
         <li>發佈日：2025-04-30</li>

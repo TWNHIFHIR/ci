@@ -2,7 +2,7 @@ Mapping: TWCIQuestionnaireResponse
 Id: TWCIQuestionnaireResponse
 Title: "Mapping to TWCI QuestionnaireResponse"
 Source: ApplyModel
-Target: "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/QuestionnaireResponse-twci"
+Target: "https://nhicore.nhi.gov.tw/ci/StructureDefinition/QuestionnaireResponse-twci"
 * hosp -> "(院所資訊)"
 * hosp.applMode -> "item.where(linkId = '1').item.where(linkId = '1.1').answer.valueCoding.code (申報方式)"
 * hosp.applType -> "item.where(linkId = '1').item.where(linkId = '1.2').answer.valueCoding.code (申報類別)"
@@ -72,7 +72,7 @@ Mapping: TWCIPatient
 Id: TWCIPatient
 Title: "Mapping to TWCI Patient"
 Source: ApplyModel
-Target: "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/Patient-twci"
+Target: "https://nhicore.nhi.gov.tw/ci/StructureDefinition/Patient-twci"
 * patient -> "(病人資訊)"
 * patient.idCard -> "identifier.where(type.coding.code = 'NNxxx').value (身分證字號)"
 * patient.medicalRecord -> "identifier.where(type.coding.code = 'MR').value (病歷號)"
@@ -89,5 +89,5 @@ Mapping: TWCICondition
 Id: TWCICondition
 Title: "Mapping to TWCI Condition"
 Source: ApplyModel
-Target: "https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/Condition-twci"
+Target: "https://nhicore.nhi.gov.tw/ci/StructureDefinition/Condition-twci"
 * ci.hvType -> "category.coding.code (重大傷病類別)" 

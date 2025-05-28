@@ -6,8 +6,8 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 * status = #completed
 * questionnaire 1..1 MS
-* questionnaire = "https://twcore.mohw.gov.tw/ig/ci/Questionnaire/apply-catastrophic-illness"
-* questionnaire only Canonical(https://twcore.mohw.gov.tw/ig/ci/StructureDefinition/Questionnaire-twci)
+* questionnaire = "https://nhicore.nhi.gov.tw/ci/Questionnaire/apply-catastrophic-illness"
+* questionnaire only Canonical(https://nhicore.nhi.gov.tw/ci/StructureDefinition/Questionnaire-twci)
 * item MS
 * item.linkId ^short = "問卷題目編號"
 
@@ -42,15 +42,15 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[hosp].item[applMode].text = "hosp.applMode|申報方式"
 * item[hosp].item[applMode].answer 1..1 MS
 * item[hosp].item[applMode].answer.valueCoding 1..1 MS
-* item[hosp].item[applMode].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-apply-mode
-* item[hosp].item[applMode].answer.valueCoding = https://twcore.mohw.gov.tw/ig/ci/CodeSystem/nhi-apply-mode#2
+* item[hosp].item[applMode].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-apply-mode
+* item[hosp].item[applMode].answer.valueCoding = https://nhicore.nhi.gov.tw/ci/CodeSystem/nhi-apply-mode#2
 
 * item[hosp].item[applType].linkId = "1.2"
 * item[hosp].item[applType].text = "hosp.applType|申報類別"
 * item[hosp].item[applType].answer 1..1 MS
 * item[hosp].item[applType].answer.valueCoding 1..1 MS
-* item[hosp].item[applType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-apply-type
-* item[hosp].item[applType].answer.valueCoding = https://twcore.mohw.gov.tw/ig/ci/CodeSystem/nhi-apply-type#1
+* item[hosp].item[applType].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-apply-type
+* item[hosp].item[applType].answer.valueCoding = https://nhicore.nhi.gov.tw/ci/CodeSystem/nhi-apply-type#1
 
 * item[hosp].item[applDate].linkId = "1.3" 
 * item[hosp].item[applDate].text = "hosp.applDate|申請日期"
@@ -69,7 +69,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
 * item[hosp].item[hospId].answer 1..1 MS
 * item[hosp].item[hospId].answer.valueCoding 1..1
-* item[hosp].item[hospId].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-organization
+* item[hosp].item[hospId].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-organization
 
 * item[hosp].item[acptNo].linkId = "1.6" 
 * item[hosp].item[acptNo].text = "hosp.acptNo|受理編號"
@@ -151,7 +151,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"
 * item[diagnosis].item[examinationReport].item[reportType].answer 1..1 MS
 * item[diagnosis].item[examinationReport].item[reportType].answer.valueCoding 1..1 MS
-* item[diagnosis].item[examinationReport].item[reportType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type
+* item[diagnosis].item[examinationReport].item[reportType].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/loinc-report-type
 
 * item[diagnosis].item[examinationReport].item[speType].linkId = "4.2.2"
 * item[diagnosis].item[examinationReport].item[speType].text = "diagnosis.examinationReport.speType|檢體種類"
@@ -304,7 +304,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicomMimeType|非DICOM影像MimeType"
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer 1..1 MS
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding 1..1 MS
-* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/media-mimetypes
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/media-mimetypes
 
 
 * item[ci].linkId = "5"
@@ -329,7 +329,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[cancerStage].item[cancerStage].text = "cancerStage.cancerStage|癌症期別，醫院自行填入癌症期別(1~4)，若為不適用者填9(不適用)。"
 * item[cancerStage].item[cancerStage].answer 1..1 MS
 * item[cancerStage].item[cancerStage].answer.valueCoding 1..1 MS
-* item[cancerStage].item[cancerStage].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/cancer-stage
+* item[cancerStage].item[cancerStage].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/cancer-stage
 
 * item[cancerStage].item[assessScore].linkId = "6.2"
 * item[cancerStage].item[assessScore].text = "cancerStage.assessScore|癌症分期分數或結果"
@@ -370,7 +370,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼，最長為7碼。"
 * item[illness].item[oriCancerCode].answer 1..1 MS
 * item[illness].item[oriCancerCode].answer.valueCoding 1..1 MS
-* item[illness].item[oriCancerCode].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-primary-cancer-icd
+* item[illness].item[oriCancerCode].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-primary-cancer-icd
 
 * item[illness].item[oriCancerDxDate].linkId = "7.2"
 * item[illness].item[oriCancerDxDate].text = "illness.oriCancerDxDate|癌症最初診斷日期，西元年月日；不得大於系統日。"
@@ -380,7 +380,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[illness].item[oriCancerAjcc].text = "illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)，依期別填入；若不是用此分類而用其他分類，則填寫9。"
 * item[illness].item[oriCancerAjcc].answer 1..1 MS
 * item[illness].item[oriCancerAjcc].answer.valueCoding 1..1 MS
-* item[illness].item[oriCancerAjcc].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstaging
+* item[illness].item[oriCancerAjcc].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-cancerstaging
 
 * item[illness].item[oriCancerAjcc1].linkId = "7.4"
 * item[illness].item[oriCancerAjcc1].text = "illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位，若前述欄位為9，則請於此欄位描述其他系統之其他分期為何。"
@@ -391,19 +391,19 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[illness].item[cancerStatus].text = "illness.cancerStatus|目前癌症狀態"
 * item[illness].item[cancerStatus].answer 1..1 MS
 * item[illness].item[cancerStatus].answer.valueCoding 1..1 MS
-* item[illness].item[cancerStatus].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-status
+* item[illness].item[cancerStatus].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-cancerstage-status
 
 * item[illness].item[cancerTreatment].linkId = "7.6"
 * item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估，可複選。"
 * item[illness].item[cancerTreatment].answer 1.. MS
 * item[illness].item[cancerTreatment].answer.valueCoding 1..1 MS
-* item[illness].item[cancerTreatment].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancer-treatment
+* item[illness].item[cancerTreatment].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-cancer-treatment
 
 * item[illness].item[cancerTreatmentPlan].linkId = "7.7"
 * item[illness].item[cancerTreatmentPlan].text = "illness.cancerTreatmentPlan|後續治療計劃，可複選。"
 * item[illness].item[cancerTreatmentPlan].answer 1.. MS
 * item[illness].item[cancerTreatmentPlan].answer.valueCoding 1..1 MS
-* item[illness].item[cancerTreatmentPlan].answer.valueCoding from https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancer-treatment-plan
+* item[illness].item[cancerTreatmentPlan].answer.valueCoding from https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-cancer-treatment-plan
 
 * item[illness].item[cancerTreatmentText].linkId = "7.8"
 * item[illness].item[cancerTreatmentText].text = "illness.cancerTreatmentText|補充說明。"

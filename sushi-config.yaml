@@ -4,12 +4,12 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: tw.gov.mohw.nhi.ci
-canonical: https://twcore.mohw.gov.tw/ig/ci
+canonical: https://nhicore.nhi.gov.tw/ci
 name: TWCI
 title: 臺灣重大傷病實作指引
 description: 臺灣重大傷病實作指引(Catastrophic Illness Implementation Guide，TWCI IG)
 status: active # draft | active | retired | unknown
-version: 1.0.1
+version: 1.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build

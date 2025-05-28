@@ -17,13 +17,13 @@ Usage: #example
 * item[hosp].item[applMode].text = "hosp.applMode|申報方式"
 * item[hosp].item[applMode].type = #choice
 * item[hosp].item[applMode].required = true
-* item[hosp].item[applMode].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-apply-mode"
+* item[hosp].item[applMode].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-apply-mode"
 
 * item[hosp].item[applType].linkId = "1.2"
 * item[hosp].item[applType].text = "hosp.applType|申報類別"
 * item[hosp].item[applType].type = #choice
 * item[hosp].item[applType].required = true
-* item[hosp].item[applType].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-apply-type"
+* item[hosp].item[applType].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-apply-type"
 
 * item[hosp].item[applDate].linkId = "1.3" 
 * item[hosp].item[applDate].text = "hosp.applDate|申請日期"
@@ -38,7 +38,7 @@ Usage: #example
 * item[hosp].item[hospId].linkId = "1.5" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
 * item[hosp].item[hospId].type = #choice
-* item[hosp].item[hospId].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-organization"
+* item[hosp].item[hospId].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-organization"
 * item[hosp].item[hospId].required = true
 
 * item[hosp].item[acptNo].linkId = "1.6" 
@@ -78,7 +78,7 @@ Usage: #example
 * item[diagnosis].item[icd10cmCode].linkId = "4.1"
 * item[diagnosis].item[icd10cmCode].text = "diagnosis.icd10cmCode|主診斷代碼"
 * item[diagnosis].item[icd10cmCode].type = #choice
-* item[diagnosis].item[icd10cmCode].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-diag-code-icd"
+* item[diagnosis].item[icd10cmCode].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-diag-code-icd"
 * item[diagnosis].item[icd10cmCode].required = true
 
 /* item[diagnosis].item[diagName].linkId = "4.2"
@@ -93,7 +93,7 @@ Usage: #example
 * item[diagnosis].item[examinationReport].item[reportType].linkId = "4.2.1"
 * item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"
 * item[diagnosis].item[examinationReport].item[reportType].type = #choice
-* item[diagnosis].item[examinationReport].item[reportType].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/loinc-report-type"
+* item[diagnosis].item[examinationReport].item[reportType].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/loinc-report-type"
 
 * item[diagnosis].item[examinationReport].item[speType].linkId = "4.2.2"
 * item[diagnosis].item[examinationReport].item[speType].text = "diagnosis.examinationReport.speType|檢體種類"
@@ -137,7 +137,7 @@ Usage: #example
 * item[diagnosis].item[imageStudy].item[imgItem].linkId = "4.4.1"
 * item[diagnosis].item[imageStudy].item[imgItem].text = "diagnosis.imageStudy.imgItem|影像報告"
 * item[diagnosis].item[imageStudy].item[imgItem].type = #choice
-* item[diagnosis].item[imageStudy].item[imgItem].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/icd-10-pcs-2023-image"
+* item[diagnosis].item[imageStudy].item[imgItem].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/icd-10-pcs-2023-image"
 
 * item[diagnosis].item[imageStudy].item[imgResult].linkId = "4.4.2"
 * item[diagnosis].item[imageStudy].item[imgResult].text = "diagnosis.imageStudy.imgResult|影像報告結果"
@@ -150,7 +150,7 @@ Usage: #example
 * item[diagnosis].item[imageStudy].item[imgBodySite].linkId = "4.4.4"
 * item[diagnosis].item[imageStudy].item[imgBodySite].text = "diagnosis.imageStudy.imgBodySite|影像檢查的身體部位"
 * item[diagnosis].item[imageStudy].item[imgBodySite].type = #choice
-* item[diagnosis].item[imageStudy].item[imgBodySite].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/body-site"
+* item[diagnosis].item[imageStudy].item[imgBodySite].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/body-site"
 
 * item[diagnosis].item[imageStudy].item[imgDicom].linkId = "4.4.5"
 * item[diagnosis].item[imageStudy].item[imgDicom].text = "diagnosis.imageStudy.imgDicom|DICOM影像"
@@ -201,7 +201,7 @@ Usage: #example
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].linkId = "4.4.6.2"
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].text = "diagnosis.imageStudy.imgNonDicom.imgNonDicomMimeType|非DICOM影像MimeType"
 * item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].type = #choice
-* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/media-mimetypes"
+* item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/media-mimetypes"
 
 
 * item[ci].linkId = "5"
@@ -217,7 +217,7 @@ Usage: #example
 * item[cancerStage].item[cancerStage].linkId = "6.1"
 * item[cancerStage].item[cancerStage].text = "cancerStage.cancerStage|癌症期別，醫院自行填入癌症期別(1~4)，若為不適用者填9(不適用)。"
 * item[cancerStage].item[cancerStage].type = #choice
-* item[cancerStage].item[cancerStage].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/cancer-stage"
+* item[cancerStage].item[cancerStage].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/cancer-stage"
 * item[cancerStage].item[cancerStage].required = true
 
 * item[cancerStage].item[assessScore].linkId = "6.2"
@@ -244,7 +244,7 @@ Usage: #example
 * item[illness].item[oriCancerCode].linkId = "7.1"
 * item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼，最長為7碼。"
 * item[illness].item[oriCancerCode].type = #choice
-* item[illness].item[oriCancerCode].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-primary-cancer-icd"
+* item[illness].item[oriCancerCode].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-primary-cancer-icd"
 
 * item[illness].item[oriCancerDxDate].linkId = "7.2"
 * item[illness].item[oriCancerDxDate].text = "illness.oriCancerDxDate|癌症最初診斷日期，西元年月日；不得大於系統日。"
@@ -253,7 +253,7 @@ Usage: #example
 * item[illness].item[oriCancerAjcc].linkId = "7.3"
 * item[illness].item[oriCancerAjcc].text = "illness.oriCancerAjcc|癌症最初診斷AJCC分期(病理分期或未接受治療前的臨床分期)，依期別填入；若不是用此分類而用其他分類，則填寫9。"
 * item[illness].item[oriCancerAjcc].type = #choice
-* item[illness].item[oriCancerAjcc].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstaging"
+* item[illness].item[oriCancerAjcc].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-cancerstaging"
 
 * item[illness].item[oriCancerAjcc1].linkId = "7.4"
 * item[illness].item[oriCancerAjcc1].text = "illness.oriCancerAjcc1|癌症最初診斷AJCC分期_補充說明欄位，若前述欄位為9，則請於此欄位描述其他系統之其他分期為何。"
@@ -262,18 +262,18 @@ Usage: #example
 * item[illness].item[cancerStatus].linkId = "7.5"
 * item[illness].item[cancerStatus].text = "illness.cancerStatus|目前癌症狀態"
 * item[illness].item[cancerStatus].type = #choice
-* item[illness].item[cancerStatus].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancerstage-status"
+* item[illness].item[cancerStatus].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-cancerstage-status"
 
 * item[illness].item[cancerTreatment].linkId = "7.6"
 * item[illness].item[cancerTreatment].text = "illness.cancerTreatment|後續治療評估，可複選。"
 * item[illness].item[cancerTreatment].type = #choice
-* item[illness].item[cancerTreatment].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancer-treatment"
+* item[illness].item[cancerTreatment].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-cancer-treatment"
 * item[illness].item[cancerTreatment].repeats = true
 
 * item[illness].item[cancerTreatmentPlan].linkId = "7.7"
 * item[illness].item[cancerTreatmentPlan].text = "illness.cancerTreatmentPlan|後續治療計劃，可複選。"
 * item[illness].item[cancerTreatmentPlan].type = #choice
-* item[illness].item[cancerTreatmentPlan].answerValueSet = "https://twcore.mohw.gov.tw/ig/ci/ValueSet/nhi-cancer-treatment-plan"
+* item[illness].item[cancerTreatmentPlan].answerValueSet = "https://nhicore.nhi.gov.tw/ci/ValueSet/nhi-cancer-treatment-plan"
 * item[illness].item[cancerTreatmentPlan].repeats = true
 
 * item[illness].item[cancerTreatmentText].linkId = "7.8"

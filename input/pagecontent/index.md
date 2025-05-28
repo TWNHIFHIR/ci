@@ -10,7 +10,7 @@
                <li>原為單位數的代碼（<code>1</code>～<code>9</code>）調整為兩位數格式（<code>01</code>～<code>09</code>）。</li>
             </ol>
         </li>
-        <li>修改<a href="CodeSystem-nhi-apply-type.html">CodeSystem: NHI-健保重大傷病-申報類別</a>：為統一命名，原URL為<code>https://twcore.mohw.gov.tw/ig/ci/CodeSystem/nhi-<b>reporting-method</b></code>，修改為<code>https://twcore.mohw.gov.tw/ig/ci/CodeSystem/nhi-<b>apply-type</b></code>。</li>
+        <li>修改<a href="CodeSystem-nhi-apply-type.html">CodeSystem: NHI-健保重大傷病-申報類別</a>：為統一命名，原URL為<code>https://nhicore.nhi.gov.tw/ci/CodeSystem/nhi-<b>reporting-method</b></code>，修改為<code>https://nhicore.nhi.gov.tw/ci/CodeSystem/nhi-<b>apply-type</b></code>。</li>
         <li>修改<a href="StructureDefinition-Questionnaire-twci.html">Profile: 重大傷病申請書-Questionnaire TWCI</a>：
             <ol>
                <li>新增欄位「(1.1)申報方式」，並調整「(1)院所資訊」中其他細項的序號(linkId)。</li>

@@ -3,7 +3,7 @@ Id: body-site
 Title: "SNOMEDCT-健保重大傷病-身體部位值集"
 Description: "SNOMEDCT-健保重大傷病-身體部位值集，代碼對應請參考[臺灣健保署身體部位代碼對應SNOMED CT](https://build.fhir.org/ig/TWNHIFHIR/pas/ConceptMap-nhi-sct-body-site.html)。"
 * ^date = "2025-04-30"
-* ^version = "1.0.1"
+* ^version = "1.0.0"
 * ^experimental = false
 * http://snomed.info/sct#69536005
 * http://snomed.info/sct#45048000

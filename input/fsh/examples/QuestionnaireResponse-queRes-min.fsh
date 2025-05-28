@@ -4,7 +4,7 @@ Title: "重大傷病申請書回覆"
 Description: "依據重大傷病申請書回覆-QuestionnaireResponse TWCI Profile呈現重大傷病申請書回覆之範例"
 Usage: #example
 
-* questionnaire = "https://twcore.mohw.gov.tw/ig/ci/Questionnaire/apply-catastrophic-illness"
+* questionnaire = "https://nhicore.nhi.gov.tw/ci/Questionnaire/apply-catastrophic-illness"
 * status = #completed
 * item[hosp].linkId = "1"
 * item[hosp].text = "hosp|院所資訊"
@@ -27,7 +27,7 @@ Usage: #example
 
 * item[hosp].item[hospId].linkId = "1.5" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
-* item[hosp].item[hospId].answer.valueCoding = https://twcore.mohw.gov.tw/ig/ci/CodeSystem/organization-identifier-tw#0131060029 "衛生福利部臺北醫院"
+* item[hosp].item[hospId].answer.valueCoding = https://nhicore.nhi.gov.tw/ci/CodeSystem/organization-identifier-tw#0131060029 "衛生福利部臺北醫院"
 
 * item[hosp].item[acptNo].linkId = "1.6" 
 * item[hosp].item[acptNo].text = "hosp.acptNo|受理編號"

@@ -4,7 +4,7 @@ Title: "重大傷病"
 Description: "依據重大傷病-Condition TWCI Profile呈現重大傷病之範例"
 Usage: #example
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
-* category = https://twcore.mohw.gov.tw/ig/ci/CodeSystem/nhi-category#01
+* category = https://nhicore.nhi.gov.tw/ci/CodeSystem/nhi-category#01
 * subject = Reference(Patient/pat-min)
 
 * text.status = #generated

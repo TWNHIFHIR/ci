@@ -4,7 +4,7 @@ Title: "重大傷病申請"
 Description: "依據重大傷病申請-Task TWCI Profile呈現重大傷病申請之範例"
 Usage: #example
 * status = http://hl7.org/fhir/task-status#requested
-* businessStatus = https://twcore.mohw.gov.tw/ig/ci/CodeSystem/nhi-approve-result#5
+* businessStatus = https://nhicore.nhi.gov.tw/ci/CodeSystem/nhi-approve-result#5
 * intent = http://hl7.org/fhir/request-intent#order
 * focus = Reference(QuestionnaireResponse/queRes-min)
 * basedOn = Reference(Condition/con-min)

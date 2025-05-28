@@ -1,14 +1,15 @@
 {
   "package-id": "tw.gov.mohw.nhi.ci",
-  "version": "1.0.1",
-  "path": "https://twcore.mohw.gov.tw/ig/ci/1.0.1",
+  "version": "1.0.0",
+  "path": "https://nhicore.nhi.gov.tw/ci/1.0.0",
   "mode": "milestone",
   "status": "release",
   "sequence": "STU1",
-  "desc": "修改CodeSystem",
-  "descmd": "- 修改CodeSystem: NHI-健保重大傷病-重大傷病類別
-  - 修改CodeSystem: NHI-健保重大傷病-申報類別
-  - 修改Profile: 重大傷病申請書-Questionnaire TWCI
-  - 修改Profile: 重大傷病申請書回覆-QuestionnaireResponse TWCI
-  - 修改Profile: 重大傷病申請-Task TWCI"
+  "desc": "第一個發佈版本",
+  "descmd": "第一個發佈版本",
+  "first" : true,
+  "title" : "臺灣重大傷病實作指引",
+  "ci-build" : "https://build.fhir.org/ig/TWNHIFHIR/ci/",
+  "category" : "Administration",
+  "introduction" : "臺灣重大傷病實作指引(Catastrophic Illness Implementation Guide，TWCI IG)",
 }
