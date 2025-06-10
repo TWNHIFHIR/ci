@@ -5,11 +5,11 @@
   "mode": "milestone",
   "status": "trial-use",
   "sequence": "STU1.0.0",
+  "ci-build" : "https://build.fhir.org/ig/TWNHIFHIR/ci/",
   "desc": "第一個發布版本",
   "descmd": "第一個發布版本",
   "first" : true,
   "title" : "臺灣重大傷病實作指引",
-  "ci-build" : "https://build.fhir.org/ig/TWNHIFHIR/ci/",
   "category" : "Rare Diseases",
   "introduction" : "臺灣重大傷病實作指引(Catastrophic Illness Implementation Guide，TWCI IG)"
 }
