@@ -1,10 +1,10 @@
 CodeSystem: CancerStagingCodes
 Id: nhi-cancerstaging
 Title: "NHI-健保重大傷病-癌症最初診斷AJCC分期"
-Description: "臺灣衛生福利部中央健康保險署「癌症最初診斷AJCC分期」代碼，代碼出版日期：2025-04-30；資料所屬單位：臺灣衛生福利部中央健康保險署。"
+Description: "臺灣衛生福利部中央健康保險署「癌症最初診斷AJCC分期」代碼，代碼出版日期：2025-06-11；資料所屬單位：臺灣衛生福利部中央健康保險署。"
 * ^caseSensitive = true
 * ^content = #complete
-* ^date = "2025-04-30"
+* ^date = "2025-06-11"
 * ^version = "1.0.0"
 * ^experimental = false
 * #1 "第一期"
@@ -17,7 +17,7 @@ ValueSet: CancerStaging
 Id: nhi-cancerstaging
 Title: "NHI-健保重大傷病-癌症最初診斷AJCC分期值集"
 Description: "NHI-健保重大傷病-癌症最初診斷AJCC分期值集"
-* ^date = "2025-04-30"
+* ^date = "2025-06-11"
 * ^version = "1.0.0"
 * ^experimental = false
 * include codes from system CancerStagingCodes

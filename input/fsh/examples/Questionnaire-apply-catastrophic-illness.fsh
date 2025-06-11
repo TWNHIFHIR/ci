@@ -5,7 +5,7 @@ Description: "依據重大傷病申請書-Questionnaire TWCI Profile呈現重大
 Usage: #example
 * name = "CatastrophicIllnessForm"
 * title = "Catastrophic-Illness-Form"
-* date = "2025-04-30"
+* date = "2025-06-11"
 * status = http://hl7.org/fhir/publication-status#active
 
 * item[hosp].linkId = "1"

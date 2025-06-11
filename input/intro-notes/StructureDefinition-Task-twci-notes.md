@@ -24,7 +24,7 @@
     `GET [base]/Task?period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]}`  
 
     例子：  
-      (1) GET [base]/Task?period=gt2025-04-30&period=lt2025-01-07  
+      (1) GET [base]/Task?period=gt2025-06-11&period=lt2025-01-07  
 
 4. **必須（SHALL）** 支援透過查詢參數 **[`modified`](SearchParameter-Task-modified.html)** 查詢所有Task：  
     ([如何透過date查詢](https://hl7.org/fhir/R4/search.html#date))  
@@ -45,7 +45,7 @@
     `GET [base]/Task?authored-on={gt|lt|ge|le}[date]{&authored-on={gt|lt|ge|le}[date]}`  
 
     例子：  
-      (1) GET [base]/Task?authored-on=gt2025-04-30&authored-on=lt2025-01-07  
+      (1) GET [base]/Task?authored-on=gt2025-06-11&authored-on=lt2025-01-07  
 
 7. **必須（SHALL）** 支援透過查詢參數 **[`status`](SearchParameter-Task-status.html)** 查詢所有Task：  
     ([如何透過token查詢](http://hl7.org/fhir/R4/search.html#token))   

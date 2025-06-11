@@ -30,7 +30,7 @@
 ##### 受理日期：[Task.period](SearchParameter-Task-period.html)
 `GET [base]/Task?period={gt|lt|ge|le}[受理日期]{&period={gt|lt|ge|le}[受理日期]}`  
 例子：  
-      (1) GET [base]/Task?period=gt2025-04-30&period=lt2025-01-07
+      (1) GET [base]/Task?period=gt2025-06-11&period=lt2025-01-07
 
 ##### 核定日期：[Task.modified](SearchParameter-Task-modified.html)
 `GET [base]/Task?modified={gt|lt|ge|le}[核定日期]{&modified={gt|lt|ge|le}[核定日期]}`  
@@ -45,7 +45,7 @@
 ##### 收件日期：[Task.authored-on](SearchParameter-Task-authored-on.html)
 `GET [base]/Task?authored-on={gt|lt|ge|le}[收件日期]{&authored-on={gt|lt|ge|le}[收件日期]}`  
 例子：  
-      (1) GET [base]/Task?authored-on=gt2025-04-30&authored-on=lt2025-01-07
+      (1) GET [base]/Task?authored-on=gt2025-06-11&authored-on=lt2025-01-07
 
 ##### 查詢進度：[Task.status](SearchParameter-Task-status.html)
 `GET [base]/Task?status=[查詢進度]`  

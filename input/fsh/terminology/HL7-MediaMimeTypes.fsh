@@ -2,7 +2,7 @@ ValueSet: MediaMimeTypes
 Id: media-mimetypes
 Title: "HL7-健保重大傷病-非DICOM影像MimeType值集"
 Description: "HL7-健保重大傷病-非DICOM影像MimeType值集"
-* ^date = "2025-04-30"
+* ^date = "2025-06-11"
 * ^version = "1.0.0"
 * ^experimental = false
 * urn:ietf:bcp:13#image/jpeg
