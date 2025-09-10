@@ -1,10 +1,24 @@
+<div class="bg-danger" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
+<p><b>請注意</b>：您目前所看到的IG為持續建置(ci-build)版，主要依據實作者及健保署端的業務需求即時調整V1.0.0版內容，因而會比健保署的IG版本V1.0.0(https://nhicore.nhi.gov.tw/ci/)內容新，僅供未來想以最新版本規格進行資料上傳的人員參考，下次更新版本號時間預計為114年10月，屆時才會調整相應版本的健保署FHIR伺服器規格。<br/>
+<br/>
+<b>醫院實作時請以V1.0.0為主進行實例驗證，目前健保署端的伺服器採用V1.0.0版規格。</b></p>
+</div>
+<br/>
+
 <div class="bg-success" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
 <p><b>相關資訊可參考衛生福利部中央健康保險署的<a href="https://www.nhi.gov.tw/ch/np-3788-1.html" target="_blank">癌症重大傷病申請導入FHIR</a>。</b></p>
 </div>
 
 <div class="bg-warning" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
-因考量實作需求，於2025/5/21異動以下內容：
+因考量實作需求，於2025/9/10異動以下內容：
     <ol>  
+        <li>修改<a href="StructureDefinition-ApplyModel.html">Logical Model: 申請(Apply)重大傷病申請書之資料模型</a>：
+            <ol>
+               <li>為統一命名規則，原<code>sex</code>(性別)，修改為<code>gender</code>。</li>
+               <li>為統一命名規則，原<code>medicalRecord</code>(病歷號)，修改為<code>patID</code>。</li>
+               <li>為統一命名規則，原「身分證字號」，修改為「身分證號」。</li>
+            </ol>
+        </li>
         <li>修改<a href="CodeSystem-nhi-category.html">CodeSystem: NHI-健保重大傷病-重大傷病類別</a>：
             <ol>
                <li>原為單位數的代碼（<code>1</code>～<code>9</code>）調整為兩位數格式（<code>01</code>～<code>09</code>）。</li>

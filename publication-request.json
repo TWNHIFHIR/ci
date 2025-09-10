@@ -1,10 +1,10 @@
 {
   "package-id": "tw.gov.mohw.nhi.ci",
-  "version": "1.0.0",
-  "path": "https://nhicore.nhi.gov.tw/ci/1.0.0",
+  "version": "1.0.1",
+  "path": "https://nhicore.nhi.gov.tw/ci/1.0.1",
   "mode": "milestone",
   "status": "trial-use",
-  "sequence": "STU1.0.0",
+  "sequence": "STU1.0.1",
   "ci-build" : "https://build.fhir.org/ig/TWNHIFHIR/ci/",
   "desc": "第一個發布版本",
   "descmd": "第一個發布版本",

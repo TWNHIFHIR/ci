@@ -44,7 +44,7 @@ Usage: #example
 		<p>
 			<b>識別碼型別</b>：National Person Identifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> （ <a href=\"http://terminology.hl7.org/CodeSystem/v2-0203\">Identifier Type Codes</a>#NNxxx） </span>
 			<br />
-			<b>身分證字號（official）</b>：A123456789 （http://www.moi.gov.tw）
+			<b>身分證號（official）</b>：A123456789 （http://www.moi.gov.tw）
 		</p>
 	</blockquote>
 	<blockquote>

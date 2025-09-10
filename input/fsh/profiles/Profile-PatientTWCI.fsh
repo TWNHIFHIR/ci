@@ -38,7 +38,7 @@ Description:    "此病人資訊-Patient TWCI Profile說明TWCI IG如何進一�
 * telecom[email].system = #email
 
 * identifier[idCardNumber].value obeys txt-10
-* identifier[idCardNumber] ^short = "身分證字號"
+* identifier[idCardNumber] ^short = "身分證號"
 * identifier[medicalRecord] ^short = "病歷號(參與醫院必須註冊命名系統)。由醫院自行填寫。"
 * name[usual] ^short = "姓名"
 * gender ^short = "病人性別。male:男性 ｜ female:女性 ｜ other:其他 ｜ unknown:未知"

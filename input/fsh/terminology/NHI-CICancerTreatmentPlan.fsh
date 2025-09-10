@@ -6,7 +6,7 @@ Description: "臺灣衛生福利部中央健康保險署「後續治療計劃」
 * ^caseSensitive = true
 * ^content = #complete
 * ^date = "2025-06-11"
-* ^version = "1.0.0"
+* ^version = "1.0.1"
 * ^experimental = false
 * #1 "手術治療"
 * #2 "放射線治療"
@@ -21,6 +21,6 @@ Id: nhi-cancer-treatment-plan
 Title: "NHI-健保重大傷病-後續治療計劃值集"
 Description: "NHI-健保重大傷病-後續治療計劃值集"
 * ^date = "2025-06-11"
-* ^version = "1.0.0"
+* ^version = "1.0.1"
 * ^experimental = false
 * include codes from system CancerTreatmentPlanCodes

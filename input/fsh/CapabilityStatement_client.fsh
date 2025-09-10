@@ -2,7 +2,7 @@ Instance: CapabilityStatementTWCIClient
 InstanceOf: CapabilityStatement
 Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/CapabilityStatement/CapabilityStatementTWCIClient"
-* version = "1.0.0"
+* version = "1.0.1"
 * name = "CapabilityStatementTWCIClient"
 * title = "臺灣重大傷病-用戶端(TWCI Client)"
 * status = #active
@@ -165,7 +165,7 @@ Usage: #definition
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
     <h2 id=\"title\">臺灣重大傷病-用戶端(TWCI Client)</h2>
     <ul>
-        <li>實作指引版本：1.0.0</li>
+        <li>實作指引版本：1.0.1</li>
         <li>FHIR版本：4.0.1</li>
         <li>支援格式：<code>json</code>, <code>xml</code></li>
         <li>發佈日：2025-06-11</li>

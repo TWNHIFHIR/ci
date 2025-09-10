@@ -43,7 +43,7 @@ Usage: #example
 * item[patient].answer.valueReference = Reference(Patient/pat-min)
 /*
 * item[illness].item[0].linkId = "2.1"
-* item[illness].item[=].text = "patient.idCard|身分證字號"
+* item[illness].item[=].text = "patient.idCard|身分證號"
 * item[illness].item[=].definition = "被保險人國民身分證統一編號"
 * item[illness].item[=].answer.valueString = "A123456789"
 

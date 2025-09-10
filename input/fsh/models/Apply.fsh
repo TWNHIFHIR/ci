@@ -7,7 +7,7 @@ Description: """
 瞭解各資料欄位實際使用TWCI IG的哪個Profiles的哪個資料項目（element）。亦可配合
 [視覺化邏輯模型圖]進行欄位對應。
 """
-* ^version = "1.0.0"
+* ^version = "1.0.1"
 
 // 院所資訊
 * hosp 1..1 BackboneElement "院所資訊" "院所資訊"
@@ -21,10 +21,10 @@ Description: """
 
 // 病人資訊
 * patient 1..1 BackboneElement "病人資訊" "病人資訊"
-* patient.idCard 1..1 string "身分證字號" "身分證字號"
-* patient.medicalRecord 0..1 string "病歷號" "病歷號(參與醫院必須註冊命名系統)"
+* patient.idCard 1..1 string "身分證號" "身分證號"
+* patient.patID 0..1 string "病歷號" "病歷號(參與醫院必須註冊命名系統)"
 * patient.name 1..1 string "姓名" "姓名"
-* patient.sex 1..1 code "病人性別" "病人性別"
+* patient.gender 1..1 code "病人性別" "病人性別"
 * patient.birthday 1..1 date "出生日期" "出生日期"
 * patient.zipCode 1..1 CodeableConcept "郵遞區號" "郵遞區號"
 * patient.contactAddr 1..1 string "連絡住址" "連絡住址"
@@ -34,7 +34,7 @@ Description: """
 
 // 醫師資訊
 * doctor 1..1 BackboneElement "醫師資訊" "醫師資訊"
-* doctor.diagPrsnId 0..1 string "醫師身分證字號" "醫師身分證字號"
+* doctor.diagPrsnId 0..1 string "醫師身分證號" "醫師身分證號"
 * doctor.diagPrsnName 1..1 string "診斷醫師姓名" "診斷醫師姓名"
 
 // 疾病資訊

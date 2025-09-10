@@ -114,7 +114,6 @@ Usage: #example
 * item[diagnosis].item[examinationReport].item[reportDate].linkId = "4.2.6"
 * item[diagnosis].item[examinationReport].item[reportDate].text = "diagnosis.examinationReport.reportDate|報告日期，YYYY-MM-DD。"
 * item[diagnosis].item[examinationReport].item[reportDate].type = #date
-* item[diagnosis].item[examinationReport].item[reportDate].repeats = true
 
 * item[diagnosis].item[medrec].linkId = "4.3"
 * item[diagnosis].item[medrec].text = "diagnosis.medrec|病歷資料"
