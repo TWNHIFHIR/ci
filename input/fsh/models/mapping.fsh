@@ -1,4 +1,4 @@
-Mapping: TWCIQuestionnaireResponse
+/*Mapping: TWCIQuestionnaireResponse
 Id: TWCIQuestionnaireResponse
 Title: "Mapping to TWCI QuestionnaireResponse"
 Source: ApplyModel
@@ -90,4 +90,4 @@ Id: TWCICondition
 Title: "Mapping to TWCI Condition"
 Source: ApplyModel
 Target: "https://nhicore.nhi.gov.tw/ci/StructureDefinition/Condition-twci"
-* ci.hvType -> "category.coding.code (重大傷病類別)" 
+* ci.hvType -> "category.coding.code (重大傷病類別)" */
