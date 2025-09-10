@@ -23,7 +23,7 @@ Usage: #example
 
 * item[hosp].item[medCertBookDate].linkId = "1.4" 
 * item[hosp].item[medCertBookDate].text = "hosp.medCertBookDate|開立診斷書申請日期"
-* item[hosp].item[medCertBookDate].answer.valueDate = "2025-06-08"
+* item[hosp].item[medCertBookDate].answer.valueDate = "2025-09-10"
 
 * item[hosp].item[hospId].linkId = "1.5" 
 * item[hosp].item[hospId].text = "hosp.hospId|醫事機構代碼"
@@ -381,7 +381,7 @@ Usage: #example
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
-                padding:0px 4px 0px 4px\" class=\"hierarchy\">2025-06-08</td>
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">2025-09-10</td>
         </tr>
          <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
