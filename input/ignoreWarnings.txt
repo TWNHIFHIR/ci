@@ -2,7 +2,7 @@
 
 # 值集中的代碼量太多，Expansion僅列出前1,000筆。（後方的藍色字樣(4 uses) 是指INFORMATION在此Profile中有被使用到）
 The value set expansion is too large, and only a subset has been displayed
-% The value set include has too many codes to validate %
+% The value set include has too many %
 
 # OID（後方的藍色字樣(1 uses) 是指INFORMATION在此Profile中有被使用到）
 The resource Questionnaire/apply-catastrophic-illness could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
@@ -24,7 +24,7 @@ WARNING: IG: The IG is not for the international realm, and it uses SNOMED CT, s
 
 
 # deprecated extension，IG中未使用，不影響驗證。（後方的藍色字樣(1uses) 是指INFORMATION在此Profile中有被使用到）
-INFORMATION: StructureDefinition/Patient-twci: StructureDefinition.snapshot.element[28].type[0].extension[1]: The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
+% The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note%
 INFORMATION: StructureDefinition/Bundle-twci: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
 # HL7預設的constraint寫法

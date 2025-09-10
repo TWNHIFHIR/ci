@@ -19,33 +19,6 @@
                <li>為統一命名規則，原「身分證字號」，修改為「身分證號」。</li>
             </ol>
         </li>
-        <li>修改<a href="CodeSystem-nhi-category.html">CodeSystem: NHI-健保重大傷病-重大傷病類別</a>：
-            <ol>
-               <li>原為單位數的代碼（<code>1</code>～<code>9</code>）調整為兩位數格式（<code>01</code>～<code>09</code>）。</li>
-            </ol>
-        </li>
-        <li>修改<a href="CodeSystem-nhi-apply-type.html">CodeSystem: NHI-健保重大傷病-申報類別</a>：為統一命名，原URL為<code>https://nhicore.nhi.gov.tw/ci/CodeSystem/nhi-<b>reporting-method</b></code>，修改為<code>https://nhicore.nhi.gov.tw/ci/CodeSystem/nhi-<b>apply-type</b></code>。</li>
-        <li>修改<a href="StructureDefinition-Questionnaire-twci.html">Profile: 重大傷病申請書-Questionnaire TWCI</a>：
-            <ol>
-               <li>新增欄位「(1.1)申報方式」，並調整「(1)院所資訊」中其他細項的序號(linkId)。</li>
-            </ol>
-        </li>
-        <li>修改<a href="StructureDefinition-QuestionnaireResponse-twci.html">Profile: 重大傷病申請書回覆-QuestionnaireResponse TWCI</a>：
-            <ol>
-               <li>新增欄位「(1.1)申報方式」，並調整「(1)院所資訊」中其他細項的序號(linkId)。</li>
-               <li><code>item[diagnosis].item[examinationReport].item[reportType].answer</code>基數原為「1..*」，改為「1..1」。</li>
-               <li><code>item[diagnosis].item[examinationReport].item[reportResultString].answer</code>基數原為「1..*」，改為「1..1」。</li>
-               <li><code>item[diagnosis].item[medrec].item[medrecTitle].answer</code>基數原為「1..*」，改為「1..1」。</li>
-               <li><code>item[diagnosis].item[imageStudy].item[imgResult].answer</code>基數原為「1..*」，改為「1..1」。</li>
-               <li><code>item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[uid].answer</code>基數原為「1..*」，改為「1..1」。</li>
-               <li><code>item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[uid].answer</code>基數原為「1..*」，改為「1..1」。</li>
-               <li><code>item[diagnosis].item[imageStudy].item[imgDicom].item[series].item[instance].item[sopClass].answer</code>基數原為「1..*」，改為「1..1」。</li>
-               <li><code>item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicom].answer</code>基數原為「1..*」，改為「1..1」。</li>
-               <li><code>item[diagnosis].item[imageStudy].item[imgNonDicom].item[imgNonDicomMimeType].answer</code>基數原為「1..*」，改為「1..1」。</li>
-               <li><code>item[illness].item[cancerTreatmentText].answer</code>基數原為「1..*」，改為「1..1」。</li>
-            </ol>
-        </li>
-        <li>修改<a href="StructureDefinition-Task-twci.html">Profile: 重大傷病申請-Task TWCI</a>：<code>status</code>設固定值為<code>requested</code>。</li>
 	</ol>
     請留意這些異動，以避免影響您的實作。
 </div>
