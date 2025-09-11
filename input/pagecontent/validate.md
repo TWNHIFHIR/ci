@@ -43,15 +43,15 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 
 #### Step 3：下載validator_cli.jar檔
 <div style="padding-left: 10px;"> 
-<p>進入HL7驗證說明官網(<a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Downloadingthevalidator">Confluence Pages of Health Level 7 (HL7) International</a>)後尋找「Downloading the validator」項目，下載「<a href="https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar">validator_cli.jar</a>」檔。</p>
+<p>進入HL7驗證說明官網(<a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Downloadingthevalidator" target="_blank">Confluence Pages of Health Level 7 (HL7) International</a>)後尋找「Downloading the validator」項目，下載「<a href="https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar" target="_blank">validator_cli.jar</a>」檔。</p>
 <img src="validate/3.png" alt="download validator_cli.jar" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" class="figure-img img-responsive img-rounded center-block"/>
 <div style="clear:both;"></div>
 </div>
 
 #### Step 4：使用您的實例JSON檔或下載範例JSON檔
 <div style="padding-left: 10px;"> 
-<p>如果您手邊已經有一個依據TWCI IG實作的JSON檔，您可以使用您的實例檔案，如果您尚未有這樣的檔案，可以下載如下圖所示的TWCI IG的「<a href="Bundle-bun-min.json">Bundle 重大傷病申請證明</a>」範例。如下圖所示，請於TWCI IG網站上，找到<a href="examples.html">範例</a>頁面中「Bundle」的「<a href="Bundle-bun-min.html">重大傷病申請證明</a>」，點選「JSON」頁籤中的「<a href="Bundle-bun-min.json">Download</a>」，若沒有自動下載，請在「Bundle-bun-min.json」頁中按右鍵，選擇「另存新檔...」。</p>
-<div class="bg-warning"><p style="color: firebrick;"><b>最終完整檔為Bundle，但實作中通常會先驗證Bundle.entry的各Resource，例如：Patient、Practitioner及Organization等，各Profile的範例亦可於<a href="examples.html">範例</a>頁面中下載。</b></p></div>
+<p>如果您手邊已經有一個依據TWCI IG實作的JSON檔，您可以使用您的實例檔案，如果您尚未有這樣的檔案，可以下載如下圖所示的TWCI IG的「<a href="Bundle-bun-min.json">Bundle 重大傷病申請證明</a>」範例。如下圖所示，請於TWCI IG網站上，找到<a href="examples.html" target="_blank">範例</a>頁面中「Bundle」的「<a href="Bundle-bun-min.html" target="_blank">重大傷病申請證明</a>」，點選「JSON」頁籤中的「<a href="Bundle-bun-min.json">Download</a>」，若沒有自動下載，請在「Bundle-bun-min.json」頁中按右鍵，選擇「另存新檔...」。</p>
+<div class="bg-warning"><p style="color: firebrick;"><b>最終完整檔為Bundle，但實作中通常會先驗證Bundle.entry的各Resource，例如：Patient、Practitioner及Organization等，各Profile的範例亦可於<a href="examples.html" target="_blank">範例</a>頁面中下載。</b></p></div>
 <img src="validate/4-1.png" alt="download example json" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" class="figure-img img-responsive img-rounded center-block"/>
 <div style="clear:both;"></div>
 <img src="validate/4-2.png" alt="download example json" style="display: block;margin-left: auto;margin-right: auto;width: 80%;" class="figure-img img-responsive img-rounded center-block"/>
@@ -83,6 +83,7 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
   <img src="validate/6-2.png" alt="validate" style="display: block;margin-left: auto;margin-right: auto;width: 80%;margin-bottom: 15px;" class="figure-img img-responsive img-rounded center-block"/>
   <div style="clear:both;"></div>
 <p>若驗證「通過」，可看到「Success: 0 errors, 1 warnings, 5 notes」，原則上看到0 errors即代表通過驗證，warning及note可參考就好，不影響實作。後續的更版可能會解決其中幾個notes (即Information)。</p>
+<div class="bg-warning"><p style="color: firebrick;"><b>若直接使用IG上的Bundle範例可能會出現error，因<code>QuestionnaireResponse.item[hosp].item[medCertBookDate]</code>(開立診斷書申請日期)有一條限制為：「開立診斷書申請日期，不可大於系統日，不可小於2016-01-01，且為系統日之30日內。」請配合驗證時的日期修改此欄的值。</b></p></div>
 <img src="validate/6-3.png" alt="validate success" style="display: block;margin-left: auto;margin-right: auto;width: 80%;margin-bottom: 15px;" class="figure-img img-responsive center-block"/>
 <p>若驗證「不通過」，可看到「*FAILURE*: ...」，可看出第69行的代碼為錯誤代碼。再依據錯誤訊息修改實例後重新驗證，直到驗證成功為止，即表示實例符合Profile定義。</p>
 <img src="validate/6-4.png" alt="validate failure" style="display: block;margin-left: auto;margin-right: auto;width: 80%;margin-bottom: 15px;" class="figure-img img-responsive center-block"/>
