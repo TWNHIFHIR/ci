@@ -6,11 +6,14 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 
 ### IG驗證公開資源參考
 - HL7總會線上驗證工具：[https://validator.fhir.org/](https://validator.fhir.org/){:target="_blank"} 
-
+- FHIR一站式驗證工具：[https://validator.dicom.tw/app/](https://validator.dicom.tw/app/){:target="_blank"}
+  - 使用說明：[https://validator.dicom.tw/app/docs/](https://validator.dicom.tw/app/docs/){:target="_blank"}
+  - FHIR Instance Validator：驗證 FHIR instance 是否符合實作指引規範
+  - Code Validator：驗證代碼是否有效
 
 ### 使用國際HL7提供的公開免費驗證器validator_cli.jar檔，以命令提示字元測試驗證。
 
-若IG已註冊可直接跳至Step 3，但目前因尚未註冊，須從Step 1開始。
+因IG已註冊可直接跳至Step 3，若想手動下載，須從Step 1開始。
 
 #### Step 1：手動下載IG Package
 <div style="padding-left: 10px;">
