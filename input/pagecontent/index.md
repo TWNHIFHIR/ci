@@ -10,8 +10,10 @@
 </div>
 
 <div class="bg-warning" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
-因考量實作需求，於2025/9/10異動以下內容：
+因考量實作需求，於2025/10/21異動以下內容：
     <ol>  
+        <li>修改<a href="StructureDefinition-Questionnaire-twci.html">Profile: 重大傷病申請書-Questionnaire TWCI</a>：<code>item:illness</code>(惡性腫瘤重大傷病換發評估表)修改為非必填。</li>
+        <li>修改<a href="StructureDefinition-QuestionnaireResponse-twci.html">Profile: 重大傷病申請書回覆-QuestionnaireResponse TWCI</a>：<code>item:illness</code>(惡性腫瘤重大傷病換發評估表)修改為非必填。</li>
         <li>修改<a href="StructureDefinition-ApplyModel.html">Logical Model: 申請(Apply)重大傷病申請書之資料模型</a>：
             <ol>
                <li>為統一命名規則，原<code>sex</code>(性別)，修改為<code>gender</code>。</li>

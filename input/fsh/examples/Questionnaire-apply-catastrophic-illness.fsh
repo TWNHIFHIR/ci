@@ -238,7 +238,7 @@ Usage: #example
 * item[illness].linkId = "7"
 * item[illness].text = "illness|惡性腫瘤重大傷病換發評估表"
 * item[illness].type = #group
-* item[illness].required = true
+//* item[illness].required = true
 
 * item[illness].item[oriCancerCode].linkId = "7.1"
 * item[illness].item[oriCancerCode].text = "illness.oriCancerCode|原發癌症診斷碼，最長為7碼。"

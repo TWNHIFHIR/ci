@@ -16,7 +16,7 @@ Description:    "此重大傷病申請書-Questionnaire TWCI Profile說明TWCI I
     diagnosis 1..1 MS and
     ci 1..1 MS and
     cancerStage 1..1 MS and
-    illness 1..1 MS
+    illness 0..1 MS
 
 * item[hosp].linkId = "1"
 * item[hosp].text = "hosp|院所資訊"
