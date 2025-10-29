@@ -1,7 +1,8 @@
 以下為TWCI IG所有Profiles的範例，範例中之代碼連結皆為代碼系統連結。
 
 #### Bundle
- - [重大傷病申請證明](Bundle-bun-min.html)：依據重大傷病申請證明-Bundle TWCI Profile呈現重大傷病申請證明之範例
+ - [重大傷病申請證明-送核](Bundle-bun-min.html)：依據重大傷病申請證明-Bundle TWCI Profile呈現重大傷病申請證明之範例
+- [<span class="bg-success">重大傷病申請證明-無換發評估表</span>](Bundle-bun-noillness.html)：據重大傷病申請證明-Bundle TWCI Profile呈現重大傷病申請證明(無換發評估表)之範例
 
 #### Task
  - [重大傷病申請](Task-tas-min.html)：依據重大傷病申請-Task TWCI Profile呈現重大傷病申請之範例
