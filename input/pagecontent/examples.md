@@ -11,6 +11,7 @@
 
 #### QuestionnaireResponse
 -  [重大傷病申請書回覆](QuestionnaireResponse-queRes-min.html)：依據重大傷病申請書回覆-QuestionnaireResponse TWCI Profile呈現重大傷病申請書回覆之範例
+- [<span class="bg-success">重大傷病申請書回覆(無換發評估表)</span>](QuestionnaireResponse-queRes-noillness.html)：依據重大傷病申請書回覆-QuestionnaireResponse TWCI Profile呈現重大傷病申請書回覆(無換發評估表)之範例
 
 #### Patient
  - [病人資訊](Patient-pat-min.html)：依據病人資訊-Patient TWCI Profile呈現病人基本資料之範例
