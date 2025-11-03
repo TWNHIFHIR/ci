@@ -1,7 +1,7 @@
 Instance: queRes-noillness
 InstanceOf: QuestionnaireResponseTWCI
-Title: "重大傷病申請書回覆(無換發評估表)"
-Description: "依據重大傷病申請書回覆-QuestionnaireResponse TWCI Profile呈現重大傷病申請書回覆(無換發評估表)之範例"
+Title: "重大傷病申請書回覆(無換發評估表、多筆檢查報告)"
+Description: "依據重大傷病申請書回覆-QuestionnaireResponse TWCI Profile呈現重大傷病申請書回覆(無換發評估表、多筆檢查報告)之範例"
 Usage: #example
 
 * questionnaire = "https://nhicore.nhi.gov.tw/ci/Questionnaire/apply-catastrophic-illness"
@@ -61,32 +61,60 @@ Usage: #example
 * item[diagnosis].item[icd10cmCode].text = "diagnosis.icd10cmCode|主診斷代碼"
 * item[diagnosis].item[icd10cmCode].answer.valueCoding = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw#C49.6 "軀幹結締及軟組織之惡性腫瘤"
 
-* item[diagnosis].item[examinationReport].linkId = "4.2"
-* item[diagnosis].item[examinationReport].text = "diagnosis.examinationReport|檢查報告"
+* item[diagnosis].item[examinationReport][0].linkId = "4.2"
+* item[diagnosis].item[examinationReport][0].text = "diagnosis.examinationReport|檢查報告"
 
-* item[diagnosis].item[examinationReport].item[reportType].linkId = "4.2.1"
-* item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"
-* item[diagnosis].item[examinationReport].item[reportType].answer[0].valueCoding = http://loinc.org#66117-3
+* item[diagnosis].item[examinationReport][0].item[reportType].linkId = "4.2.1"
+* item[diagnosis].item[examinationReport][0].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"
+* item[diagnosis].item[examinationReport][0].item[reportType].answer[0].valueCoding = http://loinc.org#66117-3
 
-* item[diagnosis].item[examinationReport].item[speType].linkId = "4.2.2"
-* item[diagnosis].item[examinationReport].item[speType].text = "diagnosis.examinationReport.speType|檢體種類"
-* item[diagnosis].item[examinationReport].item[speType].answer.valueString = "Prostate ; Stomach"
+* item[diagnosis].item[examinationReport][0].item[speType].linkId = "4.2.2"
+* item[diagnosis].item[examinationReport][0].item[speType].text = "diagnosis.examinationReport.speType|檢體種類"
+* item[diagnosis].item[examinationReport][0].item[speType].answer.valueString = "Prostate ; Stomach"
 
-* item[diagnosis].item[examinationReport].item[reportResultString].linkId = "4.2.3"
-* item[diagnosis].item[examinationReport].item[reportResultString].text = "diagnosis.examinationReport.reportResultString|報告結果-文數字"
-* item[diagnosis].item[examinationReport].item[reportResultString].answer.valueString = "Prostate labeled as lesion 1 magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate labeled as lesion 2 magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate right lateral magnetic resonance-ultrasound fusion biopsy prostatic intraepithelial neoplasia high-gradeProstate right medial magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate left medial magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate left lateral magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+4=7MACROSCOPYSites of biopsy: A. Lesion 1 (left anterior midgland TZ): 3 cores (length: up to 2.1 cm) B. Lesion 2 (right anterior apex TZ): 3 cores (length: up to 2.0 cm) C. Right lateral: 3 cores (length: up to 1.8 cm) D. Right medial: 3 cores (length: up to 1.5 cm) E. Left medial: 3 cores (length: up to 1.4 cm) F. Left lateral: 3 cores (length: up to 1.2 cm)All for section and labeled as: A1 to F1. Jar 0MICROSCOPY1. Histologic diagnosis: A. Lesion 1: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 90% 70% 60% * Maximum cancer core length: 9.8 mm B. Lesion 2: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 40% 25% 5% C. Right lateral: high-grade prostatic intraepithelial neoplasia (PIN unifocal) D. Right medial: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 20% 0% 0% E. Left medial: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 40% 40% 0% F. Left lateral: adenocarcinoma * Gleason score: 3+4=7 (Grade group: 2) * Percentage of pattern 4 component: less than 5% * Area percentages of tumor part: 100% 5% 5%2. Perineural invasion: not identified3. Extraprostatic extension: not identified4. Seminal vesicle invasion: seminal vesicle not includedStomach middle to upper body lesser curvature anterior wall endoscopic biopsy     (1) extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue            (MALT lymphoma)      (2) chronic active gastritis with Helicobacter infection      (3) intestinal metaplasiaStomach antrum lesser curvature and greater curvature endoscopic biopsy     (1) chronic gastritis without Helicobacter infection      (2) intestinal metaplasiaStomach mid-body lesser curvature and greater curvature endoscopic biopsy      (1) chronic gastritis with Helicobacter infection      (2) intestinal metaplasia     The specimen is submitted in 3 separated bottles labeled as A B and C respectively fixed in formalin.     The specimen A consists of two tissue fragments measuring up to 0.4 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft.        The specimen B consists of two tissue fragments measuring up to 0.3 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft.      The specimen C consists of 3 tissue fragments measuring up to 0.3 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft.           All for section and labeled as."
+* item[diagnosis].item[examinationReport][0].item[reportResultString].linkId = "4.2.3"
+* item[diagnosis].item[examinationReport][0].item[reportResultString].text = "diagnosis.examinationReport.reportResultString|報告結果-文數字"
+* item[diagnosis].item[examinationReport][0].item[reportResultString].answer.valueString = "Prostate labeled as lesion 1 magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate labeled as lesion 2 magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate right lateral magnetic resonance-ultrasound fusion biopsy prostatic intraepithelial neoplasia high-gradeProstate right medial magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate left medial magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+3=6Prostate left lateral magnetic resonance-ultrasound fusion biopsy adenocarcinoma Gleason score 3+4=7MACROSCOPYSites of biopsy: A. Lesion 1 (left anterior midgland TZ): 3 cores (length: up to 2.1 cm) B. Lesion 2 (right anterior apex TZ): 3 cores (length: up to 2.0 cm) C. Right lateral: 3 cores (length: up to 1.8 cm) D. Right medial: 3 cores (length: up to 1.5 cm) E. Left medial: 3 cores (length: up to 1.4 cm) F. Left lateral: 3 cores (length: up to 1.2 cm)All for section and labeled as: A1 to F1. Jar 0MICROSCOPY1. Histologic diagnosis: A. Lesion 1: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 90% 70% 60% * Maximum cancer core length: 9.8 mm B. Lesion 2: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 40% 25% 5% C. Right lateral: high-grade prostatic intraepithelial neoplasia (PIN unifocal) D. Right medial: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 20% 0% 0% E. Left medial: adenocarcinoma * Gleason score: 3+3=6 (Grade group: 1) * Area percentages of tumor part: 40% 40% 0% F. Left lateral: adenocarcinoma * Gleason score: 3+4=7 (Grade group: 2) * Percentage of pattern 4 component: less than 5% * Area percentages of tumor part: 100% 5% 5%2. Perineural invasion: not identified3. Extraprostatic extension: not identified4. Seminal vesicle invasion: seminal vesicle not includedStomach middle to upper body lesser curvature anterior wall endoscopic biopsy     (1) extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue            (MALT lymphoma)      (2) chronic active gastritis with Helicobacter infection      (3) intestinal metaplasiaStomach antrum lesser curvature and greater curvature endoscopic biopsy     (1) chronic gastritis without Helicobacter infection      (2) intestinal metaplasiaStomach mid-body lesser curvature and greater curvature endoscopic biopsy      (1) chronic gastritis with Helicobacter infection      (2) intestinal metaplasia     The specimen is submitted in 3 separated bottles labeled as A B and C respectively fixed in formalin.     The specimen A consists of two tissue fragments measuring up to 0.4 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft.        The specimen B consists of two tissue fragments measuring up to 0.3 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft.      The specimen C consists of 3 tissue fragments measuring up to 0.3 x 0.2 x 0.2 cm in size. Grossly they are gray-white and soft.           All for section and labeled as."
 
-* item[diagnosis].item[examinationReport].item[reportResultPdf].linkId = "4.2.4"
-* item[diagnosis].item[examinationReport].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告檔案，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
-* item[diagnosis].item[examinationReport].item[reportResultPdf].answer.valueString = "file://PathologyReport01.pdf"
+* item[diagnosis].item[examinationReport][0].item[reportResultPdf].linkId = "4.2.4"
+* item[diagnosis].item[examinationReport][0].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告檔案，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
+* item[diagnosis].item[examinationReport][0].item[reportResultPdf].answer.valueString = "file://PathologyReport01.pdf"
 
-* item[diagnosis].item[examinationReport].item[reportResultPdfTitle].linkId = "4.2.5"
-* item[diagnosis].item[examinationReport].item[reportResultPdfTitle].text = "diagnosis.examinationReport.reportResultPdfTitle|檢查報告名稱"
-* item[diagnosis].item[examinationReport].item[reportResultPdfTitle].answer.valueString = "PathologyReport01"
+* item[diagnosis].item[examinationReport][0].item[reportResultPdfTitle].linkId = "4.2.5"
+* item[diagnosis].item[examinationReport][0].item[reportResultPdfTitle].text = "diagnosis.examinationReport.reportResultPdfTitle|檢查報告名稱"
+* item[diagnosis].item[examinationReport][0].item[reportResultPdfTitle].answer.valueString = "PathologyReport01"
 
-* item[diagnosis].item[examinationReport].item[reportDate].linkId = "4.2.6"
-* item[diagnosis].item[examinationReport].item[reportDate].text = "diagnosis.examinationReport.reportDate|報告日期，YYYY-MM-DD。"
-* item[diagnosis].item[examinationReport].item[reportDate].answer.valueDate = "2024-01-01"
+* item[diagnosis].item[examinationReport][0].item[reportDate].linkId = "4.2.6"
+* item[diagnosis].item[examinationReport][0].item[reportDate].text = "diagnosis.examinationReport.reportDate|報告日期，YYYY-MM-DD。"
+* item[diagnosis].item[examinationReport][0].item[reportDate].answer.valueDate = "2024-01-01"
+
+
+* item[diagnosis].item[examinationReport][1].linkId = "4.2"
+* item[diagnosis].item[examinationReport][1].text = "diagnosis.examinationReport|檢查報告"
+
+* item[diagnosis].item[examinationReport][1].item[reportType].linkId = "4.2.1"
+* item[diagnosis].item[examinationReport][1].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"
+* item[diagnosis].item[examinationReport][1].item[reportType].answer[0].valueCoding = http://loinc.org#66117-3
+
+* item[diagnosis].item[examinationReport][1].item[speType].linkId = "4.2.2"
+* item[diagnosis].item[examinationReport][1].item[speType].text = "diagnosis.examinationReport.speType|檢體種類"
+* item[diagnosis].item[examinationReport][1].item[speType].answer.valueString = "Prostate ; Stomach"
+
+* item[diagnosis].item[examinationReport][1].item[reportResultString].linkId = "4.2.3"
+* item[diagnosis].item[examinationReport][1].item[reportResultString].text = "diagnosis.examinationReport.reportResultString|報告結果-文數字"
+* item[diagnosis].item[examinationReport][1].item[reportResultString].answer.valueString = "細胞檢查報告結果"
+
+* item[diagnosis].item[examinationReport][1].item[reportResultPdf].linkId = "4.2.4"
+* item[diagnosis].item[examinationReport][1].item[reportResultPdf].text = "diagnosis.examinationReport.reportResultPdf|檢查報告檔案，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。"
+* item[diagnosis].item[examinationReport][1].item[reportResultPdf].answer.valueString = "file://PathologyReport02.pdf"
+
+* item[diagnosis].item[examinationReport][1].item[reportResultPdfTitle].linkId = "4.2.5"
+* item[diagnosis].item[examinationReport][1].item[reportResultPdfTitle].text = "diagnosis.examinationReport.reportResultPdfTitle|檢查報告名稱"
+* item[diagnosis].item[examinationReport][1].item[reportResultPdfTitle].answer.valueString = "PathologyReport02"
+
+* item[diagnosis].item[examinationReport][1].item[reportDate].linkId = "4.2.6"
+* item[diagnosis].item[examinationReport][1].item[reportDate].text = "diagnosis.examinationReport.reportDate|報告日期，YYYY-MM-DD。"
+* item[diagnosis].item[examinationReport][1].item[reportDate].answer.valueDate = "2024-01-02"
 
 * item[diagnosis].item[medrec].linkId = "4.3"
 * item[diagnosis].item[medrec].text = "diagnosis.medrec|病歷資料"
@@ -563,7 +591,119 @@ Usage: #example
                 padding:0px 4px 0px 4px\" class=\"hierarchy\" />
             <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px\" class=\"hierarchy\">2024-01-01</td>
+        </tr>
+        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck111.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Group\" class=\"hierarchy\" /> 4.2</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport|檢查報告</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+        </tr>
+         <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.1</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" ><span><a href=\"ValueSet-loinc-report-type.html\">LOINC 66117-3</a>: Prostate Pathology biopsy report</span></td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.2</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.speType|檢體種類</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">Prostate ; Stomach</td>
         </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.3</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportResultString|報告結果-文數字
+            </td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">細胞檢查報告結果</td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.4</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">
+                diagnosis.examinationReport.reportResultPdf|檢查報告檔案，請填寫完整檔案路徑。填寫格式：「file://檔名.副檔名」。</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">file://PathologyReport02.pdf</td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1110.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.5</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportResultPdfTitle|檢查報告名稱
+            </td>
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">PathologyReport02</td>
+        </tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\">
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1100.png)\"
+                class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\"
+                    class=\"hierarchy\" /><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white;
+                    background-color: inherit\" title=\"Item\" class=\"hierarchy\" /> 4.2.6</td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">diagnosis.examinationReport.reportDate|報告日期，YYYY-MM-DD。
+            </td>
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\" />
+            <td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid;
+                padding:0px 4px 0px 4px\" class=\"hierarchy\">2024-01-02</td>
+        </tr>
+        <tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\">
             <td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid;
                 padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck111.png)\"
                 class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\"

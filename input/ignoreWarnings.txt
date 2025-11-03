@@ -3,6 +3,7 @@
 # 值集中的代碼量太多，Expansion僅列出前1,000筆。（後方的藍色字樣(4 uses) 是指INFORMATION在此Profile中有被使用到）
 The value set expansion is too large, and only a subset has been displayed
 % The value set include has too many %
+% expansion (local) took too long to process %
 
 # OID（後方的藍色字樣(1 uses) 是指INFORMATION在此Profile中有被使用到）
 The resource Questionnaire/apply-catastrophic-illness could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
@@ -33,3 +34,6 @@ que-7: The left side is inherently a collection, and so the expression 'answer i
 
 # 總會預設的DICOM值集無法正常顯示
 Cannot validate options because no option or options are provided
+
+# 邏輯模型的mapping，不影響驗證。
+% The html source has duplicate anchor Ids%

@@ -5,11 +5,7 @@
   "mode": "milestone",
   "status": "trial-use",
   "sequence": "STU1.0.1",
-  "ci-build" : "https://build.fhir.org/ig/TWNHIFHIR/ci/",
-  "desc": "第一個發布版本",
-  "descmd": "第一個發布版本",
-  "first" : true,
-  "title" : "臺灣重大傷病實作指引",
-  "category" : "Administration",
-  "introduction" : "臺灣重大傷病實作指引(Catastrophic Illness Implementation Guide，TWCI IG)"
+  "ci-build" : "https://build.fhir.org/ig/TWNHIFHIR/ci",
+  "desc": "修改Profiles、範例",
+  "descmd": "修改Profiles、範例"
 }

@@ -89,6 +89,7 @@ Usage: #example
 * item[diagnosis].item[examinationReport].linkId = "4.2"
 * item[diagnosis].item[examinationReport].text = "diagnosis.examinationReport|檢查報告"
 * item[diagnosis].item[examinationReport].type = #group
+* item[diagnosis].item[examinationReport].repeats = true
 
 * item[diagnosis].item[examinationReport].item[reportType].linkId = "4.2.1"
 * item[diagnosis].item[examinationReport].item[reportType].text = "diagnosis.examinationReport.reportType|報告類型。當LOINC無法具體描述檢體種類（例如：`47526-9`時），請填寫及補充說明檢體種類。"

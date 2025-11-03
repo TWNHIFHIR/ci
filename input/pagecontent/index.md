@@ -1,5 +1,5 @@
 <div class="bg-danger" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
-<p><b>請注意</b>：您目前所看到的IG為持續建置(ci-build)版，主要依據實作者及健保署端的業務需求即時調整V1.0.0版內容，因而會比健保署的IG版本V1.0.0(https://nhicore.nhi.gov.tw/ci/)內容新，僅供未來想以最新版本規格進行資料上傳的人員參考，下次更新版本號時間未定，屆時才會調整相應版本的健保署FHIR伺服器規格。<br/>
+<p><b>請注意</b>：您目前所看到的IG為持續建置(ci-build)版，主要依據實作者及健保署端的業務需求即時調整V1.0.0版內容，因而會比健保署的IG版本V1.0.0(https://nhicore.nhi.gov.tw/ci/)內容新，僅供未來想以最新版本規格進行資料上傳的人員參考，下次更新版本號時間預計為114年11月7日，屆時才會調整相應版本的健保署FHIR伺服器規格。<br/>
 <br/>
 <b>醫院實作時請以V1.0.0為主進行實例驗證，目前健保署端的伺服器採用V1.0.0版規格。</b></p>
 </div>
@@ -10,8 +10,9 @@
 </div>
 
 <div class="bg-warning" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
-因考量實作需求，於2025/10/21異動以下內容：
+因考量實作需求，於2025/11/3異動以下內容：
     <ol>  
+        <li>修改<a href="Questionnaire-apply-catastrophic-illness.html">Questionnaire: 重大傷病申請書</a>：<code>item[diagnosis].item[examinationReport]</code>(檢查報告)修改為可填多筆。</li>
         <li>修改<a href="StructureDefinition-Questionnaire-twci.html">Profile: 重大傷病申請書-Questionnaire TWCI</a>：<code>item:illness</code>(惡性腫瘤重大傷病換發評估表)修改為非必填。</li>
         <li>修改<a href="StructureDefinition-QuestionnaireResponse-twci.html">Profile: 重大傷病申請書回覆-QuestionnaireResponse TWCI</a>：<code>item:illness</code>(惡性腫瘤重大傷病換發評估表)修改為非必填。</li>
         <li>修改<a href="StructureDefinition-ApplyModel.html">Logical Model: 申請(Apply)重大傷病申請書之資料模型</a>：
