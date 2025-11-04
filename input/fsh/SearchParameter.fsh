@@ -7,7 +7,7 @@ Usage: #definition
 * name = "BundleID"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "HL7 International"
 * description = "重大傷病申請證明(Bundle)的邏輯性ID"
 * code = #_id
@@ -24,7 +24,7 @@ Usage: #definition
 * name = "TaskPeriod"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的受理日期(executionPeriod)"
 * code = #period
@@ -39,7 +39,7 @@ Usage: #definition
 * name = "TaskPatient"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的對象(patient)"
 * code = #period
@@ -58,7 +58,7 @@ Usage: #definition
 * name = "PatientName"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "HL7 International"
 * description = "病人的姓名(name)，該查詢可能與 HumanName 中的任何字串匹配，包括完整的中文姓名(text)、英文姓(family)、英文名(given)、姓名前面的頭銜(prefix)、姓名後面的稱謂(suffix)。"
 * code = #name
@@ -73,7 +73,7 @@ Usage: #definition
 * name = "PatientIdentifier"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "HL7 International"
 * description = "病人的身分證號(identifier)"
 * code = #identifier
@@ -90,7 +90,7 @@ Usage: #definition
 * name = "TaskAuthoredOn"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的收件日期(authoredOn)"
 * code = #authored-on
@@ -106,7 +106,7 @@ Usage: #definition
 * name = "TaskModified"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的核定日期(lastModified)"
 * code = #modified
@@ -122,7 +122,7 @@ Usage: #definition
 * name = "TaskIdentifier"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的核定日期(identifier)"
 * code = #identifier
@@ -138,7 +138,7 @@ Usage: #definition
 * name = "TaskStatus"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的查詢進度(status)"
 * code = #status
@@ -162,7 +162,7 @@ Usage: #definition
 * name = "QuestionnaireResponsePatientIdCard"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的病人身分證號(2.1 patient.idCard)"
 * code = #patient-idCard
@@ -178,7 +178,7 @@ Usage: #definition
 * name = "QuestionnaireResponsePatientName"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的病人姓名(2.2 patient.name)"
 * code = #patient-name
@@ -194,7 +194,7 @@ Usage: #definition
 * name = "QuestionnaireResponsePatientBirthday"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的病人出生日期(2.4 patient.birthday)"
 * code = #patient-birthday
@@ -210,7 +210,7 @@ Usage: #definition
 * name = "QuestionnaireResponsePatientMobilePhone"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的病人手機號碼(2.7 patient.mobilePhone)"
 * code = #patient-mobilePhone
@@ -226,7 +226,7 @@ Usage: #definition
 * name = "QuestionnaireResponseApplDate"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的申請日期（上傳日期）(1.2 hosp.applDate)"
 * code = #applDate
@@ -242,7 +242,7 @@ Usage: #definition
 * name = "QuestionnaireResponseIllnessType"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的重大傷病類別(5.1 ci.illnessType)"
 * code = #illnessType
@@ -258,7 +258,7 @@ Usage: #definition
 * name = "QuestionnaireResponseHospId"
 * status = #active
 * version = "1.0.1"
-* date = "2025-06-11"
+* date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的醫事機構代碼(1.4 hosp.hospId)"
 * code = #hospId
