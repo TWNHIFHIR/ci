@@ -1,11 +1,11 @@
 {
   "package-id": "tw.gov.mohw.nhi.ci",
-  "version": "1.0.1",
-  "path": "https://nhicore.nhi.gov.tw/ci/1.0.1",
+  "version": "1.0.2",
+  "path": "https://nhicore.nhi.gov.tw/ci/1.0.2",
   "mode": "milestone",
   "status": "trial-use",
-  "sequence": "STU1.0.1",
+  "sequence": "STU1.0.2",
   "ci-build" : "https://build.fhir.org/ig/TWNHIFHIR/ci",
-  "desc": "修改Profiles、範例",
-  "descmd": "修改Profiles、範例"
+  "desc": "新增並修改範例",
+  "descmd": "新增並修改範例"
 }

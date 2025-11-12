@@ -3,7 +3,7 @@ Id: nhi-diag-code-icd
 Title: "NHI-健保重大傷病-ICD-CM-重大傷病診斷代碼值集"
 Description: "NHI-健保重大傷病-ICD-CM-重大傷病診斷代碼值集"
 * ^date = "2025-11-07"
-* ^version = "1.0.1"
+* ^version = "1.0.2"
 * ^experimental = false
 * https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw#C00.0
 * https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw#C00.1

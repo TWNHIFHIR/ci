@@ -7,7 +7,7 @@ Description: """
 瞭解各資料欄位實際使用TWCI IG的哪個Profiles的哪個資料項目（element）。亦可配合
 [視覺化邏輯模型圖]進行欄位對應。
 """
-* ^version = "1.0.1"
+* ^version = "1.0.2"
 
 // 院所資訊
 * hosp 1..1 BackboneElement "院所資訊" "院所資訊"

@@ -6,7 +6,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Bundle-id"
 * name = "BundleID"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "HL7 International"
 * description = "重大傷病申請證明(Bundle)的邏輯性ID"
@@ -23,7 +23,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-period"
 * name = "TaskPeriod"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的受理日期(executionPeriod)"
@@ -38,7 +38,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-patient"
 * name = "TaskPatient"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的對象(patient)"
@@ -57,7 +57,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Patient-name"
 * name = "PatientName"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "HL7 International"
 * description = "病人的姓名(name)，該查詢可能與 HumanName 中的任何字串匹配，包括完整的中文姓名(text)、英文姓(family)、英文名(given)、姓名前面的頭銜(prefix)、姓名後面的稱謂(suffix)。"
@@ -72,7 +72,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Patient-identifier"
 * name = "PatientIdentifier"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "HL7 International"
 * description = "病人的身分證號(identifier)"
@@ -89,7 +89,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-authored-on"
 * name = "TaskAuthoredOn"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的收件日期(authoredOn)"
@@ -105,7 +105,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-modified"
 * name = "TaskModified"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的核定日期(lastModified)"
@@ -121,7 +121,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-identifier"
 * name = "TaskIdentifier"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的核定日期(identifier)"
@@ -137,7 +137,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/Task-status"
 * name = "TaskStatus"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請(Task)的查詢進度(status)"
@@ -161,7 +161,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/QuestionnaireResponse-patient-idCard"
 * name = "QuestionnaireResponsePatientIdCard"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的病人身分證號(2.1 patient.idCard)"
@@ -177,7 +177,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/QuestionnaireResponse-patient-name"
 * name = "QuestionnaireResponsePatientName"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的病人姓名(2.2 patient.name)"
@@ -193,7 +193,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/QuestionnaireResponse-patient-birthday"
 * name = "QuestionnaireResponsePatientBirthday"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的病人出生日期(2.4 patient.birthday)"
@@ -209,7 +209,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/QuestionnaireResponse-patient-mobilePhone"
 * name = "QuestionnaireResponsePatientMobilePhone"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的病人手機號碼(2.7 patient.mobilePhone)"
@@ -225,7 +225,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/QuestionnaireResponse-applDate"
 * name = "QuestionnaireResponseApplDate"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的申請日期（上傳日期）(1.2 hosp.applDate)"
@@ -241,7 +241,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/QuestionnaireResponse-illnessType"
 * name = "QuestionnaireResponseIllnessType"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的重大傷病類別(5.1 ci.illnessType)"
@@ -257,7 +257,7 @@ Usage: #definition
 * url = "https://nhicore.nhi.gov.tw/ci/SearchParameter/QuestionnaireResponse-hospId"
 * name = "QuestionnaireResponseHospId"
 * status = #active
-* version = "1.0.1"
+* version = "1.0.2"
 * date = "2025-11-07"
 * publisher = "衛生福利部中央健康保險署"
 * description = "重大傷病申請書回覆(QuestionnaireResponse)的醫事機構代碼(1.4 hosp.hospId)"

@@ -2,10 +2,11 @@
 
 #### Bundle
  - [重大傷病申請證明-送核](Bundle-bun-min.html)：依據重大傷病申請證明-Bundle TWCI Profile呈現重大傷病申請證明之範例
-- [<span class="bg-success">重大傷病申請證明-無換發評估表</span>](Bundle-bun-noillness.html)：據重大傷病申請證明-Bundle TWCI Profile呈現重大傷病申請證明(無換發評估表)之範例
+- [<span class="bg-success">重大傷病申請證明-無換發評估表</span>](Bundle-bun-noillness.html)：據重大傷病申請證明-Bundle TWCI Profile呈現重大傷病申請證明-無換發評估表之範例
 
 #### Task
  - [重大傷病申請](Task-tas-min.html)：依據重大傷病申請-Task TWCI Profile呈現重大傷病申請之範例
+ - [<span class="bg-success">重大傷病申請-無換發評估表</span>](Task-tas-noillness.html)：依據重大傷病申請-Task TWCI Profile呈現重大傷病-無換發評估表申請之範例
 
 #### Questionnaire
 -  [重大傷病申請書](Questionnaire-apply-catastrophic-illness.html)：依據重大傷病申請書-Questionnaire TWCI Profile呈現重大傷病申請書之範例
