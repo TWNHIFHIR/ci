@@ -98,17 +98,9 @@
     </thead>
     <tbody>
         <tr>
-            <td style="vertical-align: middle;">作者-IG</td>
-            <td style="vertical-align: middle;">李麗惠</td>
-            <td rowspan="3" style="vertical-align: middle;">國立臺北護理健康大學-健康事業管理系</td>
-        </tr>
-        <tr>
             <td>作者-IG</td>
             <td>曾鈺珈</td>
-        </tr>
-        <tr>
-            <td>作者-IG</td>
-            <td>黃甄翔</td>
+            <td style="vertical-align: middle;">資拓宏宇國際股份有限公司</td>
         </tr>
         <tr>
             <td>貢獻者-IG</td>
