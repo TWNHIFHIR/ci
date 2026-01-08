@@ -18,7 +18,7 @@ INFORMATION: StructureDefinition/Condition-twci: StructureDefinition.snapshot.el
 No definition could be found for URL value 'http://www.moi.gov.tw'
 No definition could be found for URL value 'https://tpech.gov.taipei'
 No definition could be found for URL value 'urn:ietf:bcp:13'
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-nationality'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-nationality' to 'http://hl7.org/fhir/StructureDefinition/patient-nationality|5.2.0'
+% There are multiple different potential matches for the url%
 
 # SCT版本
 WARNING: IG: The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
