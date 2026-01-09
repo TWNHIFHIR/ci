@@ -438,7 +438,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 
 Invariant:   UploadContent
 Description: "填寫格式：file://檔名.副檔名，例如：file://Medicalrecord01.pdf、file://王大明病歷.pdf"
-Expression:  "answer.value.ofType(String).matches('^file://[a-zA-Z0-9_\u4e00-\u9fa5()-]+.[a-zA-Z]{2,5}$')"
+Expression:  "answer.value.ofType(string).matches('^file://[a-zA-Z0-9_\u4e00-\u9fa5()-]+.[a-zA-Z]{2,5}$')"
 Severity:    #error
 
 Invariant:   medCertBookDate
