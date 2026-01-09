@@ -193,6 +193,7 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 * item[diagnosis].item[medrec].item[medrec].text = "diagnosis.medrec.medrec|病歷資料"
 * item[diagnosis].item[medrec].item[medrec].answer 1..1 MS
 * item[diagnosis].item[medrec].item[medrec].answer.valueString 1..1 MS
+* item[diagnosis].item[medrec].item[medrec].answer.valueString ^example.label = "病歷資料"
 * item[diagnosis].item[medrec].item[medrec].answer.valueString ^example.valueString = "file://PathologyReport01.pdf"
 
 * item[diagnosis].item[medrec].item[medrecTitle].linkId = "4.3.2"
@@ -433,11 +434,11 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
 //惡性腫瘤重大傷病換發評估表_補充說明
 * item[illness].item[cancerTreatmentText].answer.valueString obeys txt-400
 
-* item[diagnosis].item[medrec].item[medrec].answer obeys UploadContent
+* item[diagnosis].item[medrec].item[medrec] obeys UploadContent
 
 Invariant:   UploadContent
 Description: "填寫格式：file://檔名.副檔名，例如：file://Medicalrecord01.pdf、file://王大明病歷.pdf"
-Expression:  "valueString.matches('^file://[a-zA-Z0-9_\u4e00-\u9fa5()-]+.[a-zA-Z]{2,5}$')"
+Expression:  "answer.value.ofType(String).matches('^file://[a-zA-Z0-9_\u4e00-\u9fa5()-]+.[a-zA-Z]{2,5}$')"
 Severity:    #error
 
 Invariant:   medCertBookDate
