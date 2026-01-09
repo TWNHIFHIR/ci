@@ -12,7 +12,7 @@
 <div class="bg-warning" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
 因考量實作需求，於2026/1/9異動以下內容：
     <ol>  
-        <li>修改<a href="StructureDefinition-QuestionnaireResponse-twci.html">Profile: 重大傷病申請書回覆-QuestionnaireResponse TWCI：
+        <li>修改<a href="StructureDefinition-QuestionnaireResponse-twci.html">Profile: 重大傷病申請書回覆-QuestionnaireResponse TWCI</a>：
             <ol>
                 <li>新增<code>medrec</code>(病歷資料)Constraint: UploadContent：填寫格式：file://檔名.副檔名，例如：file://Medicalrecord01.pdf、file://王大明病歷.pdf。</li>
                 <li>取消<code>reportResultString</code>(報告結果-文數字)之Constraint: txt-4000：長度不得超過4000字。</li>
