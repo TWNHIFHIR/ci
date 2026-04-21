@@ -35840,7 +35840,6 @@ Description: "臺灣衛生福利部中央健康保險署「特約醫事機構」
 * #9446011453 "國際醫事檢驗所"
 * #JY46010018 "健曜醫事檢驗所"
 
-
 ValueSet: NHIOrganization
 Id: nhi-organization
 Title: "NHI-健保重大傷病-特約醫事機構值集"
