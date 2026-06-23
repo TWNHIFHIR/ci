@@ -38,6 +38,8 @@ Description:    "此重大傷病申請書回覆-QuestionnaireResponse TWCI Profi
     acptNo 0..1 MS and
     acptNum 0..1 MS
 
+* item[hosp] obeys acptNum
+
 * item[hosp].item[applMode].linkId = "1.1"
 * item[hosp].item[applMode].text = "hosp.applMode|申報方式"
 * item[hosp].item[applMode].answer 1..1 MS
@@ -492,6 +494,11 @@ Expression:  "length() <= 4000"
 Severity:    #error
 
 Invariant:   speType
-Description: "當報告類型(code.coding.code)為`47526-9`時，檢體種類(code.text)必填"
+Description: "當報告類型(code.coding.code)為`47526-9`時，檢體種類(code.text)必填。"
 Expression:  "(item.where(linkId = '4.2.1').item.answer.value.ofType(Coding).exists(code='47526-9')) implies (item.where(linkId = '4.2.2').item.answer.value.ofType(string).exists())"
+Severity:    #error
+
+Invariant:   acptNum
+Description: "若有填寫受理編號(hosp.acptNo)，則受理次數(hosp.acptNum)為必填。"
+Expression:  "(item.where(linkId = '1.6').exists()) implies (item.where(linkId = '1.7').answer.value.ofType(Integer).exists())"
 Severity:    #error
