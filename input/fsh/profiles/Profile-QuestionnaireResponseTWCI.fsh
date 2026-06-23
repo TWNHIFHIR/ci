@@ -500,5 +500,5 @@ Severity:    #error
 
 Invariant:   acptNum
 Description: "若有填寫受理編號(hosp.acptNo)，則受理次數(hosp.acptNum)為必填。"
-Expression:  "(item.where(linkId = '1.6').exists()) implies (item.where(linkId = '1.7').answer.value.ofType(Integer).exists())"
+Expression:  "(item.where(linkId = '1.6').exists()) implies (item.where(linkId = '1.7').answer.value.ofType(integer).exists())"
 Severity:    #error

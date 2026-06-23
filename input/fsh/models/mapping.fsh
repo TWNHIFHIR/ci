@@ -71,9 +71,9 @@ Target: "https://nhicore.nhi.gov.tw/ci/StructureDefinition/Patient-twci"
 * patient.birthday -> "Patient.birthDate"
 * patient.zipCode -> "Patient.address.postalCode"
 * patient.contactAddr -> "Patient.address.text"
-* patient.mobile -> "Patient.telecom.where(system = 'sms').value"
-* patient.contactTel -> "Patient.telecom.where(system = 'phone').value"
-* patient.email -> "Patient.telecom.where(system = 'email').value"
+* patient.mobile -> "Patient.telecom:mobile.value"
+* patient.contactTel -> "Patient.telecom:contactTel.value"
+* patient.email -> "Patient.telecom:email.value"
 
 Mapping: TWCICondition
 Id: TWCICondition
