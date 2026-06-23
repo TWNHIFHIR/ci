@@ -25,8 +25,8 @@ WARNING: IG: The IG is not for the international realm, and it uses SNOMED CT, s
 
 
 # deprecated extension，IG中未使用，不影響驗證。（後方的藍色字樣(1uses) 是指INFORMATION在此Profile中有被使用到）
-% The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note%
-INFORMATION: StructureDefinition/Bundle-twci: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+% The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note%
+% The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0 is deprecated with the note%
 
 # HL7預設的constraint寫法
 que-7: The left side is inherently a collection, and so the expression 'operator = 'exists'' may fail or return false if there is more than one item in the content being evaluated
